@@ -1,0 +1,119 @@
+﻿@model RYLLight.Models.DetailProduct
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+}
+
+<h2>编辑</h2>
+
+@using (Html.BeginForm("Edit", "DetailProducts",FormMethod.Post,new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="form-group">
+            <div class="control-label col-md-2">
+                名称
+            </div>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ProductName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProductName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="control-label col-md-2">
+                编码
+            </div>
+            
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ProductCode, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProductCode, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="control-label col-md-2">
+                类型
+            </div>
+            <div class="col-md-10">
+                @Html.EnumDropDownListFor(model => model.ProductType, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProductType, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="control-label col-md-2">
+                功率
+            </div>
+            
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.ProductPower, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProductPower, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="control-label col-md-2">
+                流明
+            </div>
+            
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ProductLumen, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProductLumen, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="control-label col-md-2">
+                光角
+            </div>
+            
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ProductColorAngle, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProductColorAngle, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="control-label col-md-2">
+                图片
+            </div>
+
+            <div class="col-md-10">
+                @Html.HiddenFor(model => model.DetailProductPicturePath)
+                <img src=@(Model.DetailProductPicturePath) alt="Alternate Text" />
+                <input type="file" name="file" value="file" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="control-label col-md-2">
+                产品编码
+            </div>
+            <div class="col-md-10">
+                @Html.DropDownList("ProductId", null, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.ProductId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="保存" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("返回", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

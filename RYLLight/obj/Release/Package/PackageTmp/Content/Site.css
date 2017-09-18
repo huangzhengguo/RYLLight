@@ -1,0 +1,757 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 0;
+    /*这里如果不隐藏横向滚动条的话，内部的元素如果超出整个屏幕的宽度，浏览器自身会出现滚动条*/
+    overflow-x: hidden;
+    /*background-color: #201d1e;*/
+    /*background-color: #ffffff;*/
+    background-color: #f6f6f6;
+    color: black;
+}
+
+h1,h2,h3,h4,h5,h6{
+    color: white;
+}
+
+hr{
+    margin: 0;
+    border-width: 5px;
+}
+
+.blackBackground{
+    background-color:black;
+    padding-bottom:20px;
+}
+
+.blackNavigationBackground{
+    margin-top: 0;
+    background-color: black;
+}
+
+.leftNavigationWith{
+    padding-left: 20px;
+    margin-top:-20px;
+    margin-bottom:20px;
+}
+
+.titleNavigation{
+    padding-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 0px;
+    color: white;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/*100像素img宽高度*/
+.hundredWidthHeigth{
+    width: 150px;
+    height: 150px;
+}
+
+/*title大小设置*/
+.productTitleWidthHeight{
+    width:30px;
+    height:150px;
+}
+
+/*首页产品展示部分样式*/ 
+/*去除列表的索引*/
+.noneIndexUl{
+    overflow-x:hidden;
+    white-space:nowrap;
+    display:inline;
+    list-style:none;
+    padding-left: 0;
+}
+
+.noneIndexUlLi{
+    margin-left: 23px;
+    display: inline-block;
+}
+
+/**当前li*/
+.noneCurrentIndexUlLi{
+    margin:0;
+    display: inline-block;
+}
+
+.disNoneIndexUlLi{
+    margin:0 0 0 -3px;
+    display: none;
+}
+
+.noneProductIndexUlLi{
+    margin-left: -3px;
+    display: inline-block;
+}
+
+.aBlock{
+    display:block;
+}
+
+.hundredPercentWidthHeigth{
+    width: 100%;
+    height: 100%;
+}
+
+/*左外边距的距离为零的li*/ 
+.leftMarginZero{
+    margin-left: 0;
+}
+
+.rightMarginZero{
+    margin-right: 0;
+}
+
+.listImg{
+    width:20%;
+}
+
+.carousel-inner .item{
+    margin: 0px;
+}
+
+.item{
+    margin: 10%;
+}
+
+.item img{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+/** 首页轮播图片 */
+#owl-demo .item{
+    margin:3px;
+}
+
+#owl-demo .item img{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+#owl-intellgentcontrol .item{
+    margin:3px;
+}
+
+#owl-intellgentcontrol .item img{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+#owl-horticulture .item{
+    margin:3px;
+}
+
+#owl-horticulture .item img{
+    display:block;
+    width:100%;
+    height:auto;
+}
+
+/*linghting页面产品图片样式*/
+.pictureLight{
+    /*border-style:solid;
+    border-width:1px;*/
+    width:100%;
+    position: relative;
+}
+
+/*100%宽度的图片*/
+.hundredWidthImg{
+    width: 100%;
+}
+
+/*linghting页面产品描述用样式*/
+.desBlackBackground{
+    background-color:#333333;
+    color:white;
+    margin-bottom: 30px;
+}
+
+.desBlackBackground > p{
+    margin:0;
+    white-space:nowrap;
+}
+
+.desBlueBackground{
+    padding:0;
+}
+
+.desBlueBackground:hover{
+    background-color:#2f91c9;
+}
+
+.desLightYellowBackground:hover{
+    background-color:#9abf40;
+}
+
+.desPadding{
+    padding-top:2%;
+    padding-left:10%;
+    padding-bottom:2%;
+}
+
+desPadding pre{
+    margin: 0;
+    line-height: 1.0;
+}
+
+.desPaddingMobileP{
+    font-size: 12px;
+}
+
+.minMarginOwl{
+    margin-top: -20px;
+}
+
+.imgThirtySize{
+    width: 30px;
+    height: 30px;
+}
+
+.imgFiftySize{
+    width: 50px;
+    height: 50px;
+}
+
+.imgHundredSize{
+    width: 100px;
+    height: 100px;
+}
+
+/*覆盖菜单的高度*/
+.navbar-inverse{
+    height: 75px;
+    background-color:#000000;
+}
+
+/*乳白色*/
+.lightWthieColor{
+    /*background:#f1f0eb*/
+    background-color:#ffffff
+}
+
+.jumbotron{
+    padding-top: 20px;
+    padding-right: 0;
+    padding-left: 0;
+    /*background-color:#f1f0eb;*/
+    background-color:#ffffff;
+    padding-bottom:0;
+    margin-bottom:0;
+}
+
+.jumbotron .container{
+    /*background: #201d1e;*/
+    font-size: 14px;
+    line-height: 1.42857;
+    width: 100%;
+}
+
+.navbar .container{
+    background: #000000;
+}
+
+.navbar-nav{
+    float: right;
+}
+
+.leftnavbar-nav{
+    float:left;
+}
+
+.ulMarginTop{
+    margin-top: 10px;
+}
+
+.aNoneDec{
+    text-decoration:none;
+}
+
+a:hover{
+    text-decoration:none;
+}
+
+/*首页轮播图标题和描述样式**/
+.carouselTitle{
+    font-size: 130%;
+    color:white;
+}
+
+.carouselDes{
+    font-size: 100%;
+    color:white;
+}
+
+/*小屏幕标题和描述样式*/
+.marginTitleDes{
+    margin: 20px auto auto 20px;
+}
+
+.carseoulImg{
+    padding: 0px;
+    background-color:black;
+}
+
+/**内联样式*/
+.disInline{
+    display:inline;
+}
+
+/**加大索引到底部的距离*/
+.carousel-indicators{
+    bottom:100px;
+}
+
+.displayNone{
+    display:none;
+}
+
+.marginZero{
+    margin: 0;
+}
+
+.marginLeftZero{
+    margin-left: 0;
+}
+
+.preDes{
+    background-color:inherit;
+    color:inherit;
+    border:none;
+    font-size:inherit;
+    font-family:inherit;
+}
+
+/*详情页面Overview Specification Accessory Download样式 */
+.detailProductTitle{
+    color:#f37044;
+}
+
+.smallScreenImg{
+    padding: 10px;
+}
+
+.slick-track{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+/*首页侧边留言框**/
+.leaveMessageBoxOuter {
+    height: 300px;
+    width: 200px;
+    z-index: 900;
+    right: -150px;
+    position:fixed;
+    border-radius:3px;
+}
+
+.leaveMessageBox{
+    z-index:1000;
+    color:white;
+    background-color:white;
+    border-width: 1px;
+    opacity:1;
+    height:50px;
+    width:50px;
+    position:relative;
+    left:0;
+    border-radius:10px;
+}
+
+.leaveMessageBox .img{
+    height: 50px;
+    width: 50px;
+}
+
+.leavemessage{
+    position:fixed;
+    right:50px;
+    z-index:1000;
+}
+
+/**大屏幕鼠标放上显示参数信息*/
+.absoluteDiv{
+    position:absolute;
+    z-index:1000;
+    bottom:0px;
+    margin: 0;
+    background-color:rgba(32,29,30,0.8);
+    width: 80%;
+    height: 80%;
+    opacity: 0;
+    top: 10%;
+    left: 10%;
+    padding: 10% 0 0 10%;
+}
+
+.absoluteDiv p {
+    opacity: 1;
+    color: white;
+    opacity: 1.0;
+    font-size: 15px;
+    z-index: 1003;
+}
+
+.absoluteDiv:hover{
+    opacity:0.8;
+}
+
+.productAbsoluteDiv{
+    position:absolute;
+    z-index:1000;
+    bottom: 0px;
+    margin: 0;
+    background-color:rgba(32,29,30,0.8);
+    width: 100%;
+    height: 50%;
+    opacity: 0;
+    padding: 10% 0 0 10%;
+}
+
+.productAbsoluteDiv p {
+    opacity: 1;
+    color: white;
+    opacity: 1.0;
+    font-size: 15px;
+    z-index: 1003;
+}
+
+/*对子元素样式进行操作*/
+.pictureLight:hover .productAbsoluteDiv{
+    opacity:0.8;
+}
+
+/*横向分割线*/ 
+.hrhorizontal{
+    background-color:#f37044;
+    height: 2px;
+    border-width: 0px;
+}
+
+.absoluteDiv p{
+    color:white;
+    line-height: 1.5;
+    font-weight:bold;
+}
+
+.nonePaddingBlockA{
+    padding:0px;
+    display:block;
+}
+
+.nonePaddingBlockA p{
+    color: white;
+    margin-bottom: 0px;
+}
+
+.applicationTitle{
+    color:white;
+    margin-left:20px;
+    font-weight:bold;
+    font-size:120%;
+    margin-top: 10px;
+}
+
+.pagination{
+    margin: 0px;
+}
+
+.lightGrayBackground{
+    /*background-color:lightgray;*/
+    background-color: #eaeef0;
+    padding-bottom: 20px;
+    margin-top: -20px;
+}
+
+.noneBottomPadding{
+    margin-bottom: 0px;
+}
+
+.productParameter{
+    background-color: black;
+    color: white;
+    padding-bottom: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.productParameter p{
+    margin-bottom: 0px;
+}
+
+.whiteProductParameter{
+    background-color: #ffffff;
+    color: #000000;
+    padding-bottom: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 1.0;
+}
+
+.whiteProductParameter  p{
+    margin: 0;
+    padding: 0;
+}
+
+/*公司页面样式*/
+.blackCompanyBackground{
+    background-color: black;
+    padding-bottom: 30px;
+}
+
+.whiteCompanyBackground{
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.lightgrayCompanyBackground{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: lightgray;
+}
+
+.whiteHorizontal{
+    background-color: white;
+}
+
+.downPadding{
+    padding-left: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+}
+
+.downPadding a{
+    background-color: white;
+    display: block;
+    padding: 5px;
+}
+
+/*页脚facebook和youtube链接图标*/
+.facebook{
+    float: right;
+}
+
+.facebook image{
+
+    height: 30px;
+    width: 30px;
+}
+
+.youtobe{
+    float: left;
+}
+
+.youtobe image{
+    height: 30px;
+    width: 30px;
+}
+
+.nonePaddingContainer {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.fivePaddingLeftContainer{
+    padding-left: 5px;
+}
+
+.nonePaddingCol{
+    padding-left: 0;
+    padding-right: 0;
+    text-align:left;
+}
+
+.displayNone{
+    display: none;
+}
+
+.lightingProductImg{
+
+}
+
+.lightingApplicationImg{
+
+}
+
+.orageColor{
+    color:#f37044;
+}
+
+.whiteBackgroundColor{
+    background-color:#ffffff;
+}
+
+.carousel-control{
+    opacity: 0.2;
+}
+
+.carousel-control:hover, .carousel-control:focus{
+    opacity: 0.2;
+}
+
+.lightgrayBackgroundButton{
+    background: lightgray;
+}
+
+.eightPercentWidth{
+    width: 80%;
+}
+
+.indexLightGrayBackground{
+    background-color: gray;
+    margin-top: 0;
+}
+
+.mobileProduct{
+    margin-top: -10px;
+}
+
+.mobileProduct .item{
+    margin: 0 10px 10px 10px;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover {
+    color: #f37044;
+}
+
+/*总体介绍*/
+.introductionBackground{
+    background-color: #000000;
+    margin-top: -20px;
+}
+
+/*登录界面背景图片*/
+.login_2017 {
+    background-color: #1F2325;
+    background-image:url("../Images/TB1ittHRFXXXXcSXFXXXXXXXXXX-2880-1280.jpg");
+    background-size:cover;
+}
+
+/*新网站样式*/
+#productScenes {
+    background-color: #F6F6F6
+}
+
+.newsPadding {
+    padding: 50px;
+}
+
+.disInlineBlock{
+    margin: 50px 50px;
+    display:inline-block;
+    height:100px;
+    width:100px;
+}
+
+.disInlineBlockWithoutSize {
+    display: inline-block;
+}
+
+.productScenePadding{
+    padding: 10px;
+}
+
+.blackhr{
+    border-color: black;
+    border-width: 1px;
+}
+
+#productSceneProduct {
+    color:black;
+}
+
+#productSceneProduct h1,h2,h3,h4,h5,h6 {
+    color: black;
+    text-align: left;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+    color: #000000;
+    font-size: 15px;
+}
+
+.navbar-inverse {
+    height: 75px;
+    background-color: #f6f6f6;
+}
+
+.navbar .container {
+    background: #f6f6f6;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+    color: #f37044;
+}
+    
+.companyIntroducePadding{
+    padding: 30px;
+}
+
+.footUpBackgroundColor{
+    background-color: #30ac66;
+}
+
+.footUp{
+    color:white;
+    padding: 20px;
+}
+
+.footDownBackgroundColor {
+    background-color: #226a41;
+}
+
+.disInlineBlockWithSizeLog {
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+}
+
+.listImageSize{
+    width: 30px;
+    height: 30px;
+}
+
+.editImageSize {
+    width: 60px;
+    height: 60px;
+}
+
+.imageSize100 {
+    width: 100px;
+    height: 100px;
+}
+
+.imageSize500 {
+    width: 500px;
+    height: 500px;
+}

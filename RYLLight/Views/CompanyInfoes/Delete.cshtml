@@ -1,0 +1,89 @@
+﻿@model RYLLight.Models.CompanyInfo
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>CompanyInfo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MailBox)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MailBox)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CompanyDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CompanyDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FreeOne)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FreeOne)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FreeTwo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FreeTwo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FreeThree)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FreeThree)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,58 @@
+﻿@model RYLLight.Models.Carousel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>轮播图</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            图片
+        </dt>
+
+        <dd>
+            <img class="img-responsive" src=@(Model.PicturePath) alt="Alternate Text" />
+        </dd>
+
+        <dt>
+            排序编号
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SortNumber)
+        </dd>
+
+        <dt>
+            关联产品ID
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PictureName)
+        </dd>
+
+        <dt>
+            轮播图标题
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PictureTitle)
+        </dd>
+
+        <dt>
+            轮播图描述
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PictureDes)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("编辑", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("返回列表", "Index")
+</p>

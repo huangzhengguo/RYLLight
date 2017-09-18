@@ -1,0 +1,74 @@
+﻿@model RYLLight.Models.Carousel
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+}
+
+<h2>创建</h2>
+
+@using (Html.BeginForm("UploadFile", "Carousels", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>轮播图</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(Model => Model.PicturePath,new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <input type="file" name="file" value="file" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(Model => Model.MobilePicturePath,htmlAttributes: new { @class = "control-label col-md-2"})
+            <div class="col-md-10">
+                <input type="file" name="file" value="mobilefile" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(Model => Model.SortNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.SortNumber, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.SortNumber, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(Model => Model.PictureName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PictureName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PictureName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(Model => Model.PictureTitle, htmlAttributes: new { @class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PictureTitle, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PictureTitle, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(Model => Model.PictureDes, htmlAttributes: new { @class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.PictureDes,new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.PictureDes, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="创建" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("返回列表", "Index")
+</div>

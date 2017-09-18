@@ -1,0 +1,72 @@
+﻿@model IEnumerable<RYLLight.Models.ProductScene>
+
+@{
+    ViewBag.Title = "ApplicationScene";
+    string applicationLinkStr = "";
+}
+
+<!--场景图片列表-->
+<div class="container">
+    <div id="lightingContainer" class="row">
+    
+        <div class="hidden-xs hidden-sm visible-md visible-lg">
+            <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
+
+            </div>
+            <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+                <div class="row">
+                    @foreach (var scene in Model)
+                    {
+                        applicationLinkStr = "/Home/ProductInApplicationScene?sceneId=" + scene.Id;
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <div class="productParameter">
+                                <a href=@(applicationLinkStr)>
+                                    <img class="img-responsive" src=@(scene.ApplicationScenePicturePath) alt="Alternate Text" />
+                                </a>
+                                <div class="desPadding">
+                                    <p>@(scene.SceneName)</p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-1 col-md-1 col-lg-1">
+
+            </div>
+        </div>
+
+        @foreach (var scene in Model)
+        {
+            <div class="visible-xs visible-sm hidden-md hidden-lg">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="productParameter">
+                        <a href=@(applicationLinkStr)>
+                            <img class="img-responsive" src=@(scene.ApplicationScenePicturePath) alt="Alternate Text" />
+                        </a>
+                        <div class="desPadding">
+                            <p>@(scene.SceneName)</p>
+                        </div>
+                    </div>
+                    <!--这里的链接点击之后应该列出该场景下的所有产品-->
+                </div>
+            </div>
+        }
+    </div>
+
+        
+</div>
+
+<script src="/Scripts/jquery-1.10.2.js"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var jumbotronDiv = document.getElementById("jumbotron");
+        var bodyContainerDiv = document.getElementById("bodyContainer");
+        var lightingContainerDiv = document.getElementById("lightingContainer");
+
+        jumbotronDiv.style.backgroundColor = "#201d1e";
+        bodyContainerDiv.style.backgroundColor = "#201d1e";
+        lightingContainerDiv.style.backgroundColor = "#201d1e";
+    });
+</script>

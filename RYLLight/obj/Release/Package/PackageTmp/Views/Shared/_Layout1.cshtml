@@ -1,0 +1,101 @@
+﻿@using RYLLight.Models
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>LeDinPro-lead,innovation,professional</title>
+    <meta name="renderer" content="webkit" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/bundles/modernizr")
+</head>
+<body>
+    <!--导航栏-->
+    <div id="navigationMenu" class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container nonePaddingContainer">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <a style="margin-left:15px;margin-right:30px;display:block" href="/Home">
+                    <img src=@ViewBag.Logo style="width:70px;height:70px" alt="Brand" />
+                </a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav ulMarginTop">
+                    <!--这里应该使用从数据库中读取所有的菜单项然后遍历所有的菜单-->
+                    @foreach (Menu menuItem in ViewBag.MenuList)
+                    {
+                        if (menuItem.MenuTitle.Equals("Contact_Us"))
+                        {
+                            <li><a href="#" id="Contact_Us">Contact Us</a></li>
+                        }
+                        else
+                        {
+                            <li><a href="#" id=@menuItem.MenuTitle>@menuItem.MenuTitle</a></li>
+                        }
+                    }
+                </ul>
+            </div>
+            <!--
+            <div class="hidden-xs hidden-sm visible-md visible-lg whiteHorizontal">
+                <hr />
+            </div>
+            -->
+        </div>
+    </div>
+
+    <div> 
+        @RenderBody()
+    </div>
+
+    <footer id="contact" class="footUpBackgroundColor">
+        
+        <!--<div style="background-color:black;padding-top: 20px">
+            
+            <div class="hidden-xs hidden-sm visible-md visible-lg">
+                <pre style="background-color:black;border:none;color:white;margin:0px;font-size: 15px;">
+                Phone:86-371-86549719 Email:info@ledinpro.com    
+                Fax:86-371-67579829</pre>
+            </div>
+            <div class="visible-xs visible-sm hidden-md hidden-lg">
+                <pre style="background-color:black;border:none;color:white;margin:0px;font-size: 15px;">
+Phone:86-371-86549719
+Email:info@ledinpro.com    
+Fax:86-371-67579829</pre>
+            </div>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<p style="color:white;background-color:black;float:right">&copy;Inledco Lighting Co.,Ltd 2006-@DateTime.Now.Year</p>
+            
+        </div>-->
+        <div class="footUpBackgroundColor">
+            <h3 class="text-center footUp">info@ledinpro.com</h3>
+        </div>
+        <hr class="blackhr"/>
+        <div class="footDownBackgroundColor text-center">
+            <img src=@ViewBag.Logo class="disInlineBlockWithSizeLog" />
+            <p style="color:white">Zhengzhou Inledco Lighting Co.,LTD</p>
+            <span id="cnzz_stat_icon_1259345350" style="float:left">
+                <a href="http://www.cnzz.com/stat/website.php?web_id=1259345350" target="_blank" title="站长统计">
+                    <img src="http://icon.cnzz.com/img/pic.gif" border="0" hspace="0" vspace="0">
+                </a>
+            </span>
+        </div>
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/owl")
+
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>
+
+    <script src="http://s95.cnzz.com/z_stat.php?id=1259345350&amp;show=pic" type="text/javascript"></script>
+    <script src="http://c.cnzz.com/core.php?web_id=1259345350&amp;show=pic&amp;t=z" charset="utf-8" type="text/javascript"></script>
+</body>
+</html>

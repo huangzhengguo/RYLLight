@@ -1,0 +1,210 @@
+﻿@using RYLLight.Models
+@model IEnumerable<Carousel>
+@{
+    ViewBag.Title = "Home Page";
+    int count = 0;
+    string productDetailLinkStr = @"/Products/ProductDetailInfo?productId=";
+    int productId = 100000;
+}
+
+<!--此处布局轮播图-->
+<div class="blackBackground">
+    <div id="carousel-example-generic" class="container carseoulImg carousel slide" data-ride="carousel">
+        <!--媒体查询-->
+        <div class="hidden-xs hidden-sm visible-md visible-lg">
+            <hr />
+        </div>
+        <!--轮播图-->
+        <div class="carousel-inner" role="listbox">
+            @{
+                count = 0;
+            }
+            @foreach (var item in Model)
+            {
+                productDetailLinkStr = @"/Products/ProductDetailInfo?productId=";
+                if (int.TryParse(item.PictureName, out productId))
+                {
+                    productDetailLinkStr = productDetailLinkStr + productId;
+                }else
+                {
+                    productDetailLinkStr = "#";
+                }
+
+                if (count++ == 0)
+                {
+                    <div class="item active">
+                        <div class="visible-xs visible-sm hidden-md hidden-lg carseoulImg">
+                            <a href=@(productDetailLinkStr)>
+                                <img src=@(item.MobilePicturePath) class="img-responsive" />
+                            </a>
+                            
+                            <p class="marginTitleDes">
+                                <span class="carouselTitle">@item.PictureTitle</span>
+                                <br />
+                                <span class="carouselDes">@item.PictureDes</span>
+                            </p>
+                        </div>
+                        <div class="hidden-xs hidden-sm visible-md visible-lg carseoulImg">
+                            <a href=@(productDetailLinkStr)><img src=@(item.PicturePath) class="img-responsive" /></a>
+                            <p class="marginTitleDes">
+                                <span class="carouselTitle">@item.PictureTitle</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="carouselDes">@item.PictureDes</span>
+                            </p>
+                        </div>
+                    </div>
+                }
+                else
+                {
+                    <div class="item">
+                        <div class="visible-xs visible-sm hidden-md hidden-lg carseoulImg">
+                            <a href=@(productDetailLinkStr)>
+                                <img src=@(item.MobilePicturePath) class="img-responsive" />
+                            </a>
+                            <p class="marginTitleDes">
+                                <span class="carouselTitle">@item.PictureTitle</span>
+                                <br />
+                                <span class="carouselDes">@item.PictureDes</span>
+                            </p>
+                        </div>
+                        <div class="hidden-xs hidden-sm visible-md visible-lg carseoulImg">
+                            <a href=@(productDetailLinkStr)>
+                                <img src=@(item.PicturePath) class="img-responsive" />
+                            </a>
+                            <p class="marginTitleDes">
+                                <span class="carouselTitle">@item.PictureTitle</span>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <span class="carouselDes">@item.PictureDes</span>
+                            </p>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+
+        <!--Controls-->
+        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+</div>
+
+<!--大屏幕-->
+<div class="hidden-xs hidden-sm visible-md visible-lg">
+    <div class="container productListBackground">
+        @{
+            <br />
+                <div>
+                    <p>Products</p>
+                </div>
+                <div class="row">
+                    @foreach (var p in ViewBag.products)
+                    {
+                        productDetailLinkStr = @"/Products/ProductDetailInfo?productId=";
+                        productDetailLinkStr = productDetailLinkStr + p.Id;
+                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                            <div class="whiteProductParameter">
+                                <div class="pictureLight">
+                                    <a href=@(productDetailLinkStr)>
+                                        <img class="img-responsive hundredPercentWidthHeigth" src=@(p.ProductPicturePath) alt="Alternate Text" />
+                                        <div class="productAbsoluteDiv">
+                                            <p>@(p.ProductPower)</p>
+                                            <p>@(p.ProductLength)</p>
+                                            <p>@(p.ProductLumen)</p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="desPadding">
+                                    <p>@(p.ProductCode)</p>
+                                    <p>@(p.ProductName)</p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+        }
+        <br />
+    </div>
+</div>
+
+<!--小屏幕-->
+<div class="visible-xs visible-sm hidden-md hidden-lg mobileProduct">
+    <div class="container">
+        <div container productListBackground>
+            @{
+                <div>
+                    <p style="margin-top: 20px">Products</p>
+                </div>
+                <div class="row">
+                    @foreach (var p in ViewBag.products)
+            {
+                productDetailLinkStr = @"/Products/ProductDetailInfo?productId=" + p.Id;
+                productDetailLinkStr = @"/Products/ProductDetailInfo?productId=" + p.Id;
+                        <div class="col-xs-6 col-sm-6">
+                            <div class="productParameter">
+                                <a class="nonePaddingBlockA" href=@(productDetailLinkStr)>
+                                    <img src=@(p.MobileProductPicturePath) class="img-responsive" id=@(p.Id) alt="Alternate Text" />
+                                </a>
+                                <div class="desPadding desPaddingMobileP">
+                                    <p>@(p.ProductCode)</p>
+                                    <p>@(p.ProductName)</p>
+                                    <p>@(p.ProductPower)</p>
+                                    <p>@(p.ProductLumen)</p>
+                                    <p>@(p.LightingAngle)</p>
+                                </div>
+                            </div>
+                        </div>
+                    }
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
+<!--这里之所以添加jquery是由于当前页面的内嵌的脚本使用到了jquery
+    而在共享视图中添加脚本的引用是在该页面内嵌脚本的后面，所以
+    需要在使用jqery之前引入jqery，以保证脚本的
+    -->
+<script src="/Scripts/jquery-1.10.2.js"></script>
+
+<script type="text/javascript">
+    var isHidden = true;
+    function messageButtonOver() {
+        // 移动出来业务员的信息
+        var leaveMessageBoxOuterDiv = document.getElementById("leaveMessageBoxOuterDiv");
+        leaveMessageBoxOuterDiv.style.right = "0px";
+    }
+
+    function messageButtonOut() {
+        // 隐藏
+        var leaveMessageBoxOuterDiv = document.getElementById("leaveMessageBoxOuterDiv");
+        leaveMessageBoxOuterDiv.style.right = "-150px";
+    }
+
+    function messageButtonClick() {
+        var leaveMessageBoxOuterDiv = document.getElementById("leaveMessageBoxOuterDiv");
+        if (isHidden == true) {
+            isHidden = false;
+            leaveMessageBoxOuterDiv.style.right = "0px";
+        } else {
+            isHidden = true;
+            leaveMessageBoxOuterDiv.style.right = "-150px";
+        }
+    }
+
+    $(document).ready(function () {
+        // 设置背景颜色
+        var jumbotronDiv = document.getElementById("jumbotron");
+        var bodyContainerDiv = document.getElementById("bodyContainer");
+
+        //jumbotronDiv.style.backgroundColor = "#201d1e";
+        //bodyContainerDiv.style.backgroundColor = "#201d1e";
+        jumbotronDiv.style.backgroundColor = "#ffffff";
+        bodyContainerDiv.style.backgroundColor = "#ffffff";
+    });
+</script>

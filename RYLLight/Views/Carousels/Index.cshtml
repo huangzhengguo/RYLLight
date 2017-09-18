@@ -1,0 +1,66 @@
+﻿@model IEnumerable<RYLLight.Models.Carousel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+}
+
+<h2>轮播图管理</h2>
+
+<p>
+    @Html.ActionLink("添加轮播图", "Create")
+</p>
+<table class="table table-bordered">
+    <tr>
+        <th>
+            图片
+        </th>
+        <th>
+            手机图片
+        </th>
+        <th>
+            排序编号
+        </th>
+        <th>
+            关联产品ID
+        </th>
+        <th>
+            图片描述
+        </th>
+        <th>
+            图片标题
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <img class="imgThirtySize" src=@(item.PicturePath) alt="Alternate Text" />
+        </td>
+        <td>
+            <img class="imgThirtySize" src=@(item.MobilePicturePath) alt="Alternate Text" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SortNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PictureName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PictureDes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PictureTitle)
+        </td>
+        <td>
+            @Html.ActionLink("编辑", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("详情", "Details", new { id=item.Id }) |
+            @Html.ActionLink("删除", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
+
+@Html.ActionLink("返回管理界面", "Index", "ProductManager")

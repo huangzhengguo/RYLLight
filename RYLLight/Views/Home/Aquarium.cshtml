@@ -1,0 +1,33 @@
+﻿@model IEnumerable<RYLLight.Models.Product>
+
+@{
+    ViewBag.Title = "Aquarium";
+    string productDetailLinkStr = "/Products/ProductDetailInfo?productId=";
+}
+
+<br />
+
+<div class="container">
+    <div id="intellgentcontrolrow" class="row">
+        @foreach (var p in Model)
+        {
+            productDetailLinkStr = "/Products/ProductDetailInfo?productId=" + p.Id;
+            <div class="col-xs-12 col-xs-6 col-md-6 col-lg-6">
+                <div class="productParameter">
+                    <div class="pictureLight">
+                        <a href=@(productDetailLinkStr)>
+                            <img class="img-responsive hundredWidthImg" src=@(p.ProductPicturePath) alt="Alternate Text" />
+                        </a>
+                    </div>
+                    <div class="desPadding">
+                        <p>@(p.ProductCode)</p>
+                        <p>@(p.ProductName)</p>
+                        <p>@(p.ProductPower)</p>
+                        <p>@(p.Dimming)</p>
+                    </div>
+
+                </div>
+            </div>
+        }
+    </div>
+</div>

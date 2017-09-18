@@ -1,0 +1,143 @@
+﻿@model RYLLight.Models.Product
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            产品编码
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductCode)
+        </dd>
+
+        <dt>
+            产品名称
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductName)
+        </dd>
+
+        <dt>
+            产品类型
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductType)
+        </dd>
+
+        <dt>
+            产品描述
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductDes)
+        </dd>
+
+        <dt>
+            功率
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductPower)
+        </dd>
+
+        <dt>
+            长度
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductLength)
+        </dd>
+
+        <dt>
+            流明
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductLumen)
+        </dd>
+
+        <dt>
+            产品图片
+        </dt>
+
+        <dd>
+            <img src=@(Model.ProductPicturePath) alt="Alternate Text" />
+        </dd>
+
+        <dt>
+            效率
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Efficient)
+        </dd>
+
+        <dt>
+            调光
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Dimming)
+        </dd>
+
+        <dt>
+            应用场景名称
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ApplicationSceneName)
+        </dd>
+
+        <dt>
+            应用场景图片
+        </dt>
+        <dd>
+            <img src=@(Model.ApplicationScenePath) alt="Alternate Text" />
+        </dd>
+
+        <dt>
+            产品指导书
+        </dt>
+
+        <dd>
+            <a href=@(Model.ProductGuide)>产品指导书</a>
+        </dd>
+
+        <dt>
+            安装指导书
+        </dt>
+
+        <dd>
+            <a href=@(Model.ProductInstallationGuide)>产品安装指导书</a>
+        </dd>
+
+        <dt>
+            Datasheet
+        </dt>
+
+        <dd>
+            <a href=@(Model.ProductDatasheet)>Datasheet</a>
+        </dd>
+
+        <dt>
+            IES文件
+        </dt>
+
+        <dd>
+            <a href=@(Model.ProductIes)>IES文件</a>
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("编辑", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("返回列表", "Index")
+</p>

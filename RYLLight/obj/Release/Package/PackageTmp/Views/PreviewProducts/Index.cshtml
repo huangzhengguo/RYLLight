@@ -1,0 +1,49 @@
+﻿@model IEnumerable<RYLLight.Models.PreviewProduct>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+}
+
+<h2>产品预览图片管理</h2>
+
+<p>
+    @Html.ActionLink("添加图片", "Create",new { productId = ViewBag.productId })
+</p>
+<table class="table table-bordered">
+    <tr>
+        <th>
+            预览图片
+        </th>
+        <th>
+            图片名称
+        </th>
+        <th>
+            所属产品编号
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <img style="width:30px;height:30px" src=@item.ProductPicturePath alt="Alternate Text" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PictureName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Product.ProductCode)
+        </td>
+        <td>
+            @Html.ActionLink("编辑", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("详情", "Details", new { id=item.Id }) |
+            @Html.ActionLink("删除", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+</table>
+
+<div>
+    @Html.ActionLink("返回产品列表", "BackToProductList",new { productId = ViewBag.productId })
+</div>

@@ -1,0 +1,239 @@
+﻿@model RYLLight.Models.Product
+
+@{
+    ViewBag.Title = "Edit";
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+}
+
+<h2>编辑产品</h2>
+
+@using (Html.BeginForm("UpLoadEdit", "Products", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+        @Html.HiddenFor(model => model.ProductSceneId)
+
+        <div class="form-group">
+            <label class="control-label col-md-2">
+                产品编码
+            </label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ProductCode, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProductCode, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">
+                产品名称
+            </label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ProductName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProductName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">
+                产品类型
+            </label>
+            <div class="col-md-10">
+                @Html.EnumDropDownListFor(model => model.ProductType, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProductType, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">
+                产品描述
+            </label>
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.ProductDes, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProductDes, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">
+                功率
+            </label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ProductPower, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProductPower, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">
+                长度
+            </label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ProductLength, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProductLength, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">
+                流明
+            </label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ProductLumen, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProductLumen, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">
+                光角
+            </label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.LightingAngle, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.LightingAngle, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">
+                效率
+            </label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Efficient, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Efficient, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">
+                调光
+            </label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Dimming, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Dimming, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">
+                产品图片
+            </label>
+            <div class="col-md-10">
+                @Html.HiddenFor(model => model.ProductPicturePath)
+                <img src=@(Model.ProductPicturePath) alt="Alternate Text" />
+                <input type="file" name="file"  value="filePicture" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">
+                手机展示产品图片
+            </label>
+            <div class="col-md-10">
+                @Html.HiddenFor(model => model.MobileProductPicturePath)
+                <img src=@(Model.MobileProductPicturePath) alt="Alternate Text" />
+                <input type="file" name="file" value="fileMobilePicture" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">
+                产品背景图片
+            </label>
+            <div class="col-md-10">
+                @Html.HiddenFor(model => model.ProductBackgroundImage)
+                <img src=@(Model.ProductBackgroundImage) class="imageSize500" alt="Alternate Text" />
+                <input type="file" name="file" value="backgroundImage" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">
+                应用场景
+            </label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ApplicationSceneName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ApplicationSceneName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">
+                应用场景图片
+            </label>
+            <div class="col-md-10">
+                @Html.HiddenFor(model => model.ApplicationScenePath)
+                <img src=@(Model.ApplicationScenePath) alt="Alternate Text" />
+                <input type="file" name="file" value="fileApplication" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">
+                光谱文件
+            </label>
+            <div class="col-md-10">
+                @Html.HiddenFor(model => model.Spectrum)
+                <img src=@(Model.Spectrum) alt="Alternate Text" />
+                <input type="file" name="file" value="fileApplication" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">
+                产品指导书
+            </label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ProductGuide, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProductGuide, "", new { @class = "text-danger" })
+                <input type="file" name="file"  value="fileGuide" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">
+                产品安装指导文件
+            </label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ProductInstallationGuide, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProductInstallationGuide, "", new { @class = "text-danger" })
+                <input type="file" name="file"  value="fileInstallGuide" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">
+                Datasheet文件
+            </label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ProductDatasheet, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProductDatasheet, "", new { @class = "text-danger" })
+                <input type="file" name="file"  value="fileDatasheet" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">
+                IES文件
+            </label>
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.ProductIes, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.ProductIes, "", new { @class = "text-danger" })
+                <input type="file" name="file"  value="fileIES"/>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="保存" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("返回", "Index")
+</div>

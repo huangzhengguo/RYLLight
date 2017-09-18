@@ -1,0 +1,35 @@
+﻿@model RYLLight.Models.Logo
+
+@{
+    ViewBag.Title = "Details";
+    //Layout = null;
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Logo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Active)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Active)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PicturePath)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PicturePath)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

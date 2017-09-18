@@ -1,0 +1,106 @@
+﻿@model RYLLight.Models.CompanyInfo
+
+@{
+    ViewBag.Title = "编辑";
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+}
+
+<h2>编辑</h2>
+
+@using (Html.BeginForm("EditCompanyInfo", "CompanyInfoes", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        <h4>公司信息</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CompanyName, new { @class= "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CompanyName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CompanyName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CompanyAddress, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CompanyAddress, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CompanyAddress, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PhoneNumber, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.MailBox, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.MailBox, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.MailBox, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CompanyDescription, new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.CompanyDescription, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CompanyDescription, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FreeOne, new { @class = "control-label col-md-2" })
+            @Html.HiddenFor(model => model.FreeOne)
+            <img src=@(Model.FreeOne) alt="Alternate Text" />
+            <div class="col-md-10">
+                <input type="file" name="file" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FreeTwo, new { @class = "control-label col-md-2" })
+            @Html.HiddenFor(model=>model.FreeTwo)
+            <img src=@(Model.FreeTwo) alt="Alternate Text" />
+            <div class="col-md-10">
+                <input type="file" name="file" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FreeThree, new { @class = "control-label col-md-2" })
+            @Html.HiddenFor(model => model.FreeThree)
+            <img src=@(Model.FreeThree) alt="Alternate Text" />
+            <div class="col-md-10">
+                <input type="file" name="file" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.CompanyBackgroundImg, new { @class = "control-label col-md-2" })
+            @Html.HiddenFor(model => model.CompanyBackgroundImg)
+            <img src=@(Model.CompanyBackgroundImg) alt="Alternate Text" />
+            <div class="col-md-10">
+                <input type="file" name="file" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="保存" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("返回", "Index")
+</div>

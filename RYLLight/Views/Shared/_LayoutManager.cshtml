@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="row">
+        <!--树型菜单-->
+        <div class="col-lg-2">
+            
+        </div>
+        <!--可以使用Ajax替换这个div的内容，从而达到切换区域的目的-->
+        <div id="managerSection" class="col-lg-10">
+            @RenderBody()
+        </div>
+    </div>
+</body>
+</html>

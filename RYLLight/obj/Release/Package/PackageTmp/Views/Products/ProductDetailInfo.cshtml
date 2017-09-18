@@ -1,0 +1,346 @@
+﻿@using RYLLight.Models
+
+@{
+    ViewBag.Title = "ProductDetailInfo";
+    int index = 0;
+}
+
+<div class="lightGrayBackground">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-1 col-md-1 co-lg-1">
+
+            </div>
+            <div class="col-xs-12 col-sm-10 col-md-10 co-lg-10">
+                <h3 class="detailProductTitle">Overview</h3>
+            </div>
+            <div class="col-xs-12 col-sm-1 col-md-1 co-lg-1">
+
+            </div>
+        </div>
+
+        <!--预览图片部分-->
+        <div class="row">
+            <div class="col-xs-12 col-sm-1 col-md-1 co-lg-1">
+
+            </div>
+            <div class="col-xs-12 col-sm-10 col-md-10 co-lg-10">
+                <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                    @foreach (var prev in ViewBag.preViewProductList)
+                    {
+                        if (index++ == 0)
+                        {
+                                <div class="item active">
+                                    <img src=@(prev.ProductPicturePath) class="img-responsive" />
+                                    <div class="carousel-caption">
+
+                                    </div>
+                                </div>
+                        }
+                        else
+                        {
+                                <div class="item">
+                                    <img src=@(prev.ProductPicturePath) class="img-responsive" />
+                                    <div class="carousel-caption">
+
+                                    </div>
+                                </div>
+                        }
+                    }
+                    </div>
+
+                    <!--Controls-->
+                    <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-1 col-md-1 co-lg-1">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-1 col-md-1 co-lg-1">
+
+            </div>
+            <div class="col-xs-12 col-sm-10 col-md-10 co-lg-10">
+                <div style="margin-top:15px">
+                    <!--描述部分-->
+                    <pre class="preDes">@ViewBag.product.ProductDes</pre>
+                </div>
+                <!--特点图标部分-->
+                <div style="display:inline">
+                    @foreach (var feature in ViewBag.featureList)
+                    {
+                        <img class="imgThirtySize" src=@(feature.ProductFeaturePicturePath) alt="Alternate Text" />
+
+                    }
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-1 col-md-1 co-lg-1">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container whiteBackgroundColor">
+    <div class="row">
+        <div class="col-xs-12 col-sm-1 col-md-1 co-lg-1">
+
+        </div>
+        <div class="col-xs-12 col-sm-10 col-md-10 co-lg-10">
+            @{
+                bool isExistSpecification = false;
+                foreach (var item in ViewBag.detailProductList)
+                {
+                    if (item.ProductType == TypeOfSubProduct.SPECIFICATION)
+                    {
+                        isExistSpecification = true;
+                        break;
+                    }
+                }
+            }
+
+            @if (isExistSpecification == true)
+            {
+                <h3 class="detailProductTitle">Specification</h3>
+                <hr class="hrhorizontal" />
+                <br />
+            }
+        </div>
+        <div class="col-xs-12 col-sm-1 col-md-1 co-lg-1">
+
+        </div>
+    </div>
+    
+    <div class="row">
+    <div class="col-xs-12 col-sm-1 col-md-1 co-lg-1">
+
+    </div>
+        <div class="col-xs-12 col-sm-10 col-md-10 co-lg-10">
+            <div class="row">
+
+                @foreach (var item in ViewBag.detailProductList)
+            {
+                if (item.ProductType == TypeOfSubProduct.ACCESSORIES)
+                {
+                    continue;
+                }
+
+
+                <div class="col-xs-6 col-sm-4 col-md-3 co-lg-3">
+                    <div class="whiteProductParameter">
+                        <div class="pictureLight">
+                            <img class="img-responsive hundredWidthImg" src=@(item.DetailProductPicturePath) alt="Alternate Text" />
+                        </div>
+                        <div class="desPadding">
+                            <p>@(item.ProductName)</p>
+                            <p>@(item.ProductPower)</p>
+                            <p>@(item.ProductLumen)</p>
+                            <p>@(item.ProductColorAngle)</p>
+                            <p>@(item.Dimming)</p>
+                            <p>@(item.Efficient)</p>
+
+
+                            <!--这里需要根据灯具的类型显示不同的信息-->
+                            @*@if (item.Product.ProductType == TypeOfProduct.LIGHTING)
+                            {
+                                <p>@(item.ProductName)</p>
+                                <p>@(item.ProductPower)</p>
+                                <p>@(item.ProductLumen)</p>
+                                <p>@(item.ProductColorAngle)</p>
+                            }
+                            else if (item.Product.ProductType == TypeOfProduct.INTELLGENTCONTROL)
+                            {
+                                <p>@(item.ProductCode)</p>
+                                <p>@(item.ProductName)</p>
+                                <p>@(item.ProductPower)</p>
+                                <p>@(item.Dimming)</p>
+                            }
+                            else if (item.Product.ProductType == TypeOfProduct.HORTICULTURE)
+                            {
+                                <p>@(item.ProductCode)</p>
+                                <p>@(item.ProductName)</p>
+                                <p>@(item.ProductPower)</p>
+                                <p>@(item.Efficient)</p>
+                            }
+                            else if (item.Product.ProductType == TypeOfProduct.AQUARIUM)
+                            {
+                                <p>@(item.ProductCode)</p>
+                                <p>@(item.ProductName)</p>
+                                <p>@(item.ProductPower)</p>
+                                <p>@(item.Efficient)</p>
+                            }*@
+                        </div>
+                    </div>
+                </div>
+
+                }
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-1 col-md-1 co-lg-1">
+
+        </div>
+    </div>
+
+    <br />
+    <br />
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-1 col-md-1 co-lg-1">
+
+        </div>
+        <div class="col-xs-12 col-sm-10 col-md-10 co-lg-10">
+            @{
+                bool isExistAccessory = false;
+                foreach (var item in ViewBag.detailProductList)
+                {
+                    if (item.ProductType == TypeOfSubProduct.ACCESSORIES)
+                    {
+                        isExistAccessory = true;
+                        break;
+                    }
+                }
+            }
+
+            @if (isExistAccessory == true)
+            {
+                <h3 class="detailProductTitle">Accessory</h3>
+                <hr class="hrhorizontal" />
+                <br />
+            }
+        </div>
+        <div class="col-xs-12 col-sm-1 col-md-1 co-lg-1">
+
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12 col-sm-1 col-md-1 co-lg-1">
+
+        </div>
+        <div class="col-xs-12 col-sm-10 col-md-10 co-lg-10">
+            <div class="row">
+                @foreach (var item in ViewBag.detailProductList)
+            {
+                if (item.ProductType == TypeOfSubProduct.SPECIFICATION)
+                {
+                    continue;
+                }
+                <div class="col-xs-6 col-sm-4 col-md-3 co-lg-3 productImgBottomMargin">
+                    <div class="whiteProductParameter">
+                        <div class="pictureLight">
+                            <img class="img-responsive hundredWidthImg" src=@(item.DetailProductPicturePath) alt="Alternate Text" />
+                        </div>
+                        <div class="desPadding">
+                            <p>@(item.ProductName)</p>
+                            <p>@(item.ProductPower)</p>
+                            <p>@(item.ProductLumen)</p>
+                            <p>@(item.ProductColorAngle)</p>
+                            <p>@(item.Dimming)</p>
+                            <p>@(item.Efficient)</p>
+                            <!--这里需要根据灯具的类型显示不同的信息-->
+                            @*@if (item.Product.ProductType == TypeOfProduct.LIGHTING)
+                            {
+                                <p>@(item.ProductName)</p>
+                                <p>@(item.ProductPower)</p>
+                                <p>@(item.ProductLumen)</p>
+                                <p>@(item.ProductColorAngle)</p>
+                            }
+                            else if (item.Product.ProductType == TypeOfProduct.INTELLGENTCONTROL)
+                            {
+                                <p>@(item.ProductCode)</p>
+                                <p>@(item.ProductName)</p>
+                                <p>@(item.ProductPower)</p>
+                                <p>@(item.Dimming)</p>
+                            }
+                            else if (item.Product.ProductType == TypeOfProduct.INTELLGENTCONTROL)
+                            {
+                                <p>@(item.ProductCode)</p>
+                                <p>@(item.ProductName)</p>
+                                <p>@(item.ProductPower)</p>
+                                <p>@(item.Efficient)</p>
+                            }*@
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-1 col-md-1 co-lg-1">
+
+        </div>
+    </div>
+    <br />
+    <br />
+</div>
+<div class="lightGrayBackground downPadding">
+    <div class="container">
+        @{
+            if (ViewBag.product.ProductGuide != null || ViewBag.product.ProductInstallationGuide != null
+                || ViewBag.product.ProductDatasheet != null || ViewBag.product.ProductIes != null)
+            {
+                <div class="row">
+                    <div class="col-xs-12 col-sm-1 col-md-1 co-lg-1">
+
+                    </div>
+                    <div class="col-xs-12 col-sm-10 col-md-10 co-lg-10">
+                        <h3 class="detailProductTitle">Download</h3>
+                        <br />
+                    </div>
+                    <div class="col-xs-12 col-sm-1 col-md-1 co-lg-1">
+
+                    </div>
+                </div>
+            }
+        }
+        <div class="col-xs-12 col-sm-1 col-md-1 co-lg-1">
+
+        </div>
+        <div class="col-xs-12 col-sm-10 col-md-10 co-lg-10 nonePaddingCol">
+
+            @if (!string.IsNullOrEmpty(ViewBag.product.ProductGuide) && !string.IsNullOrWhiteSpace(ViewBag.product.ProductGuide))
+            {
+                <a class="aNoneDec" href=@(ViewBag.product.ProductGuide)>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="imgThirtySize" src="~/Images/pdf.png" alt="Alternate Text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Product Guide
+                </a>
+                <br />
+                <br />
+            }
+            @if (!string.IsNullOrEmpty(ViewBag.product.ProductInstallationGuide) && !string.IsNullOrWhiteSpace(ViewBag.product.ProductInstallationGuide))
+            {
+                <a class="aNoneDec" href=@(ViewBag.product.ProductInstallationGuide)>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="imgThirtySize" src="~/Images/pdf.png" alt="Alternate Text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Installation Guide
+                </a>
+                <br />
+                <br />
+            }
+            @if (!string.IsNullOrEmpty(ViewBag.product.ProductDatasheet) && !string.IsNullOrWhiteSpace(ViewBag.product.ProductDatasheet))
+            {
+                <a class="aNoneDec" href=@(ViewBag.product.ProductDatasheet)>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="imgThirtySize" src="~/Images/pdf.png" alt="Alternate Text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Datasheet
+                </a>
+                <br />
+                <br />
+            }
+            @if (!string.IsNullOrEmpty(ViewBag.product.ProductIes) && !string.IsNullOrWhiteSpace(ViewBag.product.ProductIes))
+            {
+                <a class="aNoneDec" href=@(ViewBag.product.ProductIes)>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="imgThirtySize" src="~/Images/zip.png" alt="Alternate Text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IES-Data LDT-Data
+                </a>
+            }
+        </div>
+        <div class="col-xs-12 col-sm-1 col-md-1 co-lg-1">
+
+        </div>
+
+    </div>
+</div>

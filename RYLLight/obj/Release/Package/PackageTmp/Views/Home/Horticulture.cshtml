@@ -1,0 +1,45 @@
+﻿@model IEnumerable<RYLLight.Models.Product>
+
+@{
+    ViewBag.Title = "Horticulture";
+    string productDetailLinkStr = "/Products/ProductDetailInfo?productId=";
+}
+
+<div class="introductionBackground">
+    <div class="container">
+        <div class="visible-xs visible-sm hidden-md hidden-lg">
+            <img src="~/Images/growlightmobile.jpg" alt="Alternate Text" class="img-responsive" />
+        </div>
+        <div class="hidden-xs hidden-sm visible-md visible-lg">
+            <img src="~/Images/growlight.jpg" alt="Alternate Text" class="img-responsive" />
+        </div>
+    </div>
+    <br />
+</div>
+
+<br />
+
+<div class="container">
+    <div class="row">
+        @foreach (var p in Model)
+        {
+            productDetailLinkStr = "/Products/ProductDetailInfo?productId=" + p.Id;
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                <div class="productParameter desLightYellowBackground">
+                    <div class="pictureLight">
+                        <a href=@(productDetailLinkStr)>
+                            <img class="img-responsive hundredPercentWidthHeigth" src=@(p.ProductPicturePath) alt="Alternate Text" />
+                        </a>
+                    </div>
+                    <div class="desPadding">
+                        <p>@(p.ProductCode)</p>
+                        <p>@(p.ProductName)</p>
+                        <p>@(p.ProductPower)</p>
+                        <p>@(p.Dimming)</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<br />

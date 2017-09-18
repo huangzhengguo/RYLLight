@@ -1,0 +1,64 @@
+﻿@model RYLLight.Models.Carousel
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+}
+
+<h2>删除</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>轮播图</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            图片
+        </dt>
+
+        <dd>
+            <img class="img-responsive" src=@(Model.PicturePath) alt="Alternate Text" />
+        </dd>
+
+        <dt>
+            排序编号
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SortNumber)
+        </dd>
+
+        <dt>
+            关联产品ID
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PictureName)
+        </dd>
+
+        <dt>
+            轮播图标题
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PictureTitle)
+        </dd>
+
+        <dt>
+            轮播图描述
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PictureDes)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="删除" class="btn btn-default" /> |
+            @Html.ActionLink("返回列表", "Index")
+        </div>
+    }
+</div>

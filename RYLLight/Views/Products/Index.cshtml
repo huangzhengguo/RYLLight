@@ -1,0 +1,89 @@
+﻿@model IEnumerable<RYLLight.Models.Product>
+
+@{
+    ViewBag.Title = "产品列表";
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+}
+
+<h2>产品管理</h2>
+
+<p>
+    @Html.ActionLink("添加产品", "Create",new { sceneId = ViewBag.sceneId })
+</p>
+<table class="table table-bordered">
+    <tr>
+        <th>
+            电脑产品图片
+        </th>
+        <th>
+            手机产品图片
+        </th>
+        <th>
+            背景图片
+        </th>
+        <th>
+            产品类型
+        </th>
+        <th>
+            编码
+        </th>
+        <th>
+            名称
+        </th>
+        <th>
+            功率
+        </th>
+        <th>
+            流明
+        </th>
+        <th>
+            光角
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <img style="width:30px;height:30px" src=@item.ProductPicturePath />
+        </td>
+        <td>
+            <img style="width:30px;height:30px" src=@item.MobileProductPicturePath />
+        </td>
+        <td>
+            <img style="width:30px;height:30px" src=@item.ProductBackgroundImage />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductCode)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductPower)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductLumen)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LightingAngle)
+        </td>
+        <td>
+            @Html.ActionLink("编辑", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("详情", "Details", new { id=item.Id }) |
+            @Html.ActionLink("删除", "Delete", new { id=item.Id }) | 
+            @Html.ActionLink("添加预览图", "AddPreview", new { id = item.Id }) |
+            @Html.ActionLink("添加特点图标","AddFeatureIcon", new { id = item.Id}) |
+            @Html.ActionLink("添加规格图片", "AddDetailProducts", new { id = item.Id})
+        </td>
+    </tr>
+}
+
+</table>
+
+<div>
+    @Html.ActionLink("返回场景界面", "BackToSceneList")
+</div>

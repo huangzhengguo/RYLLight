@@ -1,0 +1,172 @@
+﻿@model IEnumerable<RYLLight.Models.Product>
+
+@{
+    ViewBag.Title = "Lighting";
+    string productDetailLinkStr = "/Products/ProductDetailInfo?productId=";
+}
+
+<div class="introductionBackground">
+    <div class="container">
+        <div class="visible-xs visible-sm hidden-md hidden-lg">
+            <img src="~/Images/lightsmobile.png" alt="Alternate Text" class="img-responsive" />
+        </div>
+        <div class="hidden-xs hidden-sm visible-md visible-lg">
+            <img src="~/Images/lights.png" alt="Alternate Text" class="img-responsive" />
+        </div>
+    </div>
+    <br />
+</div>
+
+<br />
+
+<div id="lightingContainer" class="container lightWthieColor">
+    @if (ViewBag.isShowButton == true)
+    {
+        <div class="btn-group" role="group" aria-label="...">
+            <button id="productButton" type="button" class="btn btn-default orageColor" onclick="productButtonClick();">&nbsp;&nbsp;Product&nbsp;&nbsp;</button>
+            <button id="applicationButton" type="button" class="btn btn-default lightgrayBackgroundButton" onclick="applicationButtonClick();">Application</button>
+        </div>
+        <br />
+        <br />
+    }
+    <!--产品列表-->
+    <div class="row">
+        @foreach (var p in Model)
+        {
+            <div class="col-xs-6 col-sm-4 col-md-3 col-lg-3">
+                <div class="productParameter desBlueBackground">
+                    <div class="pictureLight">
+                        <!--对于链接需要把产品的id传递过去，以获取到对应产品的详细信息-->
+                        @{
+                            productDetailLinkStr = @"/Products/ProductDetailInfo?productId=" + p.Id;
+                        }
+                        <a href=@(productDetailLinkStr)>
+                                <img class="img-responsive hundredWidthImg lightingProductImg" src=@p.ProductPicturePath alt="Alternate Text" />
+                                <img class="img-responsive hundredWidthImg displayNone lightingApplicationImg" src=@p.ApplicationScenePath alt="Alternate Text" />
+
+                        </a>
+                    </div>
+                    <div class="hidden-xs hidden-sm visible-md visible-lg">
+                        <div class="desPadding">
+                            <!--产品的简单描述-->
+                            @if (p.ProductName.IsEmpty())
+                            {
+                                <p><br /></p>
+                            }
+                            else
+                            {
+                                <p>@p.ProductCode</p>
+                            }
+
+                            @if (p.ProductName.IsEmpty())
+                            {
+                                <p><br /></p>
+                            }
+                            else
+                            {
+                                <p>@p.ProductName</p>
+                            }
+
+                            @if (p.ProductName.IsEmpty())
+                            {
+                                <p><br /></p>
+                            }
+                            else
+                            {
+                                <p>@p.ProductPower</p>
+                            }
+
+                            @if (p.ProductName.IsEmpty())
+                            {
+                                <p><br /></p>
+                            }
+                            else
+                            {
+                                <p>@p.ProductLumen</p>
+                            }
+
+                            @if (p.ProductName.IsEmpty())
+                            {
+                                <p><br /></p>
+                            }
+                            else
+                            {
+                                <p>@p.LightingAngle</p>
+                            }
+                        </div>
+                    </div>
+                    <div class="visible-xs visible-sm hidden-md hidden-lg">
+                        <div class="desPadding desPaddingMobileP">
+                            <!--产品的简单描述-->
+                            @if (p.ProductName.IsEmpty())
+                            {
+                                <p><br /></p>
+                            }
+                            else
+                            {
+                                <p>@p.ProductCode</p>
+                            }
+
+                            @if (p.ProductName.IsEmpty())
+                            {
+                                <p><br /></p>
+                            }
+                            else
+                            {
+                                <p>@p.ProductName</p>
+                            }
+
+                            @if (p.ProductName.IsEmpty())
+                            {
+                                <p><br /></p>
+                            }
+                            else
+                            {
+                                <p>@p.ProductPower</p>
+                            }
+
+                            @if (p.ProductName.IsEmpty())
+                            {
+                                <p><br /></p>
+                            }
+                            else
+                            {
+                                <p>@p.ProductLumen</p>
+                            }
+
+                            @if (p.ProductName.IsEmpty())
+                            {
+                                <p><br /></p>
+                            }
+                            else
+                            {
+                                <p>@p.LightingAngle</p>
+                            }
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+<script>
+    function productButtonClick() {
+        $("#productButton").css("color", "#f37044");
+        $("#productButton").css("background", "white");
+        $("#applicationButton").css("background", "lightgray");
+        $("#applicationButton").css("color", "black");
+        $(".lightingProductImg").css("display", "block");
+        $(".lightingApplicationImg").css("display", "none");
+    }
+    function applicationButtonClick() {
+        $("#applicationButton").css("color", "#f37044");
+        $("#applicationButton").css("background", "white");
+        $("#productButton").css("background", "lightgray");
+        $("#productButton").css("color", "black");
+        $(".lightingProductImg").css("display", "none");
+        $(".lightingApplicationImg").css("display", "block");
+    }
+</script>

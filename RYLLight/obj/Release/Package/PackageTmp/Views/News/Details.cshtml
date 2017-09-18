@@ -1,0 +1,114 @@
+﻿@model RYLLight.Models.News
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>News</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Title)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Title)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.SubTitle)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.SubTitle)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Thumbnail)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Thumbnail)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Picture)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Picture)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Content)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Content)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Author)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Author)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PublishDateTime)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PublishDateTime)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.EditDateTime)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.EditDateTime)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PublishOrNot)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PublishOrNot)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.SortNumber)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.SortNumber)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.NewsBackgroundImg)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.NewsBackgroundImg)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

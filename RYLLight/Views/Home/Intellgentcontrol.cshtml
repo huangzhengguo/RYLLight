@@ -1,0 +1,47 @@
+﻿@model IEnumerable<RYLLight.Models.Product>
+
+@{
+    ViewBag.Title = "Intellgentcontrol";
+    string productDetailLinkStr = "/Products/ProductDetailInfo?productId=";
+}
+
+<div class="introductionBackground">
+    <div class="container">
+        <div class="visible-xs visible-sm hidden-md hidden-lg">
+            <img src="~/Images/controlmobile.png" alt="Alternate Text" class="img-responsive" />
+        </div>
+        <div class="hidden-xs hidden-sm visible-md visible-lg">
+            <img src="~/Images/control.png" alt="Alternate Text" class="img-responsive" />
+        </div>
+    </div>
+    <br />
+</div>
+
+<br />
+
+<div class="container">
+    <div id="intellgentcontrolrow" class="row">
+        @foreach (var p in Model)
+        {
+            productDetailLinkStr = "/Products/ProductDetailInfo?productId=" + p.Id;
+            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3">
+                <div class="productParameter desBlueBackground">
+                    <div class="pictureLight">
+                        <a href=@(productDetailLinkStr)>
+                            <img class="img-responsive hundredWidthImg" src=@(p.ProductPicturePath) alt="Alternate Text" />
+                        </a>
+                    </div>
+                    <div class="desPadding">
+                        <p>@(p.ProductCode)</p>
+                        <p>@(p.ProductName)</p>
+                        <p>@(p.ProductPower)</p>
+                        <p>@(p.Dimming)</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<br />
+
+

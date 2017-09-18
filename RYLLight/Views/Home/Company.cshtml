@@ -1,0 +1,33 @@
+﻿@using RYLLight.Models
+
+@{
+    ViewBag.Title = "Company";
+    CompanyInfo companyInfo = (CompanyInfo)ViewBag.ComanyInfo;
+}
+
+    <div class="row blackCompanyBackground">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 container">
+            @if (companyInfo != null)
+            {
+                <img class="img-responsive" src=@(companyInfo.FreeOne) alt="Alternate Text" />
+            }
+        </div>
+    </div>
+
+    <div class="row whiteCompanyBackground">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 container">
+            @if (companyInfo != null)
+            {
+                <img class="img-responsive" src=@(companyInfo.FreeTwo) alt="Alternate Text" />
+            }
+        </div>
+    </div>
+
+    <div class="row lightgrayCompanyBackground">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 container">
+            @if (companyInfo != null)
+            {
+                <img class="img-responsive" src=@(companyInfo.FreeThree) alt="Alternate Text" />
+            }
+        </div>
+    </div>

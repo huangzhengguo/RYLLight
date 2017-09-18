@@ -1,0 +1,50 @@
+﻿@model IEnumerable<RYLLight.Models.ProductFeature>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+}
+
+<h2>产品特点图标管理</h2>
+
+<p>
+    @Html.ActionLink("添加特点图标", "Create",new { productId = ViewBag.productId})
+</p>
+<table class="table table-bordered">
+    <tr>
+        <th>
+            特点图标
+        </th>
+        <th>
+            特点图标名称
+        </th>
+        <th>
+            所属产品编码
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            <img style="width:30px;height:30px" src=@(item.ProductFeaturePicturePath) alt="Alternate Text" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ProductFeatureName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Product.ProductCode)
+        </td>
+        <td>
+            @Html.ActionLink("编辑", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("详情", "Details", new { id=item.Id }) |
+            @Html.ActionLink("删除", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+
+</table>
+
+<div>
+    @Html.ActionLink("返回产品列表", "BackToProductList",new { productId = ViewBag.productId })
+</div>

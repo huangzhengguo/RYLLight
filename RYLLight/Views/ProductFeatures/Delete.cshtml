@@ -1,0 +1,47 @@
+﻿@model RYLLight.Models.ProductFeature
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+}
+
+<h2>删除</h2>
+<div>
+    <h4>ProductFeature</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            产品编码
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Product.ProductCode)
+        </dd>
+
+        <dt>
+            名称
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductFeatureName)
+        </dd>
+
+        <dt>
+            图标
+        </dt>
+
+        <dd>
+            <img src=@(Model.ProductFeaturePicturePath) alt="Alternate Text" />
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="删除" class="btn btn-default" /> |
+            @Html.ActionLink("返回", "Index")
+        </div>
+    }
+</div>

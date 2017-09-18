@@ -1,0 +1,74 @@
+﻿@model RYLLight.Models.DetailProduct
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DetailProduct</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            产品编码
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Product.ProductCode)
+        </dd>
+
+        <dt>
+            产品名称
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductName)
+        </dd>
+
+        <dt>
+            子产品编码
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductCode)
+        </dd>
+
+        <dt>
+            功率
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductPower)
+        </dd>
+
+        <dt>
+            流明
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductLumen)
+        </dd>
+
+        <dt>
+            光角
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ProductColorAngle)
+        </dd>
+
+        <dt>
+            图片
+        </dt>
+        <dd>
+            <img src=@(Model.DetailProductPicturePath) alt="Alternate Text" />
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("编辑", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("返回", "Index")
+</p>
