@@ -24,7 +24,14 @@
                 productDetailLinkStr = @"/Products/ProductDetailInfo?productId=";
                 if (int.TryParse(item.PictureName, out productId))
                 {
-                    productDetailLinkStr = productDetailLinkStr + productId;
+                    if (productId == 0)
+                    {
+                        productDetailLinkStr = "#";
+                    }
+                    else
+                    {
+                        productDetailLinkStr = productDetailLinkStr + productId;
+                    }
                 }else
                 {
                     productDetailLinkStr = "#";

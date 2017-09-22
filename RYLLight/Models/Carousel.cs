@@ -25,7 +25,7 @@ namespace RYLLight.Models
         [Display(Name = "轮播图排序编号")]
         public int SortNumber { get; set; }
 
-        // 图片名称
+        // 关联产品id
         [Required(ErrorMessage = "请输入关联产品Id!")]
         [Display(Name = "轮播图关联产品id")]
         public string PictureName { get; set; }

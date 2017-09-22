@@ -20,10 +20,10 @@ namespace RYLLight
             );
 
             routes.MapRoute(
-                name: "manager",
-                url: "{controller}/{action}",
-                defaults: new { controller = "ProductManager", action = "Index" }
-                );
+               name: "manager",
+               url: "{controller}/{action}",
+               defaults: new { controller = "ProductManager", action = "Index" }
+               );
         }
     }
 }
