@@ -703,6 +703,7 @@ a:hover{
 .navbar-inverse {
     height: 75px;
     background-color: #f6f6f6;
+    border-color: #ffffff;
 }
 
 .navbar .container {

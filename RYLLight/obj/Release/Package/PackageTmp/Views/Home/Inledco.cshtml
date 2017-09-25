@@ -14,7 +14,7 @@
 }
 
 <!--轮播图部分-->
-<div class="blackBackground">
+<div class="blackBackground" style="margin-top: 20px">
     <div id="carousel-example-generic" class="container-fluid carseoulImg carousel slide" data-ride="carousel">
         <!--媒体查询-->
         <div class="hidden-xs hidden-sm visible-md visible-lg">
@@ -101,7 +101,9 @@
     </div>
 </div>
 
-<hr class="blackhr" />
+<!--去掉黑色横线
+    <hr class="blackhr" />
+    -->
 
 <!--新闻部分
     实现滑动到对应部分时获取到新闻内容，并且显示出来
@@ -202,8 +204,6 @@
         </div>
     }
 </div>
-
-<hr class="blackhr" />
 
 <!--场景对应产品:使用部分视图实现，实现通过ajax更新部分视图-->
 @RenderPage("~/Views/Home/ProductForSceneId.cshtml", ViewBag.sceneProducts);

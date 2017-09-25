@@ -347,4 +347,3 @@ D:\vsProject\Projects\RYLLight\RYLLight\obj\Release\RYLLight.Migrations.EditInpu
 D:\vsProject\Projects\RYLLight\RYLLight\obj\Release\RYLLight.Migrations.AddProductModelRequire.resources
 D:\vsProject\Projects\RYLLight\RYLLight\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
 D:\vsProject\Projects\RYLLight\RYLLight\obj\Release\RYLLight.Migrations.AddCompanyBackgroudImg.resources
-D:\vsProject\Projects\RYLLight\RYLLight\obj\Release\RYLLight.csprojResolveAssemblyReference.cache
