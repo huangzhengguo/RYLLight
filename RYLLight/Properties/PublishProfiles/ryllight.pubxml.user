@@ -133,10 +133,10 @@
       <publishTime>06/18/2015 20:19:46</publishTime>
     </File>
     <File Include="bin/RYLLight.dll">
-      <publishTime>09/25/2017 14:35:24</publishTime>
+      <publishTime>09/25/2017 16:16:54</publishTime>
     </File>
     <File Include="bin/RYLLight.pdb">
-      <publishTime>09/25/2017 14:35:24</publishTime>
+      <publishTime>09/25/2017 16:16:54</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
       <publishTime>01/28/2015 04:04:30</publishTime>
@@ -193,7 +193,7 @@
       <publishTime>09/18/2017 14:42:33</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>09/25/2017 14:35:13</publishTime>
+      <publishTime>09/25/2017 15:34:54</publishTime>
     </File>
     <File Include="Content/slick-theme.css">
       <publishTime>03/29/2017 10:04:31</publishTime>
@@ -370,7 +370,7 @@
       <publishTime>09/18/2017 14:42:34</publishTime>
     </File>
     <File Include="Views/Account/Login.cshtml">
-      <publishTime>09/18/2017 14:42:34</publishTime>
+      <publishTime>09/25/2017 15:41:17</publishTime>
     </File>
     <File Include="Views/Account/Register.cshtml">
       <publishTime>09/18/2017 14:42:34</publishTime>
@@ -610,7 +610,7 @@
       <publishTime>09/18/2017 14:42:34</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>09/25/2017 14:35:32</publishTime>
+      <publishTime>09/25/2017 16:17:03</publishTime>
     </File>
   </ItemGroup>
 </Project>

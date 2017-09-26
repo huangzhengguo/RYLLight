@@ -93,7 +93,7 @@ namespace RYLLight.Controllers
         // 编辑
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult EditUploadFile([Bind(Include = "Id,PicturePath,SortNumber,PictureName,PictureDes,PictureTitle")] Carousel carousel, HttpPostedFileBase[] file)
+        public ActionResult EditUploadFile([Bind(Include = "Id,PicturePath,MobilePicturePath,SortNumber,PictureName,PictureDes,PictureTitle")] Carousel carousel, HttpPostedFileBase[] file)
         {
             if (ModelState.IsValid)
             {

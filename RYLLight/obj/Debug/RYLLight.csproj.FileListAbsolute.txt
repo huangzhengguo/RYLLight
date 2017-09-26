@@ -416,7 +416,6 @@ D:\vsProject\Projects\RYLLight\RYLLight\bin\Microsoft.Owin.Security.Twitter.xml
 D:\vsProject\Projects\RYLLight\RYLLight\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\vsProject\Projects\RYLLight\RYLLight\bin\zh-Hans\EntityFramework.resources.dll
 D:\vsProject\Projects\RYLLight\RYLLight\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
-D:\vsProject\Projects\RYLLight\RYLLight\obj\Debug\RYLLight.csprojResolveAssemblyReference.cache
 D:\vsProject\Projects\RYLLight\RYLLight\obj\Debug\RYLLight.Migrations.InitialCreate.resources
 D:\vsProject\Projects\RYLLight\RYLLight\obj\Debug\RYLLight.Migrations.AddProductInputVoltage.resources
 D:\vsProject\Projects\RYLLight\RYLLight\obj\Debug\RYLLight.Migrations.AddProductInputPower.resources
