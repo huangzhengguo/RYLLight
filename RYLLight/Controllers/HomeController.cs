@@ -21,29 +21,30 @@ namespace RYLLight.Controllers
         /*
           旧版首页 
         */
-        //public ActionResult Index()
-        //{
-        //    // 传递轮播图数据
-        //    var carousel = from c in context.Carousels
-        //                   orderby c.SortNumber ascending
-        //                   select c;
+        public ActionResult Index()
+        {
+            // 传递轮播图数据
+            var carousel = from c in Context.Carousels
+                           where c.TypeProduct != TypeOfProduct.HORTICULTURE
+                           orderby c.SortNumber ascending
+                           select c;
 
-        //    // 提供默认的轮播图:防止从数据库中读取到的数据为0
-        //    if (carousel.Count() == 0)
-        //    {
-        //        return Content("缺少轮播图!");
-        //    }
+            // 提供默认的轮播图:防止从数据库中读取到的数据为0
+            if (carousel.Count() == 0)
+            {
+                return Content("缺少轮播图!");
+            }
 
-        //    // 传递产品数据
-        //    /*
-        //     排除23 24两个产品
-        //     */
-        //    ViewBag.products = (from p in context.Products
-        //                        where p.Id != 23 && p.Id != 24
-        //                        select p).ToList();
+            // 传递产品数据
+            /*
+             排除23 24两个产品
+             */
+            ViewBag.products = (from p in Context.Products
+                                where p.Id != 23 && p.Id != 24
+                                select p).ToList();
 
-        //    return View(carousel);
-        //}
+            return View(carousel);
+        }
 
         /**
          * 网站总体设计：
@@ -51,10 +52,20 @@ namespace RYLLight.Controllers
          * 2.分类首页，分别进入不同种类的灯具的首页，每个分类的首页展示的是不同种类的灯具
          */
         // 1.植物灯新版首页
-        public ActionResult Index()
+        public ActionResult PlantIndex()
         {
+            // 获取植物灯页面菜单
+            MenuList = (from menu in Context.Menus
+                        where menu.FreeOne == "Plant"
+                        orderby menu.Sortnumber ascending
+                        select menu).ToList<Menu>();
+            string productType = types.ToList<ProductTypes>()[(int)TypeOfProduct.HORTICULTURE].ProductTypeName;
+
+            ViewBag.MenuList = MenuList;
+
             // 1.获取轮播图，轮播图使用强类型，其它使用ViewBag传递
-            var carousel = from c in context.Carousels
+            var carousel = from c in Context.Carousels
+                           where c.TypeProduct == TypeOfProduct.HORTICULTURE
                            orderby c.SortNumber ascending
                            select c;
             if (carousel.Count() == 0)
@@ -63,15 +74,16 @@ namespace RYLLight.Controllers
             }
 
             // 2.获取新闻数据
-            var news = (from c in context.CompanyNews
-                        where c.PublishOrNot == true
+            var news = (from c in Context.CompanyNews
+                        where c.PublishOrNot == true && c.TypeProduct == TypeOfProduct.HORTICULTURE
                         orderby c.SortNumber
                         select c).Take(2).ToList();
 
             ViewBag.news = news;
 
             // 3.获取应用分类
-            var scenes = (from s in context.ProductScenes
+            var scenes = (from s in Context.ProductScenes
+                          where s.FreeOne == productType
                           select s).ToList();
             ViewBag.scenes = scenes;
 
@@ -79,7 +91,7 @@ namespace RYLLight.Controllers
             if (scenes.Count > 0)
             {
                 ProductScene productScene = scenes[0];
-                var sceneProducts = (from p in context.Products
+                var sceneProducts = (from p in Context.Products
                                      where p.ProductSceneId == productScene.Id
                                      select p).ToList();
 
@@ -88,6 +100,7 @@ namespace RYLLight.Controllers
 
             // 5.获取公司信息
             List<CompanyInfo> companyList = (from p in db.CompanyInfos
+                                             where p.TypeProduct == TypeOfProduct.HORTICULTURE
                                              select p).ToList();
             if (companyList.Count > 0)
             {

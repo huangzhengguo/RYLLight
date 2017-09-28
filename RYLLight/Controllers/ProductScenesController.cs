@@ -39,6 +39,7 @@ namespace RYLLight.Controllers
         // GET: ProductScenes/Create
         public ActionResult Create()
         {
+
             return View();
         }
 

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using System.ComponentModel.DataAnnotations;
 
 namespace RYLLight.Models
 {
@@ -26,6 +27,7 @@ namespace RYLLight.Models
         public virtual List<Product> Produts { get; set; }
 
         // 备用字段
+        [Display(Name = "场景分类")]
         public string FreeOne { get; set; }
         public string FreeTwo { get; set; }
         public string FreeThree { get; set; }

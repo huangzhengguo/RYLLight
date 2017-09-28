@@ -9,9 +9,39 @@ namespace RYLLight.Controllers
 {
     public abstract class RyllightController : Controller
     {
+        // 定义一个表示类型的数组
+        public IEnumerable<ProductTypes> types = new List<ProductTypes>
+        {
+            new ProductTypes
+            {
+                ProductTypeId = 0,
+                ProductTypeName = "商业照明"
+            },
+            new ProductTypes
+            {
+                ProductTypeId = 1,
+                ProductTypeName = "智能控制"
+            },
+            new ProductTypes
+            {
+                ProductTypeId = 2,
+                ProductTypeName = "植物照明"
+            },
+            new ProductTypes
+            {
+                ProductTypeId = 3,
+                ProductTypeName = "水族照明"
+            },
+            new ProductTypes
+            {
+                ProductTypeId = 4,
+                ProductTypeName = "其它类型"
+            }
+        };
+
         // 控制器基类:为了实现往模板页传递数据，比如logo，菜单数据等
         // 数据库上下文
-        public RyllightEntities context { get; set; }
+        public RyllightEntities Context { get; set; }
 
         // 布局页需要用到的数据
         // logo
@@ -22,14 +52,18 @@ namespace RYLLight.Controllers
 
         public RyllightController()
         {
-            context = new RyllightEntities();
+            // 各种灯具的分类
+            ViewBag.Types = types;
+
+            Context = new RyllightEntities();
 
             // 准备logo数据
             LogoList = new List<Logo>();
             // 获取设置为当前logo的图片：其中Active标记为True的logo
-            var logo = from r in context.Logos
+            var logo = from r in Context.Logos
                        where r.Active == true
                        select r;
+
             // logo只有一个传递第一个
             if (logo.Count() > 0)
             {
@@ -42,9 +76,10 @@ namespace RYLLight.Controllers
 
 
             // 准备菜单数据
-            MenuList = (from menu in context.Menus
-                       orderby menu.Sortnumber ascending
-                       select menu).ToList<Menu>();
+            MenuList = (from menu in Context.Menus
+                        where menu.FreeOne == "Index"
+                        orderby menu.Sortnumber ascending
+                        select menu).ToList<Menu>();
 
             if (MenuList.Count > 0)
             {

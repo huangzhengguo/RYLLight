@@ -47,7 +47,7 @@ namespace RYLLight.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,PicturePath,SortNumber,PictureName,PictureDes,PictureTitle")] Carousel carousel)
+        public ActionResult Create([Bind(Include = "Id,PicturePath,SortNumber,TypeProduct,PictureName,PictureDes,PictureTitle")] Carousel carousel)
         {
             if (ModelState.IsValid)
             {
@@ -93,7 +93,7 @@ namespace RYLLight.Controllers
         // 编辑
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult EditUploadFile([Bind(Include = "Id,PicturePath,MobilePicturePath,SortNumber,PictureName,PictureDes,PictureTitle")] Carousel carousel, HttpPostedFileBase[] file)
+        public ActionResult EditUploadFile([Bind(Include = "Id,PicturePath,MobilePicturePath,TypeProduct,SortNumber,PictureName,PictureDes,PictureTitle")] Carousel carousel, HttpPostedFileBase[] file)
         {
             if (ModelState.IsValid)
             {

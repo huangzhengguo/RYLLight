@@ -19,6 +19,9 @@
             场景展示图片
         </th>
         <th>
+            分类
+        </th>
+        <th>
             场景名称
         </th>
         <th>
@@ -34,6 +37,9 @@
         </td>
         <td>
             <img class="imgThirtySize" src=@(item.ScenePicturePath) alt="Alternate Text" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FreeOne)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.SceneName)

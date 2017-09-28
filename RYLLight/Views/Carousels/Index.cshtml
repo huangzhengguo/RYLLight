@@ -19,6 +19,9 @@
             手机图片
         </th>
         <th>
+            分类
+        </th>
+        <th>
             排序编号
         </th>
         <th>
@@ -40,6 +43,9 @@
         </td>
         <td>
             <img class="imgThirtySize" src=@(item.MobilePicturePath) alt="Alternate Text" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TypeProduct)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.SortNumber)

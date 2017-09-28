@@ -251,6 +251,18 @@
     <Compile Include="Migrations\201708300603258_AddCompanyBackgroudImg.Designer.cs">
       <DependentUpon>201708300603258_AddCompanyBackgroudImg.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709280649581_AddTypes.cs" />
+    <Compile Include="Migrations\201709280649581_AddTypes.Designer.cs">
+      <DependentUpon>201709280649581_AddTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709280752541_RenameTypes.cs" />
+    <Compile Include="Migrations\201709280752541_RenameTypes.Designer.cs">
+      <DependentUpon>201709280752541_RenameTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709280754292_RenameAllTypes.cs" />
+    <Compile Include="Migrations\201709280754292_RenameAllTypes.Designer.cs">
+      <DependentUpon>201709280754292_RenameAllTypes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Carousel.cs" />
@@ -267,6 +279,7 @@
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\ProductFeature.cs" />
     <Compile Include="Models\ProductScene.cs" />
+    <Compile Include="Models\ProductTypes.cs" />
     <Compile Include="Models\RyllightEntities.cs" />
     <Compile Include="Models\SaleContactInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -468,6 +481,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201708300603258_AddCompanyBackgroudImg.resx">
       <DependentUpon>201708300603258_AddCompanyBackgroudImg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709280649581_AddTypes.resx">
+      <DependentUpon>201709280649581_AddTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709280752541_RenameTypes.resx">
+      <DependentUpon>201709280752541_RenameTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709280754292_RenameAllTypes.resx">
+      <DependentUpon>201709280754292_RenameAllTypes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

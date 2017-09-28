@@ -16,6 +16,9 @@
             公司名称
         </th>
         <th>
+            分类
+        </th>
+        <th>
             公司地址
         </th>
         <th>
@@ -47,6 +50,9 @@
         <td>
             @Html.DisplayFor(modelItem => item.CompanyName)
         </td>
+        <th>
+            @Html.DisplayFor(modelItem => item.TypeProduct)
+        </th>
         <td>
             @Html.DisplayFor(modelItem => item.CompanyAddress)
         </td>

@@ -1,8 +1,11 @@
-﻿@model RYLLight.Models.ProductScene
+﻿@using RYLLight.Models;
+@model RYLLight.Models.ProductScene
 
 @{
     ViewBag.Title = "Create";
     Layout = "~/Views/Shared/_LayoutManager.cshtml";
+
+    IEnumerable<ProductTypes> types = ViewBag.Types;
 }
 
 <h2>应用场景创建</h2>
@@ -23,6 +26,17 @@
             <div class="col-md-10">
                 @Html.EditorFor(model => model.SceneName, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.SceneName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.FreeOne, new { @class = "control-label col-md-2" } )
+            <div class="col-md-10">
+                <!--
+                @Html.EditorFor(model => model.FreeOne, new { htmlAttributes = new { @class = "form-control" } })
+                -->
+                @Html.DropDownListFor(model => model.FreeOne, new SelectList(types, "ProductTypeName", "ProductTypeName"), new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.FreeOne,"",new { @class="text-danger"})
             </div>
         </div>
 

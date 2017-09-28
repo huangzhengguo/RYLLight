@@ -429,3 +429,6 @@ D:\vsProject\Projects\RYLLight\RYLLight\obj\Debug\RYLLight.csproj.CoreCompileInp
 D:\vsProject\Projects\RYLLight\RYLLight\obj\Debug\RYLLight.dll
 D:\vsProject\Projects\RYLLight\RYLLight\obj\Debug\RYLLight.pdb
 D:\vsProject\Projects\RYLLight\RYLLight\obj\Debug\RYLLight.Migrations.AddCompanyBackgroudImg.resources
+D:\vsProject\Projects\RYLLight\RYLLight\obj\Debug\RYLLight.Migrations.AddTypes.resources
+D:\vsProject\Projects\RYLLight\RYLLight\obj\Debug\RYLLight.Migrations.RenameTypes.resources
+D:\vsProject\Projects\RYLLight\RYLLight\obj\Debug\RYLLight.Migrations.RenameAllTypes.resources

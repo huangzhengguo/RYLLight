@@ -6,6 +6,10 @@
 <div id="productSceneProduct">
     @{
         int index = 0;
+        if (productList == null)
+        {
+            return;
+        }
         foreach (var p in productList)
         {
             <div class="productScenePadding row text-center" style="background-image:url(@p.ProductBackgroundImage)">

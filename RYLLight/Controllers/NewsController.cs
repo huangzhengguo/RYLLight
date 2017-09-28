@@ -47,7 +47,7 @@ namespace RYLLight.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Id,Title,SubTitle,Content,Author,PublishDateTime,EditDateTime,PublishOrNot,SortNumber")] News news,
+        public ActionResult Create([Bind(Include = "Id,Title,SubTitle,TypeProduct,Content,Author,PublishDateTime,EditDateTime,PublishOrNot,SortNumber")] News news,
             HttpPostedFileBase[] file)
         {   
             // 上传文件

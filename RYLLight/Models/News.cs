@@ -66,5 +66,9 @@ namespace RYLLight.Models
         [Display(Name = "新闻背景图片")]
         [Required(ErrorMessage = "请输入背景图片！")]
         public string NewsBackgroundImg { get; set; }
+
+        // 分类
+        [Display(Name = "分类")]
+        public TypeOfProduct TypeProduct { get; set; }
     }
 }

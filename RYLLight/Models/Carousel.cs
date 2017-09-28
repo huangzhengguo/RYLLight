@@ -20,7 +20,7 @@ namespace RYLLight.Models
         [Required(ErrorMessage = "请输入手机版轮播图!")]
         public string MobilePicturePath { get; set; }
 
-        // 关联产品id
+        // 排序编号
         [Required(ErrorMessage = "请输入排序编号!")]
         [Display(Name = "轮播图排序编号")]
         public int SortNumber { get; set; }
@@ -39,5 +39,9 @@ namespace RYLLight.Models
         [Required(ErrorMessage = "请输入标题!")]
         [Display(Name = "轮播图标题")]
         public string PictureTitle { get; set; }
+
+        // 分类
+        [Display(Name = "分类")]
+        public TypeOfProduct TypeProduct { get; set; }
     }
 }

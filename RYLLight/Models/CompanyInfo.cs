@@ -47,5 +47,9 @@ namespace RYLLight.Models
         // 背景图片
         [Display(Name = "背景图片")]
         public string CompanyBackgroundImg { get; set; }
+
+        // 分类
+        [Display(Name = "分类")]
+        public TypeOfProduct TypeProduct { get; set; }
     }
 }
