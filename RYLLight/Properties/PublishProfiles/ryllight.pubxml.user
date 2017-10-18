@@ -133,10 +133,10 @@
       <publishTime>06/18/2015 20:19:46</publishTime>
     </File>
     <File Include="bin/RYLLight.dll">
-      <publishTime>09/28/2017 17:27:50</publishTime>
+      <publishTime>10/17/2017 15:52:43</publishTime>
     </File>
     <File Include="bin/RYLLight.pdb">
-      <publishTime>09/28/2017 17:27:50</publishTime>
+      <publishTime>10/17/2017 15:52:43</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
       <publishTime>01/28/2015 04:04:30</publishTime>
@@ -193,7 +193,7 @@
       <publishTime>09/18/2017 14:42:33</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>09/25/2017 15:34:54</publishTime>
+      <publishTime>10/12/2017 17:04:22</publishTime>
     </File>
     <File Include="Content/slick-theme.css">
       <publishTime>03/29/2017 10:04:31</publishTime>
@@ -457,7 +457,7 @@
       <publishTime>09/22/2017 09:35:32</publishTime>
     </File>
     <File Include="Views/Home/Inledco.cshtml">
-      <publishTime>09/28/2017 15:36:48</publishTime>
+      <publishTime>10/17/2017 17:01:26</publishTime>
     </File>
     <File Include="Views/Home/Intellgentcontrol.cshtml">
       <publishTime>09/18/2017 14:42:34</publishTime>
@@ -511,7 +511,7 @@
       <publishTime>09/18/2017 14:42:34</publishTime>
     </File>
     <File Include="Views/News/Edit.cshtml">
-      <publishTime>09/28/2017 16:27:29</publishTime>
+      <publishTime>10/17/2017 16:03:50</publishTime>
     </File>
     <File Include="Views/News/Index.cshtml">
       <publishTime>09/28/2017 17:02:22</publishTime>
@@ -589,10 +589,10 @@
       <publishTime>09/18/2017 14:42:34</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>09/18/2017 14:42:34</publishTime>
+      <publishTime>10/17/2017 17:24:02</publishTime>
     </File>
     <File Include="Views/Shared/_Layout1.cshtml">
-      <publishTime>09/28/2017 09:17:07</publishTime>
+      <publishTime>10/17/2017 17:27:40</publishTime>
     </File>
     <File Include="Views/Shared/_LayoutManager.cshtml">
       <publishTime>09/18/2017 14:42:34</publishTime>
@@ -610,7 +610,7 @@
       <publishTime>09/18/2017 14:42:34</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>09/28/2017 17:27:56</publishTime>
+      <publishTime>10/17/2017 15:52:45</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -432,3 +432,4 @@ D:\vsProject\Projects\RYLLight\RYLLight\obj\Debug\RYLLight.Migrations.AddCompany
 D:\vsProject\Projects\RYLLight\RYLLight\obj\Debug\RYLLight.Migrations.AddTypes.resources
 D:\vsProject\Projects\RYLLight\RYLLight\obj\Debug\RYLLight.Migrations.RenameTypes.resources
 D:\vsProject\Projects\RYLLight\RYLLight\obj\Debug\RYLLight.Migrations.RenameAllTypes.resources
+D:\vsProject\Projects\RYLLight\RYLLight\obj\Debug\RYLLight.csprojResolveAssemblyReference.cache

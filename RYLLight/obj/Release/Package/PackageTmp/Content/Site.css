@@ -695,6 +695,7 @@ a:hover{
     text-align: left;
 }
 
+/*
 .navbar-inverse .navbar-nav > li > a {
     color: #000000;
     font-size: 15px;
@@ -713,7 +714,7 @@ a:hover{
 .navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
     color: #f37044;
 }
-    
+*/
 .companyIntroducePadding{
     padding: 30px;
 }
