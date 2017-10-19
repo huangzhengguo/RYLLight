@@ -350,4 +350,3 @@ D:\vsProject\Projects\RYLLight\RYLLight\obj\Release\RYLLight.csproj.GenerateReso
 D:\vsProject\Projects\RYLLight\RYLLight\obj\Release\RYLLight.csproj.CoreCompileInputs.cache
 D:\vsProject\Projects\RYLLight\RYLLight\obj\Release\RYLLight.dll
 D:\vsProject\Projects\RYLLight\RYLLight\obj\Release\RYLLight.pdb
-D:\vsProject\Projects\RYLLight\RYLLight\obj\Release\RYLLight.csprojResolveAssemblyReference.cache

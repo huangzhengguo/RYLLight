@@ -40,7 +40,7 @@ namespace RYLLight.Controllers
              排除23 24两个产品
              */
             ViewBag.products = (from p in Context.Products
-                                where p.Id != 23 && p.Id != 24
+                                where p.Id != 23 && p.Id != 24 && p.ProductType != TypeOfProduct.HORTICULTURE
                                 select p).ToList();
 
             return View(carousel);

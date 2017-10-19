@@ -115,77 +115,83 @@
 <!--新闻部分
     实现滑动到对应部分时获取到新闻内容，并且显示出来
     -->
-@{
-    News newsModel;
-    if (newsList != null && newsList.Count() > 0)
-    {
-        newsModel = newsList[0];
+<div class="hidden-xs hidden-sm visible-md visible-lg">
+    @{
+        News newsModel;
+        if (newsList != null && newsList.Count() > 0)
+        {
+            newsModel = newsList[0];
 
-        <div id="companyNews" style="background-image:url('@(newsModel.NewsBackgroundImg)');background-size:cover;color:#000000;display:block">
-            <!--新闻背景-->
-            <div class="row">
-                @{
-                    int newsIndex = 0;
-                    foreach (News news in newsList)
-                    {
-                        if (newsIndex++ == 0)
-                        {
-                            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 text-left newsPadding text-left">
-                                <p id="currenNewContent">@news.Content</p>
-                            </div>
-                            <div class="col-md-1 col-lg-1">
+            <div id="companyNews" class="container-fluid" style="background-image:url('@(newsModel.NewsBackgroundImg)');background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;">
+                <!--新闻背景-->
+                <div class="container">
+                    <div class="row">
+                        @{
+                            int newsIndex = 0;
+                            foreach (News news in newsList)
+                            {
+                                if (newsIndex++ == 0)
+                                {
+                                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 text-left newsPadding text-left" style="padding-left: 0px">
+                                        <pre id="currenNewContent" class="preDes">@news.Content</pre>
+                                    </div>
+                                    <div class="col-md-1 col-lg-1">
 
-                            </div>
-                            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 newsPadding" style="padding-right: 10px">
-                                <img id=@("newsImg" + newsIndex.ToString()) src=@news.Picture class="img-responsive disInlineBlockWithoutSize" style="float: right" />
-                            </div>
-                        }
-                        else
-                        {
-                            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 newsPadding" style="padding-left: 10px">
-                                <img id=@("newsImg" + newsIndex.ToString()) src=@news.Picture class="img-responsive disInlineBlockWithoutSize" />
-                            </div>
-                        }
-                    }
-                }
-            </div>
-        </div>
-                    if (newsList.Count() > 1)
-                    {
-                        newsModel = newsList[1];
-                        <div id="companyNews1" style="background-image:url('@(newsModel.NewsBackgroundImg)');background-size:cover;color:#000000;display:none">
-                            <!--新闻背景-->
-                            <div class="row">
-                                @{
-                                    int newsIndex1 = 0;
-                                    foreach (News news in newsList)
-                                    {
-                                        if (newsIndex1++ == 0)
-                                        {
-                                            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 text-left newsPadding text-left" style="padding-bottom: 0px">
-                                                <p id="currenNewContent">@newsModel.Content</p>
-                                            </div>
-                                            <div class="col-md-1 col-lg-1">
-
-                                            </div>
-                                            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 newsPadding" style="padding-right: 10px">
-                                                <img id=@("newsImg" + (newsIndex1 + 2).ToString()) src=@news.Picture class="img-responsive disInlineBlockWithoutSize" style="float: right" />
-                                            </div>
-                                        }
-                                        else
-                                        {
-                                            <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 newsPadding" style="padding-left: 10px">
-                                                <img id=@("newsImg" + (newsIndex1 + 2).ToString()) src=@news.Picture class="img-responsive disInlineBlockWithoutSize" />
-                                            </div>
-                                        }
-                                    }
+                                    </div>
+                                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 newsPadding" style="padding-right: 10px">
+                                        <img id=@("newsImg" + newsIndex.ToString()) src=@news.Picture class="img-responsive disInlineBlockWithoutSize" style="float: right" />
+                                    </div>
                                 }
-                            </div>
-                        </div>
-                                        }
-                                    }
-}
+                                else
+                                {
+                                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 newsPadding" style="padding-left: 10px">
+                                        <img id=@("newsImg" + newsIndex.ToString()) src=@news.Picture class="img-responsive disInlineBlockWithoutSize" />
+                                    </div>
+                                }
+                            }
+                        }
+                    </div>
+                </div>
+            </div>
+                            if (newsList.Count() > 1)
+                            {
+                                newsModel = newsList[1];
+                                <div id="companyNews1" style="background-image:url('@(newsModel.NewsBackgroundImg)');background-repeat:no-repeat; background-size:100% 100%;-moz-background-size:100% 100%;display:none">
+                                    <!--新闻背景-->
+                                    <div class="container">
+                                        <div class="row">
+                                            @{
+                                                int newsIndex1 = 0;
+                                                foreach (News news in newsList)
+                                                {
+                                                    if (newsIndex1++ == 0)
+                                                    {
+                                                        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 text-left newsPadding text-left" style="padding-bottom: 0px">
+                                                            <pre id="currenNewContent" class="preDes">@newsModel.Content</pre>
+                                                        </div>
+                                                        <div class="col-md-1 col-lg-1">
 
+                                                        </div>
+                                                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 newsPadding" style="padding-right: 10px">
+                                                            <img id=@("newsImg" + (newsIndex1 + 2).ToString()) src=@news.Picture class="img-responsive disInlineBlockWithoutSize" style="float: right" />
+                                                        </div>
+                                                    }
+                                                    else
+                                                    {
+                                                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 newsPadding" style="padding-left: 10px">
+                                                            <img id=@("newsImg" + (newsIndex1 + 2).ToString()) src=@news.Picture class="img-responsive disInlineBlockWithoutSize" />
+                                                        </div>
+                                                    }
+                                                }
+                                            }
+                                        </div>
+                                    </div>
+                                </div>
+                                                    }
+                                                }
+    }
+
+</div>
 <!--应用场景分类部分
     这里的点击事件应该使用Ajax技术
     替换id为productSceneProduct的div的内容
@@ -196,9 +202,12 @@
             @{
                 if (productSceneList.Count() > 0)
                 {
-                    foreach (var scene in productSceneList)
-                    {
-                        @Ajax.ImageActionLink(
+                    // 大屏幕部分
+                    <div class="hidden-xs hidden-sm visible-md visible-lg">
+                        @{
+                            foreach (var scene in productSceneList)
+                            {
+                                @Ajax.ImageActionLink(
                                 scene.ScenePicturePath,
                                 scene.SceneName,
                                 scene.SceneName,
@@ -212,22 +221,52 @@
                                      htmlAttributes: new
                                      {
                                          @class = "disInlineBlock"
-                                     });
-                    }
-                }
+                                     })
+                            }
+                        }
+                    </div>
+
+                    // 小屏幕部分
+                    <div class="visible-xs visible-sm hidden-md hidden-lg">
+                        <div class="row">
+                            @{
+                                foreach (var scene in productSceneList)
+                                {
+                                    <div class="col-xs-4 col-sm-4">
+                                        @Ajax.ImageActionLink(
+                                        scene.ScenePicturePath,
+                                        scene.SceneName,
+                                        scene.SceneName,
+                                        "GetProductWithScenedId",
+                                            new { sceneId = scene.Id },
+                                            new AjaxOptions
+                                            {
+                                                UpdateTargetId = "productSceneProduct",
+                                                InsertionMode = InsertionMode.Replace
+                                            },
+                                            htmlAttributes: new
+                                            {
+                                                @class = "smalldisInlineBlock"
+                                            })
+                                    </div>
+                                 }
+                            }
+                        </div>
+                    </div>
+                 }
             }
         </div>
     }
 </div>
 
 <!--场景对应产品:使用部分视图实现，实现通过ajax更新部分视图-->
-@RenderPage("~/Views/Home/ProductForSceneId.cshtml", ViewBag.sceneProducts);
+@RenderPage("~/Views/Home/ProductForSceneId.cshtml", ViewBag.sceneProducts)
 
 <!--公司介绍部分-->
 @{
     if (companyInfo != null)
     {
-        <div id="companyIntroduce" class="container companyIntroducePadding" style=@("background-image:url('" + companyInfo.CompanyBackgroundImg + "')")>
+        <div id="companyIntroduce" class="companyIntroducePadding" style=@("background-image:url('" + companyInfo.CompanyBackgroundImg + "');margin-bottom:50px")>
             <div class="row text-center">
                 <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2 disInlineBlockWithoutSize">
                     <img src=@(companyInfo.FreeOne) class="img-responsive" />

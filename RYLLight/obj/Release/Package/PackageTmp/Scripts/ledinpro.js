@@ -18,16 +18,17 @@
     });
 
     // 新闻切换事件
-    for (var j = 0; j < 4; j++) {
+    for (var j = 1; j < 5; j++) {
+        
         if (j % 2 == 0) {
-            $("#newsImg" + j).mousemove(function (e) {
+            $("#newsImg" + j).mouseenter(function (e) {
                 switchNewsImg(false)
             });
             $("#newsImg" + j).click(function (e) {
                 switchNewsImg(false)
             });
         } else {
-            $("#newsImg" + j).mousemove(function (e) {
+            $("#newsImg" + j).mouseenter(function (e) {
                 switchNewsImg(true)
             });
             $("#newsImg" + j).click(function (e) {
@@ -35,8 +36,39 @@
             });
         }
 
+        if (j == 1 || j == 4) {
+            $("#newsImg" + j).mouseenter(function (e) {
+                $(this).animate({
+                    width: this.width + 10 + "px",
+                    height: this.height + 20 + "px"
+                }, 100);
+            });
+
+            $("#newsImg" + j).mouseout(function (e) {
+                $(this).animate({
+                    width: this.width - 10 + "px",
+                    height: this.height - 20 + "px"
+                }, 100);
+            });
+        } else {
+            var k = 0
+            if (j == 2) {
+                k = 4
+            } else {
+                k = 1
+            }
+
+            $("#newsImg" + j).mouseenter(function (e) {
+                $("newsImg" + k).animate({
+                    width: $("newsImg" + k).width + 10 + "px",
+                    height: $("newsImg" + k).height + 20 + "px"
+                }, 100);
+            });
+        }
+
     }
 
+    // 切换新闻背景及文字描述
     function switchNewsImg(isFirst) {
         if (isFirst == true) {
             // 切换到第二个
@@ -54,7 +86,7 @@
         $(this).tab('show')
     });
 
-    // 点击场景显示对应场景下的产品
+    // 新闻图片动画
 })
 
 
