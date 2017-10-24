@@ -439,6 +439,8 @@
     <Content Include="Views\News\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutManager.cshtml" />
     <Content Include="Views\Home\ProductForSceneId.cshtml" />
+    <Content Include="Views\Home\InledcoIndex.cshtml" />
+    <Content Include="Views\Shared\_Layout2.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

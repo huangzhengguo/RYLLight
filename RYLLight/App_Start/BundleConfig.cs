@@ -26,8 +26,11 @@ namespace RYLLight
             // 轮播展示产品js
             bundles.Add(new ScriptBundle("~/bundles/owl").Include(
                 "~/Scripts/owl.carousel.js",
-                "~/Scripts/ledinpro.js",
                 "~/Scripts/glide.js"));
+
+            // 新界面js
+            bundles.Add(new ScriptBundle("~/bundles/plant").Include(
+                "~/Scripts/ledinpro.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",

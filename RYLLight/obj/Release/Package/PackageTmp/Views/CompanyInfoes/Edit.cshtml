@@ -12,6 +12,8 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
+        @Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/jqueryval")
         <h4>公司信息</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
@@ -60,7 +62,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.CompanyDescription, new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.CompanyDescription, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.TextAreaFor(model => model.CompanyDescription, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.CompanyDescription, "", new { @class = "text-danger" })
             </div>
         </div>
@@ -68,7 +70,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.FreeOne, new { @class = "control-label col-md-2" })
             @Html.HiddenFor(model => model.FreeOne)
-            <img src=@(Model.FreeOne) alt="Alternate Text" />
+            <img src=@(Model.FreeOne) alt="Alternate Text"  style="width: 300px;height:300px"/>
             <div class="col-md-10">
                 <input type="file" name="file" />
             </div>
@@ -77,7 +79,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.FreeTwo, new { @class = "control-label col-md-2" })
             @Html.HiddenFor(model=>model.FreeTwo)
-            <img src=@(Model.FreeTwo) alt="Alternate Text" />
+            <img src=@(Model.FreeTwo) alt="Alternate Text" style="width: 300px;height:300px" />
             <div class="col-md-10">
                 <input type="file" name="file" />
             </div>
@@ -86,7 +88,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.FreeThree, new { @class = "control-label col-md-2" })
             @Html.HiddenFor(model => model.FreeThree)
-            <img src=@(Model.FreeThree) alt="Alternate Text" />
+            <img src=@(Model.FreeThree) alt="Alternate Text"  style="width: 300px;height:300px"/>
             <div class="col-md-10">
                 <input type="file" name="file" />
             </div>
@@ -95,7 +97,7 @@
         <div class="form-group">
             @Html.LabelFor(model => model.CompanyBackgroundImg, new { @class = "control-label col-md-2" })
             @Html.HiddenFor(model => model.CompanyBackgroundImg)
-            <img src=@(Model.CompanyBackgroundImg) alt="Alternate Text" />
+            <img src=@(Model.CompanyBackgroundImg) alt="Alternate Text"  style="width: 300px;height:300px"/>
             <div class="col-md-10">
                 <input type="file" name="file" />
             </div>

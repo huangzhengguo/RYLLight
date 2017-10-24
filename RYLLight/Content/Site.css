@@ -641,7 +641,7 @@ a:hover{
 }
 
 .navbar-inverse .navbar-nav > li > a:hover {
-    color: #f37044;
+        color: #f37044;
 }
 
 /*总体介绍*/
@@ -722,6 +722,7 @@ a:hover{
     color: #f37044;
 }
 */
+
 .companyIntroducePadding{
     padding: 30px;
 }
@@ -764,4 +765,11 @@ a:hover{
 .imageSize500 {
     width: 500px;
     height: 500px;
+}
+
+.inledcoBodyAColor {
+}
+
+.inledcoBodyAColor a {
+    color: #000000;
 }

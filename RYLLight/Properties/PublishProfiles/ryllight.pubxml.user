@@ -133,10 +133,10 @@
       <publishTime>06/18/2015 20:19:46</publishTime>
     </File>
     <File Include="bin/RYLLight.dll">
-      <publishTime>10/19/2017 13:40:08</publishTime>
+      <publishTime>10/23/2017 20:24:18</publishTime>
     </File>
     <File Include="bin/RYLLight.pdb">
-      <publishTime>10/19/2017 13:40:08</publishTime>
+      <publishTime>10/23/2017 20:24:18</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
       <publishTime>01/28/2015 04:04:30</publishTime>
@@ -193,7 +193,7 @@
       <publishTime>09/18/2017 14:42:33</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>10/19/2017 13:39:58</publishTime>
+      <publishTime>10/23/2017 10:22:22</publishTime>
     </File>
     <File Include="Content/slick-theme.css">
       <publishTime>03/29/2017 10:04:31</publishTime>
@@ -331,7 +331,7 @@
       <publishTime>09/18/2017 14:42:34</publishTime>
     </File>
     <File Include="Scripts/ledinpro.js">
-      <publishTime>10/19/2017 11:08:52</publishTime>
+      <publishTime>10/23/2017 18:09:35</publishTime>
     </File>
     <File Include="Scripts/modernizr-2.6.2.js">
       <publishTime>09/18/2017 14:42:34</publishTime>
@@ -406,7 +406,7 @@
       <publishTime>09/28/2017 15:51:39</publishTime>
     </File>
     <File Include="Views/CompanyInfoes/Create.cshtml">
-      <publishTime>09/28/2017 17:24:34</publishTime>
+      <publishTime>10/23/2017 17:47:26</publishTime>
     </File>
     <File Include="Views/CompanyInfoes/Delete.cshtml">
       <publishTime>09/18/2017 14:42:34</publishTime>
@@ -415,7 +415,7 @@
       <publishTime>09/18/2017 14:42:34</publishTime>
     </File>
     <File Include="Views/CompanyInfoes/Edit.cshtml">
-      <publishTime>09/28/2017 15:19:50</publishTime>
+      <publishTime>10/23/2017 18:05:44</publishTime>
     </File>
     <File Include="Views/CompanyInfoes/Index.cshtml">
       <publishTime>09/28/2017 16:27:01</publishTime>
@@ -457,7 +457,10 @@
       <publishTime>09/22/2017 09:35:32</publishTime>
     </File>
     <File Include="Views/Home/Inledco.cshtml">
-      <publishTime>10/19/2017 13:59:56</publishTime>
+      <publishTime>10/23/2017 18:50:07</publishTime>
+    </File>
+    <File Include="Views/Home/InledcoIndex.cshtml">
+      <publishTime>10/24/2017 08:37:50</publishTime>
     </File>
     <File Include="Views/Home/Intellgentcontrol.cshtml">
       <publishTime>09/18/2017 14:42:34</publishTime>
@@ -466,7 +469,7 @@
       <publishTime>09/18/2017 14:42:34</publishTime>
     </File>
     <File Include="Views/Home/ProductForSceneId.cshtml">
-      <publishTime>10/19/2017 13:32:51</publishTime>
+      <publishTime>10/23/2017 18:30:02</publishTime>
     </File>
     <File Include="Views/Logoes/Create.cshtml">
       <publishTime>09/18/2017 14:42:34</publishTime>
@@ -559,7 +562,7 @@
       <publishTime>09/18/2017 14:42:34</publishTime>
     </File>
     <File Include="Views/Products/Edit.cshtml">
-      <publishTime>09/18/2017 14:42:34</publishTime>
+      <publishTime>10/20/2017 10:20:02</publishTime>
     </File>
     <File Include="Views/Products/Index.cshtml">
       <publishTime>09/18/2017 14:42:34</publishTime>
@@ -592,7 +595,10 @@
       <publishTime>10/19/2017 13:53:19</publishTime>
     </File>
     <File Include="Views/Shared/_Layout1.cshtml">
-      <publishTime>10/19/2017 13:53:33</publishTime>
+      <publishTime>10/23/2017 20:10:20</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout2.cshtml">
+      <publishTime>10/23/2017 18:59:44</publishTime>
     </File>
     <File Include="Views/Shared/_LayoutManager.cshtml">
       <publishTime>09/18/2017 14:42:34</publishTime>
@@ -610,7 +616,7 @@
       <publishTime>09/18/2017 14:42:34</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>10/19/2017 13:40:13</publishTime>
+      <publishTime>10/23/2017 20:24:21</publishTime>
     </File>
   </ItemGroup>
 </Project>

@@ -18,10 +18,16 @@ namespace RYLLight.Controllers
 
         }
 
+        // 网站总入口
+        public ActionResult Index()
+        {
+            return View("InledcoIndex");
+        }
+
         /*
           旧版首页 
         */
-        public ActionResult Index()
+        public ActionResult InledcoIndex()
         {
             // 传递轮播图数据
             var carousel = from c in Context.Carousels
@@ -43,7 +49,7 @@ namespace RYLLight.Controllers
                                 where p.Id != 23 && p.Id != 24 && p.ProductType != TypeOfProduct.HORTICULTURE
                                 select p).ToList();
 
-            return View(carousel);
+            return View("Index",carousel);
         }
 
         /**
