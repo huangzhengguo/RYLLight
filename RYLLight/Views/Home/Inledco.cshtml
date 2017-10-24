@@ -119,7 +119,7 @@
             newsModel = newsList[0];
 
             <!--新闻背景-->
-            <div id="companyNews" class="container-fluid" style="background-image:url('@(newsModel.NewsBackgroundImg)');background-repeat:no-repeat; background-size:100% auto;padding-bottom: 4%">
+            <div id="companyNews" class="container-fluid" style="background-image:url('@(newsModel.NewsBackgroundImg)');background-repeat:no-repeat; background-size:100% auto">
                 <div class="container">
                     <div class="row">
                         @{
@@ -135,13 +135,18 @@
 
                                     </div>
                                     <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 newsPadding" style="padding-right: 0px;padding-top: 60px;">
-                                        <img id=@("newsImg" + newsIndex.ToString()) src=@news.Picture class="img-responsive disInlineBlockWithoutSize" style="float: right;width: 75%" />
+                                        <div style="float: right;width: 75%">
+                                            <img id=@("newsImg" + newsIndex.ToString()) src=@news.Picture class="img-responsive disInlineBlockWithoutSize" />
+                                            <div style="bottom: 20px; height: 20px; background-color: #f37044; opacity: 0.75;position: relative">
+
+                                            </div>
+                                        </div>
                                     </div>
                                 }
                                 else
                                 {
                                     <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 newsPadding" style="padding-right: 0px;padding-top: 60px;">
-                                        <img id=@("newsImg" + newsIndex.ToString()) src=@news.Picture class="img-responsive disInlineBlockWithoutSize" style="width: 75%" />
+                                        <img id=@("newsImg" + newsIndex.ToString()) src=@news.Picture class="img-responsive disInlineBlockWithoutSize" style="width: 75%; float: right" />
                                     </div>
                                 }
                             }
@@ -175,7 +180,12 @@
                                                     else
                                                     {
                                                         <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 newsPadding" style="padding-right: 0px;padding-top: 60px;">
-                                                            <img id=@("newsImg" + (newsIndex1 + 2).ToString()) src=@news.Picture class="img-responsive disInlineBlockWithoutSize" style="width: 75%" />
+                                                            <div style="width: 75%;float: right">
+                                                                <img id=@("newsImg" + (newsIndex1 + 2).ToString()) src=@news.Picture class="img-responsive disInlineBlockWithoutSize" />
+                                                                <div style="bottom: 20px; height: 20px; background-color: #f37044; opacity: 0.75; position: relative">
+
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     }
                                                 }
@@ -262,7 +272,7 @@
 @{
     if (companyInfo != null)
     {
-        <div id="companyIntroduce" class="companyIntroducePadding container-fluid" style="background-image:url('@(companyInfo.CompanyBackgroundImg)');background-repeat:no-repeat; background-size:100% auto;padding-bottom: 3%">
+        <div id="companyIntroduce" class="companyIntroducePadding container-fluid" style="background-image:url('@(companyInfo.CompanyBackgroundImg)');background-repeat:no-repeat; background-size:100% auto;padding-bottom: 100px;padding-top: 100px">
             <div class="container hidden-xs hidden-sm visible-md visible-lg">
                 <div class="row text-center">
                     <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 disInlineBlockWithoutSize" style="padding: 0 0 0 30px">
