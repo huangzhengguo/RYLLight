@@ -51,6 +51,12 @@ namespace RYLLight.Models
             Database.SetInitializer<RyllightEntities>(new DropCreateDatabaseIfModelChanges<RyllightEntities>());
         }*/
 
+        private const string connectionString = @"server=HUANGZHENGGUO\MYSQLSERVER2008;database=ledinpro;Trusted_Connection=true";
+        public RyllightEntities() : base(connectionString)
+        {
+
+        }
+
         // logo数据 
         public DbSet<Logo> Logos { get; set; }
 
