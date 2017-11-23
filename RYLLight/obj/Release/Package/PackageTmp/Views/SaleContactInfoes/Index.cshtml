@@ -1,0 +1,69 @@
+﻿@model IEnumerable<RYLLight.Models.SaleContactInfo>
+
+@{
+    ViewBag.Title = "新建信息";
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+}
+
+
+<p>
+    @Html.ActionLink("添加", "Create")
+</p>
+<table class="table table-bordered table-striped">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NickName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MailBox)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Skype)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FreeOne)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.FreeTwo)
+        </th>
+        <th></th>
+    </tr>
+    
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NickName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MailBox)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Skype)
+        </td>
+        <td>
+            <img src=@item.FreeOne style="width: 100px; height: 100px" />
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FreeTwo)
+        </td>
+        <td>
+            @Html.ActionLink("编辑", "Edit", new { id=item.Id }) |
+            @Html.ActionLink("详情", "Details", new { id=item.Id }) |
+            @Html.ActionLink("删除", "Delete", new { id=item.Id })
+        </td>
+    </tr>
+}
+    
+</table>

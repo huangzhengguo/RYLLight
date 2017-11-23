@@ -1,0 +1,72 @@
+﻿@model RYLLight.Models.SaleContactInfo
+
+@{
+    Layout = "~/Views/Shared/_LayoutManager.cshtml";
+}
+
+<div>
+    <h4>详情</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+    
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+    
+        <dt>
+            @Html.DisplayNameFor(model => model.NickName)
+        </dt>
+    
+        <dd>
+            @Html.DisplayFor(model => model.NickName)
+        </dd>
+    
+        <dt>
+            @Html.DisplayNameFor(model => model.PhoneNumber)
+        </dt>
+    
+        <dd>
+            @Html.DisplayFor(model => model.PhoneNumber)
+        </dd>
+    
+        <dt>
+            @Html.DisplayNameFor(model => model.MailBox)
+        </dt>
+    
+        <dd>
+            @Html.DisplayFor(model => model.MailBox)
+        </dd>
+    
+        <dt>
+            @Html.DisplayNameFor(model => model.Skype)
+        </dt>
+    
+        <dd>
+            @Html.DisplayFor(model => model.Skype)
+        </dd>
+    
+        <dt>
+            @Html.DisplayNameFor(model => model.FreeOne)
+        </dt>
+    
+        <dd>
+            <img style="width: 100px; height: 100px" src=@(Model.FreeOne) />
+        </dd>
+    
+        <dt>
+            @Html.DisplayNameFor(model => model.FreeTwo)
+        </dt>
+    
+        <dd>
+            @Html.DisplayFor(model => model.FreeOne)
+        </dd>
+    
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("编辑", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("返回", "Index")
+</p>

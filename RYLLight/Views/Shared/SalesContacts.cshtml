@@ -1,0 +1,29 @@
+﻿@using RYLLight.Models
+
+@{
+    var salesContacts = (List<SaleContactInfo>)ViewBag.SaleContacts;
+}
+
+@{
+    if (salesContacts == null || salesContacts.Count == 0)
+    {
+        <h3 class="text-center footUp">info@ledinpro.com</h3>
+    }
+    else
+    {
+        <div class="container">
+            <div class="row" style="margin: 10px">
+                @foreach (SaleContactInfo saleContactInfo in salesContacts)
+                {
+                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                        <img style="width: 80px; height: 100px; float: left" src=@saleContactInfo.FreeOne />
+                        <div style="float: left;padding-left: 10px;padding-top: 10px">
+                            <p>Phone:@saleContactInfo.PhoneNumber</p>
+                            <p>Skype:@saleContactInfo.Skype</p>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    }
+}

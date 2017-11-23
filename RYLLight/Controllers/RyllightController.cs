@@ -107,9 +107,9 @@ namespace RYLLight.Controllers
             }
 
             // 获取业务员数据
-            var salesContacts = from sale in Context.SaleContactInfos
+            var salesContacts = (from sale in Context.SaleContactInfos
                                orderby sale.FreeThree
-                               select sale;
+                               select sale).ToList<SaleContactInfo>();
             ViewBag.SaleContacts = salesContacts;
         }
 

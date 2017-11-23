@@ -447,6 +447,7 @@
     <Content Include="Views\SaleContactInfoes\Details.cshtml" />
     <Content Include="Views\SaleContactInfoes\Edit.cshtml" />
     <Content Include="Views\SaleContactInfoes\Index.cshtml" />
+    <Content Include="Views\Shared\SalesContacts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
