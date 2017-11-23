@@ -212,6 +212,7 @@
     <Compile Include="Controllers\ProductScenesController.cs" />
     <Compile Include="Controllers\ProductsController.cs" />
     <Compile Include="Controllers\RyllightController.cs" />
+    <Compile Include="Controllers\SaleContactInfoesController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -441,6 +442,11 @@
     <Content Include="Views\Home\ProductForSceneId.cshtml" />
     <Content Include="Views\Home\InledcoIndex.cshtml" />
     <Content Include="Views\Shared\_Layout2.cshtml" />
+    <Content Include="Views\SaleContactInfoes\Create.cshtml" />
+    <Content Include="Views\SaleContactInfoes\Delete.cshtml" />
+    <Content Include="Views\SaleContactInfoes\Details.cshtml" />
+    <Content Include="Views\SaleContactInfoes\Edit.cshtml" />
+    <Content Include="Views\SaleContactInfoes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

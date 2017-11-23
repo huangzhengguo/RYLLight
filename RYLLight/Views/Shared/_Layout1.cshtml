@@ -119,7 +119,19 @@ Fax:86-371-67579829</pre>
             
         </div>-->
         <div class="footUpBackgroundColor">
-            <h3 class="text-center footUp">info@ledinpro.com</h3>
+            <!--<h3 class="text-center footUp">info@ledinpro.com</h3>-->
+            <div class="row">
+                @foreach (SaleContactInfo saleContactInfo in ViewBag.SaleContacts)
+                {
+                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                        <div>
+                            <img style="width: 100px; height: 100px" src=@saleContactInfo.FreeOne />
+                        </div>
+                        <p>@saleContactInfo.PhoneNumber</p>
+                        <p>@saleContactInfo.Skype</p>
+                    </div>
+                }
+            </div>
         </div>
 
         <div class="footDownBackgroundColor text-center">

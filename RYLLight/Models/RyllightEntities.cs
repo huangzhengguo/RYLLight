@@ -36,8 +36,7 @@ namespace RYLLight.Models
     public class RyllightEntities : DbContext
     {
         /**private const string connectionString = @"server=(localdb)\v11.0;database=Ryllight;trusted_connection=true";
-         *  如果提供
-            如果不写初始化，则会根据服务器安装的数据库提供程序自动生成数据库
+         *  如果不写初始化，则会根据服务器安装的数据库提供程序自动生成数据库
             数据库名称为RYLLight.Models.RyllightEntities
             public RyllightEntities() : base(connectionString)
         {
@@ -51,7 +50,7 @@ namespace RYLLight.Models
             Database.SetInitializer<RyllightEntities>(new DropCreateDatabaseIfModelChanges<RyllightEntities>());
         }*/
 
-        private const string connectionString = @"server=HUANGZHENGGUO\MYSQLSERVER2008;database=ledinpro;Trusted_Connection=true";
+        private const string connectionString = @"server=HUANGZHENGGUO\MYSQLSERVER2008;database=RYLLight.Models.RyllightEntities;Trusted_Connection=true";
         public RyllightEntities() : base(connectionString)
         {
 

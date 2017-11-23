@@ -105,7 +105,12 @@ namespace RYLLight.Controllers
                     });
                 ViewBag.MenuList = MenuList;
             }
-            
+
+            // 获取业务员数据
+            var salesContacts = from sale in Context.SaleContactInfos
+                               orderby sale.FreeThree
+                               select sale;
+            ViewBag.SaleContacts = salesContacts;
         }
 
         // 获取文件名称
