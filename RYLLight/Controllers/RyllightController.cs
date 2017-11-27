@@ -106,10 +106,51 @@ namespace RYLLight.Controllers
                 ViewBag.MenuList = MenuList;
             }
 
-            // 获取业务员数据
+            // 获取业务员数据：需要考虑顺序问题
             var salesContacts = (from sale in Context.SaleContactInfos
-                               orderby sale.FreeThree
+                               orderby sale.FreeTwo
                                select sale).ToList<SaleContactInfo>();
+
+            int index = 0;
+            if (salesContacts.Count > 0)
+            {
+                if (int.TryParse(salesContacts[0].FreeTwo, out index))
+                {
+                    // 如果是不是当天的话，调整顺序
+                    DateTime dt;
+                    DateTime dtNow = DateTime.Now;
+                    if (DateTime.TryParse(salesContacts[0].FreeThree, out dt) == false)
+                    {
+                        dt = DateTime.Now;
+                    }
+
+                    if (index == 0 && (dt.Year != dtNow.Year || dt.Month != dtNow.Month || dt.Day != dtNow.Day))
+                    {
+                        // 说明顺序需要调整，把业务员信息一次往后移动
+                        foreach (var salesContact in salesContacts)
+                        {
+                            salesContact.FreeThree = DateTime.Now.ToShortDateString();
+                            if (index++ == (salesContacts.Count - 1))
+                            {
+                                salesContact.FreeTwo = 0.ToString();
+                            }else
+                            {
+                                salesContact.FreeTwo = (index).ToString();
+                            }
+                        }
+                    }
+                } else
+                {
+                    foreach (var salesContact in salesContacts)
+                    {
+                        salesContact.FreeThree = DateTime.Now.ToShortDateString();
+                        salesContact.FreeTwo = (index++).ToString();
+                    }
+                }
+            }
+
+            Context.SaveChanges();
+
             ViewBag.SaleContacts = salesContacts;
         }
 
