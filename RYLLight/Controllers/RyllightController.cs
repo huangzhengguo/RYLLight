@@ -138,6 +138,10 @@ namespace RYLLight.Controllers
                                 salesContact.FreeTwo = (index).ToString();
                             }
                         }
+
+                        salesContacts = (from sale in Context.SaleContactInfos
+                                         orderby sale.FreeTwo
+                                         select sale).ToList<SaleContactInfo>();
                     }
                 } else
                 {
