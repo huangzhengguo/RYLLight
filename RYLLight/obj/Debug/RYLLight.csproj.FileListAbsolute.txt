@@ -514,7 +514,6 @@ D:\github\RYLLight\RYLLight\bin\Microsoft.Owin.Security.Twitter.xml
 D:\github\RYLLight\RYLLight\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\github\RYLLight\RYLLight\bin\zh-Hans\EntityFramework.resources.dll
 D:\github\RYLLight\RYLLight\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
-D:\github\RYLLight\RYLLight\obj\Debug\RYLLight.csprojResolveAssemblyReference.cache
 D:\github\RYLLight\RYLLight\obj\Debug\RYLLight.Migrations.InitialCreate.resources
 D:\github\RYLLight\RYLLight\obj\Debug\RYLLight.Migrations.AddProductInputVoltage.resources
 D:\github\RYLLight\RYLLight\obj\Debug\RYLLight.Migrations.AddProductInputPower.resources
@@ -531,3 +530,4 @@ D:\github\RYLLight\RYLLight\obj\Debug\RYLLight.csproj.GenerateResource.Cache
 D:\github\RYLLight\RYLLight\obj\Debug\RYLLight.csproj.CoreCompileInputs.cache
 D:\github\RYLLight\RYLLight\obj\Debug\RYLLight.dll
 D:\github\RYLLight\RYLLight\obj\Debug\RYLLight.pdb
+D:\github\RYLLight\RYLLight\obj\Debug\RYLLight.csprojResolveAssemblyReference.cache

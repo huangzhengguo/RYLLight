@@ -16,11 +16,25 @@
                 @foreach (SaleContactInfo saleContactInfo in salesContacts)
                 {
                     <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                        <img style="width: 80px; height: 100px; float: left" src=@saleContactInfo.FreeOne />
-                        <div style="float: left;padding-left: 10px;padding-top: 10px">
-                            <p>Phone:@saleContactInfo.PhoneNumber</p>
-                            <p>Skype:@saleContactInfo.Skype</p>
-                        </div>
+                        <table style="font-size:10px;margin-bottom: 10px; color: white;">
+                            <tr>
+                                <td rowspan="5">
+                                    <img style="width: 100px; height: 100px; margin-right: 10px;" src=@saleContactInfo.FreeOne />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Name:@saleContactInfo.Name</td> 
+                            </tr>
+                            <tr>
+                                <td>Phone:@saleContactInfo.PhoneNumber</td>
+                            </tr>
+                            <tr>
+                                <td>Email:@saleContactInfo.MailBox</td>
+                            </tr>
+                            <tr>
+                                <td>Skype:@saleContactInfo.Skype</td>
+                            </tr>
+                        </table>
                     </div>
                 }
             </div>
