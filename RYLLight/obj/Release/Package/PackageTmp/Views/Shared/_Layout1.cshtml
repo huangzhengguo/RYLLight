@@ -75,29 +75,6 @@
                     <img src="/Images/logoblack.png" style="width:131px;height:70px" alt="Brand" />
                 </a>
             </div>
-            @*
-    <div class="navbar-collapse collapse">
-        <ul class="nav navbar-nav ulMarginTop leftnavbar-nav">
-            <!--这里应该使用从数据库中读取所有的菜单项然后遍历所有的菜单-->
-            @foreach (Menu menuItem in ViewBag.MenuList)
-            {
-                if (menuItem.MenuTitle.Equals("Contact_Us"))
-                {
-                    <li><a href="#" id="Contact_Us" style="color: #000000;">Contact Us</a></li>
-                }
-                else
-                {
-                    <li><a href="#" style="color: #000000;" id=@menuItem.MenuTitle>@menuItem.MenuTitle</a></li>
-                }
-            }
-        </ul>
-    </div>
-            *@
-            <!--
-            <div class="hidden-xs hidden-sm visible-md visible-lg whiteHorizontal">
-                <hr />
-            </div>
-            -->
         </div>
     </div>
     <div> 
@@ -107,9 +84,6 @@
     <footer id="contact" class="footUpBackgroundColor">
         <div class="footUpBackgroundColor">
             @Html.Partial("SalesContacts")
-
-            <!--<h3 class="text-center footUp">info@ledinpro.com</h3>-->
-
         </div>
 
         <div class="footDownBackgroundColor text-center">

@@ -40,24 +40,9 @@
                             <a href=@(productDetailLinkStr)>
                                 <img src=@(item.MobilePicturePath) class="img-responsive" />
                             </a>
-
-                            <!--
-                            <p class="marginTitleDes">
-                                <span class="carouselTitle">@item.PictureTitle</span>
-                                <br />
-                                <span class="carouselDes">@item.PictureDes</span>
-                            </p>
-                            -->
                         </div>
                         <div class="hidden-xs hidden-sm visible-md visible-lg carseoulImg">
                             <a href=@(productDetailLinkStr)><img src=@(item.PicturePath) class="img-responsive" /></a>
-                            <!--
-                            <p class="marginTitleDes">
-                                <span class="carouselTitle">@item.PictureTitle</span>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <span class="carouselDes">@item.PictureDes</span>
-                            </p>
-                            -->
                         </div>
                     </div>
                 }
@@ -68,25 +53,11 @@
                             <a href=@(productDetailLinkStr)>
                                 <img src=@(item.MobilePicturePath) class="img-responsive" />
                             </a>
-                            <!--
-                            <p class="marginTitleDes">
-                                <span class="carouselTitle">@item.PictureTitle</span>
-                                <br />
-                                <span class="carouselDes">@item.PictureDes</span>
-                            </p>
-                            -->
                         </div>
                         <div class="hidden-xs hidden-sm visible-md visible-lg carseoulImg">
                             <a href=@(productDetailLinkStr)>
                                 <img src=@(item.PicturePath) class="img-responsive" />
                             </a>
-                            <!--
-                            <p class="marginTitleDes">
-                                <span class="carouselTitle">@item.PictureTitle</span>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <span class="carouselDes">@item.PictureDes</span>
-                            </p>
-                            -->
                         </div>
                     </div>
                 }
@@ -105,12 +76,7 @@
     </div>
 </div>
 
-<!--去掉黑色横线
-    <hr class="blackhr" />
-    -->
-<!--新闻部分
-    实现滑动到对应部分时获取到新闻内容，并且显示出来
-    -->
+<!--新闻部分实现滑动到对应部分时获取到新闻内容，并且显示出来-->
 <div class="hidden-xs hidden-sm visible-md visible-lg">
     @{
         News newsModel;
@@ -272,7 +238,7 @@
 @{
     if (companyInfo != null)
     {
-        <div id="companyIntroduce" class="companyIntroducePadding container-fluid" style="background-image:url('@(companyInfo.CompanyBackgroundImg)');background-repeat:no-repeat; background-size:100% auto;padding-bottom: 100px;padding-top: 100px">
+        <div id="companyIntroduce" class="companyIntroducePadding container-fluid" style="background-image:url('/Upload/20171023151859013.png');/* background-repeat:no-repeat; *//* background-size:100% auto; */padding-bottom: 100px;padding-top: 100px;">
             <div class="container hidden-xs hidden-sm visible-md visible-lg">
                 <div class="row text-center">
                     <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 disInlineBlockWithoutSize" style="padding: 0 0 0 30px">
