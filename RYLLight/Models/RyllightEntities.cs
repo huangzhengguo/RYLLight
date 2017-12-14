@@ -58,37 +58,26 @@ namespace RYLLight.Models
 
         // logo数据 
         public DbSet<Logo> Logos { get; set; }
-
         // 菜单数据
         public DbSet<Menu> Menus { get; set; }
-
         // 产品
         public DbSet<Product> Products { get; set; }
-
         // 产品明细表
         public DbSet<DetailProduct> DetailProducts { get; set; }
-
         // 轮播图数据
         public DbSet<Carousel> Carousels { get; set; }
-
         // 三级页面预览图片
         public DbSet<PreviewProduct> PreviewProducts { get; set; }
-
         // 产品特点图片
         public DbSet<ProductFeature> ProductFeature { get; set; }
-
         // 系统自动添加了
         public DbSet<ProductScene> ProductScenes { get; set; }
-
         // 公司信息
         public DbSet<CompanyInfo> CompanyInfos { get; set; }
-
         // 留言信息
         public DbSet<ContactMessage> ContactMessages { get; set; }
-
         // 业务员联系信息
         public DbSet<SaleContactInfo> SaleContactInfos { get; set; }
-
         // 公司新闻
         public DbSet<News> CompanyNews { get; set; }
     }
