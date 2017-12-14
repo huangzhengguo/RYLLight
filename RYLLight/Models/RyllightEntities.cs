@@ -50,7 +50,7 @@ namespace RYLLight.Models
             Database.SetInitializer<RyllightEntities>(new DropCreateDatabaseIfModelChanges<RyllightEntities>());
         }*/
 
-        private const string connectionString = @"server=(local)\SQLEXPRESS;database=RYLLight.Models.RyllightEntities;Trusted_Connection=true";
+        private const string connectionString = @"server=DESKTOP-GRT5610\HUANGSQLEXPRESS;database=RYLLight.Models.RyllightEntities;Trusted_Connection=true";
         public RyllightEntities() : base(connectionString)
         {
 

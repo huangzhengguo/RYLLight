@@ -133,10 +133,10 @@
       <publishTime>11/23/2017 18:44:52</publishTime>
     </File>
     <File Include="bin/RYLLight.dll">
-      <publishTime>11/28/2017 07:16:28</publishTime>
+      <publishTime>12/14/2017 07:21:04</publishTime>
     </File>
     <File Include="bin/RYLLight.pdb">
-      <publishTime>11/28/2017 07:16:28</publishTime>
+      <publishTime>12/14/2017 07:21:04</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
       <publishTime>11/23/2017 18:44:51</publishTime>
@@ -193,7 +193,7 @@
       <publishTime>11/23/2017 18:44:46</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>11/23/2017 18:44:46</publishTime>
+      <publishTime>12/14/2017 08:39:07</publishTime>
     </File>
     <File Include="Content/slick-theme.css">
       <publishTime>03/29/2017 10:04:31</publishTime>
@@ -253,7 +253,7 @@
       <publishTime>11/23/2017 18:44:46</publishTime>
     </File>
     <File Include="Images/ledinprologo.png">
-      <publishTime>11/23/2017 18:44:46</publishTime>
+      <publishTime>12/08/2017 18:31:41</publishTime>
     </File>
     <File Include="Images/lights.png">
       <publishTime>11/23/2017 18:44:46</publishTime>
@@ -460,7 +460,7 @@
       <publishTime>11/23/2017 18:44:47</publishTime>
     </File>
     <File Include="Views/Home/InledcoIndex.cshtml">
-      <publishTime>11/23/2017 20:26:53</publishTime>
+      <publishTime>12/14/2017 08:35:21</publishTime>
     </File>
     <File Include="Views/Home/Intellgentcontrol.cshtml">
       <publishTime>11/23/2017 18:44:47</publishTime>
@@ -607,13 +607,13 @@
       <publishTime>11/23/2017 18:44:47</publishTime>
     </File>
     <File Include="Views/Shared/SalesContacts.cshtml">
-      <publishTime>11/27/2017 19:45:52</publishTime>
+      <publishTime>11/28/2017 20:10:52</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>11/27/2017 19:45:52</publishTime>
+      <publishTime>12/14/2017 08:26:14</publishTime>
     </File>
     <File Include="Views/Shared/_Layout1.cshtml">
-      <publishTime>11/23/2017 20:25:03</publishTime>
+      <publishTime>12/14/2017 08:47:58</publishTime>
     </File>
     <File Include="Views/Shared/_Layout2.cshtml">
       <publishTime>11/23/2017 18:44:47</publishTime>
