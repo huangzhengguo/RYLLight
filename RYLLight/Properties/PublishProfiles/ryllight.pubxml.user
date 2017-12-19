@@ -133,10 +133,10 @@
       <publishTime>06/18/2015 20:19:46</publishTime>
     </File>
     <File Include="bin/RYLLight.dll">
-      <publishTime>12/14/2017 11:57:06</publishTime>
+      <publishTime>12/19/2017 13:46:39</publishTime>
     </File>
     <File Include="bin/RYLLight.pdb">
-      <publishTime>12/14/2017 11:57:06</publishTime>
+      <publishTime>12/19/2017 13:46:39</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
       <publishTime>01/28/2015 04:04:30</publishTime>
@@ -457,10 +457,10 @@
       <publishTime>09/22/2017 09:35:32</publishTime>
     </File>
     <File Include="Views/Home/Inledco.cshtml">
-      <publishTime>12/14/2017 13:27:38</publishTime>
+      <publishTime>12/14/2017 16:28:53</publishTime>
     </File>
     <File Include="Views/Home/InledcoIndex.cshtml">
-      <publishTime>12/14/2017 13:35:42</publishTime>
+      <publishTime>12/19/2017 13:57:42</publishTime>
     </File>
     <File Include="Views/Home/Intellgentcontrol.cshtml">
       <publishTime>09/18/2017 14:42:34</publishTime>
@@ -610,10 +610,10 @@
       <publishTime>12/14/2017 08:52:42</publishTime>
     </File>
     <File Include="Views/Shared/_Layout.cshtml">
-      <publishTime>12/14/2017 08:52:42</publishTime>
+      <publishTime>12/19/2017 14:46:55</publishTime>
     </File>
     <File Include="Views/Shared/_Layout1.cshtml">
-      <publishTime>12/14/2017 13:34:13</publishTime>
+      <publishTime>12/19/2017 14:39:33</publishTime>
     </File>
     <File Include="Views/Shared/_Layout2.cshtml">
       <publishTime>10/23/2017 18:59:44</publishTime>
