@@ -73,7 +73,6 @@ namespace RYLLight.Controllers
                 ViewBag.Logo = @"/Images/ledinprologo.png";
             }
 
-
             // 准备菜单数据
             MenuList = (from menu in Context.Menus
                         where menu.FreeOne == "Index"
@@ -89,14 +88,6 @@ namespace RYLLight.Controllers
                 // 提供默认的菜单项
                 MenuList.AddRange(
                     new List<Menu>() {
-                        /*
-                        new Menu {MenuTitle="LIGHTS",Sortnumber=0,Link="Lighting" },
-                        new Menu {MenuTitle="APPLICATION",Sortnumber=1,Link="ApplicationScene"},
-                        new Menu {MenuTitle="CONTROL",Sortnumber=2,Link="Intellgentcontrol" },
-                        new Menu {MenuTitle="HORTICULTURE",Sortnumber=3,Link="Horticulture" },
-                        new Menu {MenuTitle="AQUARIUM",Sortnumber=4,Link="Aquarium" },
-                        new Menu {MenuTitle="COMPANY",Sortnumber=5,Link="Company" }
-                        */
                         new Menu {MenuTitle="News",Sortnumber=0,Link="#companyNews" },
                         new Menu {MenuTitle="Products",Sortnumber=1,Link="#productScenes"},
                         new Menu {MenuTitle="Company",Sortnumber=2,Link="#companyIntroduce" },
@@ -125,7 +116,7 @@ namespace RYLLight.Controllers
 
                     if (index == 0 && (dt.Year != dtNow.Year || dt.Month != dtNow.Month || dt.Day != dtNow.Day))
                     {
-                        // 说明顺序需要调整，把业务员信息一次往后移动
+                        // 顺序需要调整，把业务员信息依次往后移动
                         foreach (var salesContact in salesContacts)
                         {
                             salesContact.FreeThree = DateTime.Now.ToShortDateString();
