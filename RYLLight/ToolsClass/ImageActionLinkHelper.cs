@@ -30,7 +30,8 @@ namespace RYLLight.ToolsClass
 
             MvcHtmlString link = helper.ActionLink("[replaceme]", actionName, routesValues, ajaxOptions, htmlAttributes);
 
-            return MvcHtmlString.Create(link.ToString().Replace("[replaceme]", imgBuilder.ToString(TagRenderMode.SelfClosing) + spanBuilder.ToString(TagRenderMode.Normal)));
+            return MvcHtmlString.Create(link.ToString().Replace("[replaceme]", 
+                imgBuilder.ToString(TagRenderMode.SelfClosing) + spanBuilder.ToString(TagRenderMode.Normal)));
         }
     }
 }

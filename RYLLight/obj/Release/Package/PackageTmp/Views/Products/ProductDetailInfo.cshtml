@@ -247,28 +247,6 @@
                             <p>@(item.ProductColorAngle)</p>
                             <p>@(item.Dimming)</p>
                             <p>@(item.Efficient)</p>
-                            <!--这里需要根据灯具的类型显示不同的信息-->
-                            @*@if (item.Product.ProductType == TypeOfProduct.LIGHTING)
-                            {
-                                <p>@(item.ProductName)</p>
-                                <p>@(item.ProductPower)</p>
-                                <p>@(item.ProductLumen)</p>
-                                <p>@(item.ProductColorAngle)</p>
-                            }
-                            else if (item.Product.ProductType == TypeOfProduct.INTELLGENTCONTROL)
-                            {
-                                <p>@(item.ProductCode)</p>
-                                <p>@(item.ProductName)</p>
-                                <p>@(item.ProductPower)</p>
-                                <p>@(item.Dimming)</p>
-                            }
-                            else if (item.Product.ProductType == TypeOfProduct.INTELLGENTCONTROL)
-                            {
-                                <p>@(item.ProductCode)</p>
-                                <p>@(item.ProductName)</p>
-                                <p>@(item.ProductPower)</p>
-                                <p>@(item.Efficient)</p>
-                            }*@
                         </div>
                     </div>
                 </div>
