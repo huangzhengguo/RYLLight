@@ -85,18 +85,20 @@ namespace RYLLight.Controllers
 
             ViewBag.news = news;
 
-            // 3.获取应用分类
+            // 3.获取应用分类，获取时按照id排序
             var scenes = (from s in Context.ProductScenes
                           where s.FreeOne == productType
+                          orderby s.Id
                           select s).ToList();
             ViewBag.scenes = scenes;
 
-            // 4.根据应用分类获取产品信息(默认是获取第一个场景对应的产品)
+            // 4.根据应用分类获取产品信息(默认是获取第一个场景对应的产品)，获取所有的产品，按照场景id排序
             if (scenes.Count > 0)
             {
                 ProductScene productScene = scenes[0];
                 var sceneProducts = (from p in Context.Products
-                                     where p.ProductSceneId == productScene.Id
+                                     where p.ProductType == TypeOfProduct.HORTICULTURE
+                                     orderby p.ProductSceneId
                                      select p).ToList();
 
                 ViewBag.sceneProducts = sceneProducts;

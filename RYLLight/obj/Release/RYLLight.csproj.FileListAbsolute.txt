@@ -530,7 +530,6 @@ D:\vsProject\CompanyProjects\RYLLight\RYLLight\bin\Microsoft.Owin.Security.Twitt
 D:\vsProject\CompanyProjects\RYLLight\RYLLight\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 D:\vsProject\CompanyProjects\RYLLight\RYLLight\bin\zh-Hans\EntityFramework.resources.dll
 D:\vsProject\CompanyProjects\RYLLight\RYLLight\bin\zh-Hans\EntityFramework.SqlServer.resources.dll
-D:\vsProject\CompanyProjects\RYLLight\RYLLight\obj\Release\RYLLight.csprojResolveAssemblyReference.cache
 D:\vsProject\CompanyProjects\RYLLight\RYLLight\obj\Release\RYLLight.Migrations.InitialCreate.resources
 D:\vsProject\CompanyProjects\RYLLight\RYLLight\obj\Release\RYLLight.Migrations.AddProductInputVoltage.resources
 D:\vsProject\CompanyProjects\RYLLight\RYLLight\obj\Release\RYLLight.Migrations.AddProductInputPower.resources
@@ -547,3 +546,4 @@ D:\vsProject\CompanyProjects\RYLLight\RYLLight\obj\Release\RYLLight.csproj.Gener
 D:\vsProject\CompanyProjects\RYLLight\RYLLight\obj\Release\RYLLight.csproj.CoreCompileInputs.cache
 D:\vsProject\CompanyProjects\RYLLight\RYLLight\obj\Release\RYLLight.dll
 D:\vsProject\CompanyProjects\RYLLight\RYLLight\obj\Release\RYLLight.pdb
+D:\vsProject\CompanyProjects\RYLLight\RYLLight\obj\Release\RYLLight.csprojResolveAssemblyReference.cache

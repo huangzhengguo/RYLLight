@@ -168,7 +168,7 @@
     这里的点击事件应该使用Ajax技术
     替换id为productSceneProduct的div的内容
     -->
-<div id="productScenes">
+@*<div id="productScenes">
     @{
         <div class="text-center">
             @{
@@ -229,6 +229,45 @@
             }
         </div>
     }
+</div>*@
+
+<div id="productScenes">
+    @{
+        <div class="text-center">
+            @{
+                if (productSceneList.Count() > 0)
+                {
+                    // 大屏幕部分
+                    <div class="hidden-xs hidden-sm visible-md visible-lg">
+                        @{
+                            foreach (var scene in productSceneList)
+                            {
+                                <a id=@scene.Id class="disInlineBlock productSceneNavigation">
+                                    <img src=@scene.ScenePicturePath alt=@scene.SceneName />
+                                </a>
+                            }
+                        }
+                    </div>
+
+                    // 小屏幕部分
+                    <div class="visible-xs visible-sm hidden-md hidden-lg">
+                        <div class="row">
+                            @{
+                                foreach (var scene in productSceneList)
+                                {
+                                    <div class="col-xs-4 col-sm-4">
+                                        <a id=@scene.Id class="disInlineBlock">
+                                            <img src=@scene.ScenePicturePath alt=@scene.SceneName />
+                                        </a>
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    }
 </div>
 
 <!--场景对应产品:使用部分视图实现，实现通过ajax更新部分视图-->
@@ -238,7 +277,7 @@
 @{
     if (companyInfo != null)
     {
-        <div id="companyIntroduce" class="companyIntroducePadding container-fluid" style="background-image:url('/Upload/20171023151859013.png');/* background-repeat:no-repeat; *//* background-size:100% auto; */padding-bottom: 100px;padding-top: 100px;">
+        <div id="companyIntroduce" class="companyIntroducePadding container-fluid" style="background-image:url('@(companyInfo.CompanyBackgroundImg)');/* background-repeat:no-repeat; *//* background-size:100% auto; */padding-bottom: 100px;padding-top: 100px;">
             <div class="container hidden-xs hidden-sm visible-md visible-lg">
                 <div class="row text-center">
                     <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 disInlineBlockWithoutSize" style="padding: 0 0 0 30px">

@@ -8,15 +8,32 @@
     <div class="hidden-xs hidden-sm visible-md visible-lg">
         @{
             int index = 0;
+            int firstProductSceneId = 0;
             if (productList == null)
             {
                 return;
             }
             foreach (var p in productList)
             {
-                <div class="productScenePadding row text-center" style="background-image:url(@p.ProductBackgroundImage);background-size:cover;height: 400px">
-                    @if (index++ % 2 == 0)
+                // 如果前一个产品和当前产品的场景id不相同的话，标记id
+                if (index == 0)
+                {
+                    firstProductSceneId = 1000000 + p.ProductSceneId;
+                } else
+                {
+                    if (productList[index - 1].ProductSceneId != p.ProductSceneId)
                     {
+                        firstProductSceneId = 1000000 + p.ProductSceneId;
+                    }
+                    else
+                    {
+                        firstProductSceneId = p.Id;
+                    }
+                }
+
+                <div id=@firstProductSceneId class="productScenePadding row text-center" style="background-image:url(@p.ProductBackgroundImage);background-size:cover;height: 400px">
+                    @if (index++ % 2 == 0)
+            {
                         // 图片靠左
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                             <br />
@@ -26,12 +43,6 @@
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="padding-left: 50px">
                             <div>
-                                <!--文字描述及其他信息-->
-                                @*<p style="text-align:left; width: 300px">
-                            <!--产品描述部分-->
-                            @p.ProductDes
-                            </p>*@
-
                                 <h5>Product Data</h5>
 
                                 <ul class="nav nav-tabs">

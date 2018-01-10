@@ -133,10 +133,10 @@
       <publishTime>06/18/2015 20:19:46</publishTime>
     </File>
     <File Include="bin/RYLLight.dll">
-      <publishTime>12/29/2017 09:06:49</publishTime>
+      <publishTime>01/10/2018 14:35:43</publishTime>
     </File>
     <File Include="bin/RYLLight.pdb">
-      <publishTime>12/29/2017 09:06:49</publishTime>
+      <publishTime>01/10/2018 14:35:43</publishTime>
     </File>
     <File Include="bin/System.Web.Helpers.dll">
       <publishTime>01/28/2015 04:04:30</publishTime>
@@ -193,7 +193,7 @@
       <publishTime>09/18/2017 14:42:33</publishTime>
     </File>
     <File Include="Content/Site.css">
-      <publishTime>12/14/2017 08:52:42</publishTime>
+      <publishTime>01/10/2018 16:26:19</publishTime>
     </File>
     <File Include="Content/slick-theme.css">
       <publishTime>03/29/2017 10:04:31</publishTime>
@@ -331,7 +331,7 @@
       <publishTime>09/18/2017 14:42:34</publishTime>
     </File>
     <File Include="Scripts/ledinpro.js">
-      <publishTime>10/23/2017 18:09:35</publishTime>
+      <publishTime>01/10/2018 16:30:17</publishTime>
     </File>
     <File Include="Scripts/modernizr-2.6.2.js">
       <publishTime>09/18/2017 14:42:34</publishTime>
@@ -457,7 +457,7 @@
       <publishTime>09/22/2017 09:35:32</publishTime>
     </File>
     <File Include="Views/Home/Inledco.cshtml">
-      <publishTime>12/29/2017 09:06:23</publishTime>
+      <publishTime>01/10/2018 16:28:38</publishTime>
     </File>
     <File Include="Views/Home/InledcoIndex.cshtml">
       <publishTime>12/26/2017 10:04:52</publishTime>
@@ -469,7 +469,7 @@
       <publishTime>09/18/2017 14:42:34</publishTime>
     </File>
     <File Include="Views/Home/ProductForSceneId.cshtml">
-      <publishTime>12/29/2017 11:32:03</publishTime>
+      <publishTime>01/10/2018 16:04:51</publishTime>
     </File>
     <File Include="Views/Logoes/Create.cshtml">
       <publishTime>09/18/2017 14:42:34</publishTime>
@@ -634,7 +634,7 @@
       <publishTime>09/18/2017 14:42:34</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>12/29/2017 09:08:44</publishTime>
+      <publishTime>01/10/2018 14:35:52</publishTime>
     </File>
   </ItemGroup>
 </Project>

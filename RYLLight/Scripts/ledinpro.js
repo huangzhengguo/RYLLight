@@ -34,6 +34,12 @@
         $("#" + currentClickMenu).css("color", "#f37044")
     }
 
+    // 点击场景滚动到对应的产品
+    $('.productSceneNavigation').click(function (e) {
+        e.preventDefault()
+        $('html,body').animate({ scrollTop: $('#' + (this.id + 1000000)).offset().top - 75 }, 1000)
+    });
+
     // 滑动变色
     var currentEelment = ""
     $("a").mouseenter(function (e) {
@@ -83,24 +89,11 @@
             $("#newsImg" + j).mouseenter(function (e) {
                 // 第一次进来时，记录图片的大小，用作恢复图片大小
                 if (gIsFirstEnter == true) {
-                    //imgWidth = this.width
-                    //imgHeight = this.height
                     gIsFirstEnter = false
                 }
-
-                /*
-                $(this).animate({
-                    width: imgWidth + 10 + "px",
-                    height: imgHeight + 20 + "px"
-                }, 100);*/
             });
 
             $("#newsImg" + j).mouseleave(function (e) {
-                /*
-                $(this).animate({
-                    width: imgWidth + "px",
-                    height: imgHeight + "px"
-                }, 100);*/
             });
         }
     }
@@ -124,19 +117,6 @@
         $(this).tab('show')
     }
     )
-
-    // 新闻背景高度调整
-    /*
-    var backgroundImg = new Image()
-    $(window).resize(function (){
-        // 获取新闻背景图片
-        
-        backgroundImg.src = $("#companyIntroduce").css('background-image').replace('url(', '').replace(')', '').replace("'", '').replace('"', '');
-        console.log(backgroundImg.height + "px")
-        console.log("哈哈")
-        $("#companyIntroduce").css("height", backgroundImg.height + "px")
-    } 
-    )*/
 })
 
 
