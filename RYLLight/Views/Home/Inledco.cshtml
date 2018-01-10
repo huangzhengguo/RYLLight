@@ -103,9 +103,6 @@
                                     <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 newsPadding" style="padding-right: 0px;padding-top: 60px;">
                                         <div style="float: right;width: 75%">
                                             <img id=@("newsImg" + newsIndex.ToString()) src=@news.Picture class="img-responsive disInlineBlockWithoutSize" />
-                                            @*<div style="bottom: 20px; height: 20px; background-color: #f37044; opacity: 0.75;position: relative">
-
-                                            </div>*@
                                         </div>
                                     </div>
                                 }
@@ -120,47 +117,45 @@
                     </div>
                 </div>
             </div>
-                            if (newsList.Count() > 1)
-                            {
-                                newsModel = newsList[1];
-                                <div id="companyNews1" style="background-image:url('@(newsModel.NewsBackgroundImg)');background-repeat:no-repeat; background-size:100% auto;display:none">
-                                    <!--新闻背景-->
-                                    <div class="container">
-                                        <div class="row">
-                                            @{
-                                                int newsIndex1 = 0;
-                                                foreach (News news in newsList)
-                                                {
-                                                    if (newsIndex1++ == 0)
-                                                    {
-                                                        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 text-left newsPadding text-left" style="padding-bottom: 0px">
-                                                            
-                                                        </div>
-                                                        <div class="col-md-1 col-lg-1">
-
-                                                        </div>
-                                                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 newsPadding" style="padding-right: 0px;padding-top: 60px;">
-                                                            <img id=@("newsImg" + (newsIndex1 + 2).ToString()) src=@news.Picture class="img-responsive disInlineBlockWithoutSize" style="float: right;width: 75%" />
-                                                        </div>
-                                                    }
-                                                    else
-                                                    {
-                                                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 newsPadding" style="padding-right: 0px;padding-top: 60px;">
-                                                            <div style="width: 75%;float: right">
-                                                                <img id=@("newsImg" + (newsIndex1 + 2).ToString()) src=@news.Picture class="img-responsive disInlineBlockWithoutSize" />
-                                                                @*<div style="bottom: 20px; height: 20px; background-color: #f37044; opacity: 0.75; position: relative">
-
-                                                                </div>*@
-                                                            </div>
-                                                        </div>
-                                                    }
-                                                }
-                                            }
+            if (newsList.Count() > 1)
+            {
+                newsModel = newsList[1];
+                <div id="companyNews1" style="background-image:url('@(newsModel.NewsBackgroundImg)');background-repeat:no-repeat; background-size:100% auto;display:none">
+                    <!--新闻背景-->
+                    <div class="container">
+                        <div class="row">
+                            @{
+                                int newsIndex1 = 0;
+                                foreach (News news in newsList)
+                                {
+                                    if (newsIndex1++ == 0)
+                                    {
+                                        <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 text-left newsPadding text-left" style="padding-bottom: 0px">
+                                            
                                         </div>
-                                    </div>
-                                </div>
-                                                    }
-                                                }
+                                        <div class="col-md-1 col-lg-1">
+
+                                        </div>
+                                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 newsPadding" style="padding-right: 0px;padding-top: 60px;">
+                                            <img id=@("newsImg" + (newsIndex1 + 2).ToString()) src=@news.Picture class="img-responsive disInlineBlockWithoutSize" style="float: right;width: 75%" />
+                                        </div>
+                                    }
+                                    else
+                                    {
+                                        <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 newsPadding" style="padding-right: 0px;padding-top: 60px;">
+                                            <div style="width: 75%;float: right">
+                                                <img id=@("newsImg" + (newsIndex1 + 2).ToString()) src=@news.Picture class="img-responsive disInlineBlockWithoutSize" />
+
+                                            </div>
+                                        </div>
+                                    }
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+            }
+        }
     }
 
 </div>
@@ -180,20 +175,20 @@
                             foreach (var scene in productSceneList)
                             {
                                 @Ajax.ImageActionLink(
-                                scene.ApplicationScenePicturePath,
-                                scene.SceneName,
-                                scene.SceneName,
-                                     "GetProductWithScenedId",
-                                     new { sceneId = scene.Id },
-                                     new AjaxOptions
-                                     {
-                                         UpdateTargetId = "productSceneProduct",
-                                         InsertionMode = InsertionMode.Replace
-                                     },
-                                     htmlAttributes: new
-                                     {
-                                         @class = "disInlineBlock"
-                                     })
+                                     scene.ApplicationScenePicturePath,
+                                     scene.SceneName,
+                                     scene.SceneName,
+                                          "GetProductWithScenedId",
+                                          new { sceneId = scene.Id },
+                                          new AjaxOptions
+                                          {
+                                              UpdateTargetId = "productSceneProduct",
+                                              InsertionMode = InsertionMode.Replace
+                                          },
+                                          htmlAttributes: new
+                                          {
+                                              @class = "disInlineBlock"
+                                          })
                             }
                         }
                     </div>
@@ -206,26 +201,26 @@
                                 {
                                     <div class="col-xs-4 col-sm-4">
                                         @Ajax.ImageActionLink(
-                                        scene.ScenePicturePath,
-                                        scene.SceneName,
-                                        scene.SceneName,
-                                        "GetProductWithScenedId",
-                                            new { sceneId = scene.Id },
-                                            new AjaxOptions
-                                            {
-                                                UpdateTargetId = "productSceneProduct",
-                                                InsertionMode = InsertionMode.Replace
-                                            },
-                                            htmlAttributes: new
-                                            {
-                                                @class = "smalldisInlineBlock"
-                                            })
+                                             scene.ScenePicturePath,
+                                             scene.SceneName,
+                                             scene.SceneName,
+                                             "GetProductWithScenedId",
+                                                 new { sceneId = scene.Id },
+                                                 new AjaxOptions
+                                                 {
+                                                     UpdateTargetId = "productSceneProduct",
+                                                     InsertionMode = InsertionMode.Replace
+                                                 },
+                                                 htmlAttributes: new
+                                                 {
+                                                     @class = "smalldisInlineBlock"
+                                                 })
                                     </div>
-                                 }
+                                }
                             }
                         </div>
                     </div>
-                 }
+                }
             }
         </div>
     }
@@ -277,37 +272,8 @@
 @{
     if (companyInfo != null)
     {
-        <div id="companyIntroduce" class="companyIntroducePadding container-fluid" style="background-image:url('@(companyInfo.CompanyBackgroundImg)');/* background-repeat:no-repeat; *//* background-size:100% auto; */padding-bottom: 100px;padding-top: 100px;">
-            <div class="container hidden-xs hidden-sm visible-md visible-lg">
-                <div class="row text-center">
-                    <div class="col-xs-6 col-sm-6 col-md-3 col-lg-3 disInlineBlockWithoutSize" style="padding: 0 0 0 30px">
-                        <img src=@(companyInfo.FreeOne) class="img-responsive" />
-                    </div>
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 disInlineBlockWithoutSize">
-                        <img src=@(companyInfo.FreeTwo) class="img-responsive" />
-                    </div>
-                    <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 disInlineBlockWithoutSize">
-                        <pre class="preDes" style="text-align: left">@companyInfo.CompanyDescription</pre>
-                    </div>
-                </div>
-            </div>
-
-            <div class="container visible-xs visible-sm hidden-md hidden-lg">
-                <div class="row text-center">
-                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 disInlineBlockWithoutSize" style="padding: 0 0 0 60px">
-                        <img src=@(companyInfo.FreeOne) class="img-responsive" style="margin-right: 5px" />
-                    </div>
-                    <div class="col-xs-6 col-sm-6 col-md-4 col-lg-4 disInlineBlockWithoutSize">
-                        <img src=@(companyInfo.FreeTwo) class="img-responsive" />
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="visible-xs visible-sm hidden-md hidden-lg container-fluid" style="background-image:url('@(companyInfo.CompanyBackgroundImg)');background-repeat:no-repeat; background-size:100% auto;padding-bottom: 7%">
-            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 disInlineBlockWithoutSize" style="padding: 0 0 0 10px">
-                <pre class="preDes" style="font-size:13px;padding: 0;text-align: left">@companyInfo.CompanyDescription</pre>
-            </div>
+        <div id="companyIntroduce" class="container-fluid">
+            <img class="img-responsive" src=@(companyInfo.CompanyBackgroundImg) style="width:100%" />
         </div>
     }
 }
