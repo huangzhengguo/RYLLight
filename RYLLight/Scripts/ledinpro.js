@@ -37,7 +37,9 @@
     // 点击场景滚动到对应的产品
     $('.productSceneNavigation').click(function (e) {
         e.preventDefault()
-        $('html,body').animate({ scrollTop: $('#' + (this.id + 1000000)).offset().top - 75 }, 1000)
+        // 字符串转换成数字类型使用Number
+        var scrollId = (1000000 + Number(this.id)).toString();
+        $('html,body').animate({ scrollTop: $('#' + scrollId).offset().top - 75 }, 1000)
     });
 
     // 滑动变色

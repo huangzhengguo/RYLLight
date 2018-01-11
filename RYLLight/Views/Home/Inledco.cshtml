@@ -237,8 +237,8 @@
                         @{
                             foreach (var scene in productSceneList)
                             {
-                                <a id=@scene.Id class="disInlineBlock productSceneNavigation">
-                                    <img src=@scene.ScenePicturePath alt=@scene.SceneName />
+                                <a id=@scene.Id class="sceneDisInlineBlock productSceneNavigation" href="#">
+                                    <img class="img-responsive" src=@scene.ScenePicturePath alt=@scene.SceneName />
                                 </a>
                             }
                         }
@@ -251,8 +251,8 @@
                                 foreach (var scene in productSceneList)
                                 {
                                     <div class="col-xs-4 col-sm-4">
-                                        <a id=@scene.Id class="disInlineBlock">
-                                            <img src=@scene.ScenePicturePath alt=@scene.SceneName />
+                                        <a id=@scene.Id class="sceneDisInlineBlock productSceneNavigation" href="#">
+                                            <img class="img-responsive" src=@scene.ScenePicturePath alt=@scene.SceneName />
                                         </a>
                                     </div>
                                 }

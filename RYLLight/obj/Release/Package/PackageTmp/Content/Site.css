@@ -777,3 +777,10 @@ a:hover{
 .productSceneNavigation {
 
 }
+
+.sceneDisInlineBlock {
+    margin: 50px 50px;
+    display: inline-block;
+    width: 100px;
+    height: 131px;
+}

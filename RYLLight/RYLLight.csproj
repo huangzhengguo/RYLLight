@@ -326,6 +326,7 @@
     <Content Include="fonts\msjh.ttc" />
     <Content Include="fonts\msjhbd.ttc" />
     <Content Include="fonts\msjhl.ttc" />
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Properties\PublishProfiles\ryllight.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\glide.js" />
