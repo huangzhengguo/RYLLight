@@ -16,15 +16,19 @@ namespace RYLLight.Controllers
 
         }
 
-        // 网站总入口
+        /// <summary>
+        /// 网站首页
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Index()
         {
             return View("InledcoIndex");
         }
 
-        /*
-          旧版首页 
-        */
+        /// <summary>
+        /// 商业照明首页
+        /// </summary>
+        /// <returns></returns>
         public ActionResult InledcoIndex()
         {
             // 传递轮播图数据
@@ -55,7 +59,10 @@ namespace RYLLight.Controllers
          * 1.总的首页有一个灯具分类入口，比如，植物灯、商业照明等等，点击不同的分类，进入不同的灯具首页
          * 2.分类首页，分别进入不同种类的灯具的首页，每个分类的首页展示的是不同种类的灯具
          */
-        // 1.植物灯新版首页
+        /// <summary>
+        /// 植物灯首页
+        /// </summary>
+        /// <returns></returns>
         public ActionResult PlantIndex()
         {
             // 获取植物灯页面菜单
@@ -116,7 +123,11 @@ namespace RYLLight.Controllers
             return View("Inledco", carousel);
         }
 
-        // 返回对应场景下的产品
+        /// <summary>
+        /// 获取指定场景下的产品
+        /// </summary>
+        /// <param name="sceneId">场景ID</param>
+        /// <returns></returns>
         public ActionResult GetProductWithScenedId(int sceneId)
         {
             List<Product> sceneProducts = (from p in db.Products
