@@ -779,6 +779,8 @@ a:hover{
 }
 
 .sceneDisInlineBlock {
+    width: 240px;
+    margin: 30px 50px 30px 50px;
     display: inline-block;
 }
 

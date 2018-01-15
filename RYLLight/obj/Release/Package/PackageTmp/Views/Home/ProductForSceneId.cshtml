@@ -32,185 +32,191 @@
                     }
                 }
 
-                <div id=@firstProductSceneId class="productScenePadding row text-center" style="background-image:url(@p.ProductBackgroundImage);background-size:cover;height: 400px">
-                    @if (index++ % 2 == 0)
-            {
-                        // 图片靠左
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                            <img class="img-responsive disInlineBlockWithoutSize" style="max-width: 450px; float: right;margin-right: 50px" src=@p.ProductPicturePath />
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="padding-left: 50px">
-                            <div>
-                                <h5>Product Data</h5>
+        <div id=@firstProductSceneId class="productScenePadding row text-center" style="background-image:url(@p.ProductBackgroundImage);background-size:cover;height: 400px">
+            @if (index++ % 2 == 0)
+    {
+        // 图片靠左
+            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                <img class="img-responsive disInlineBlockWithoutSize" style="max-width: 450px; float: right" src=@p.ProductPicturePath />
+            </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <div>
+                <br />
+                <br />
+                <br />
+                <h5>Product Data</h5>
 
-                                <ul class="nav nav-tabs">
-                                    <li role="presentation" class="active"><a href=@("#RINTRUDUCTION" + index.ToString())>INTRUDUCTION</a></li>
-                                    <li role="presentation"><a href=@("#RSPECTRUM" + index.ToString())>SPECTRUM</a></li>
-                                    <li role="presentation"><a href=@("#RSPECIFICATION" + index.ToString())>SPECIFICATION</a></li>
-                                    <li role="presentation"><a href=@("#RDATA" + index.ToString())>DATA</a></li>
-                                </ul>
+                <ul class="nav nav-tabs">
+                    <li role="presentation" class="active"><a href=@("#RINTRUDUCTION" + index.ToString())>INTRUDUCTION</a></li>
+                    <li role="presentation"><a href=@("#RSPECTRUM" + index.ToString())>SPECTRUM</a></li>
+                    <li role="presentation"><a href=@("#RSPECIFICATION" + index.ToString())>SPECIFICATION</a></li>
+                    <li role="presentation"><a href=@("#RDATA" + index.ToString())>DATA</a></li>
+                </ul>
 
-                                <div class="tab-content" style="float: left">
-                                    <div role="tabpanel" class="tab-pane active" style="text-align:left;width:300px;padding-left:10px;padding-top:10px" id=@("RINTRUDUCTION" + index.ToString())>
-                                        @p.ProductDes
-                                    </div>
-                                    <div role="tabpanel" class="tab-pane" id=@("RSPECTRUM" + index.ToString())>
-                                        <br />
-                                        <img src=@p.Spectrum class="img-responsive" style="width:300px;height:200px" />
-                                    </div>
-                                    <div role="tabpanel" class="tab-pane" style="text-align:left;font-size: 15px" id=@("RSPECIFICATION" + index.ToString())>
-                                        <br />
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@p.ProductPower
-                                        <br />
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@p.ProductLength
-                                        <br />
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@p.Efficient
-                                        <br />
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@p.Ppf
-                                        <br />
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@p.LightingAngle
-                                    </div>
-                                    <div role="tabpanel" class="tab-pane" id=@("RDATA" + index.ToString())>
-                                        <br />
-                                        <div class="" style="width:300px;height:200px">
-                                            <div class="col-xs-12 col-sm-1 col-md-1 co-lg-1">
+                <div class="tab-content" style="float: left">
+                    <div role="tabpanel" class="tab-pane active" style="text-align:left;width:300px;padding-left:10px;padding-top:10px" id=@("RINTRUDUCTION" + index.ToString())>
+                        @p.ProductDes
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id=@("RSPECTRUM" + index.ToString())>
+                        <br />
+                        <img src=@p.Spectrum class="img-responsive" style="width:300px;height:200px" />
+                    </div>
+                    <div role="tabpanel" class="tab-pane" style="text-align:left;font-size: 15px" id=@("RSPECIFICATION" + index.ToString())>
+                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@p.ProductPower
+                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@p.ProductLength
+                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@p.Efficient
+                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@p.Ppf
+                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@p.LightingAngle
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id=@("RDATA" + index.ToString())>
+                        <br />
+                        <div class="" style="width:300px;height:200px">
+                            <div class="col-xs-12 col-sm-1 col-md-1 co-lg-1">
 
-                                            </div>
-                                            <div class="col-xs-12 col-sm-10 col-md-10 co-lg-10 nonePaddingCol">
+                            </div>
+                            <div class="col-xs-12 col-sm-10 col-md-10 co-lg-10 nonePaddingCol">
 
-                                                @if (!string.IsNullOrEmpty(p.ProductGuide) && !string.IsNullOrWhiteSpace(p.ProductGuide))
+                                @if (!string.IsNullOrEmpty(p.ProductGuide) && !string.IsNullOrWhiteSpace(p.ProductGuide))
                     {
-                            <a class="aNoneDec" href=@(p.ProductGuide)>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="imgThirtySize" src="~/Images/pdf.png" alt="Alternate Text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Product Guide
-                            </a>
-                            <br />
-                            <br />
-}
-                                                @if (!string.IsNullOrEmpty(p.ProductInstallationGuide) && !string.IsNullOrWhiteSpace(p.ProductInstallationGuide))
+                        <a class="aNoneDec" href=@(p.ProductGuide)>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="imgThirtySize" src="~/Images/pdf_icon.png" alt="Alternate Text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Product Guide
+                        </a>
+                        <br />
+                        <br />
+        }
+                                @if (!string.IsNullOrEmpty(p.ProductInstallationGuide) && !string.IsNullOrWhiteSpace(p.ProductInstallationGuide))
                     {
-                            <a class="aNoneDec" href=@(p.ProductInstallationGuide)>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="imgThirtySize" src="~/Images/pdf.png" alt="Alternate Text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Installation Guide
-                            </a>
-                            <br />
-                            <br />
-}
-                                                @if (!string.IsNullOrEmpty(p.ProductDatasheet) && !string.IsNullOrWhiteSpace(p.ProductDatasheet))
+                        <a class="aNoneDec" href=@(p.ProductInstallationGuide)>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="imgThirtySize" src="~/Images/pdf_icon.png" alt="Alternate Text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Installation Guide
+                        </a>
+                        <br />
+                        <br />
+        }
+                                @if (!string.IsNullOrEmpty(p.ProductDatasheet) && !string.IsNullOrWhiteSpace(p.ProductDatasheet))
                     {
-                            <a class="aNoneDec" href=@(p.ProductDatasheet)>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="imgThirtySize" src="~/Images/excel.png" alt="Alternate Text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Datasheet
-                            </a>
-                            <br />
-                            <br />
-}
-                                                @if (!string.IsNullOrEmpty(p.ProductIes) && !string.IsNullOrWhiteSpace(p.ProductIes))
+                        <a class="aNoneDec" href=@(p.ProductDatasheet)>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="imgThirtySize" src="~/Images/excel.png" alt="Alternate Text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Datasheet
+                        </a>
+                        <br />
+                        <br />
+        }
+                                @if (!string.IsNullOrEmpty(p.ProductIes) && !string.IsNullOrWhiteSpace(p.ProductIes))
                     {
-                            <a class="aNoneDec" href=@(p.ProductIes)>
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="imgThirtySize" src="~/Images/zip.png" alt="Alternate Text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IES-Data LDT-Data
-                            </a>
-}
-                                            </div>
-                                            <div class="col-xs-12 col-sm-1 col-md-1 co-lg-1">
+                        <a class="aNoneDec" href=@(p.ProductIes)>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="imgThirtySize" src="~/Images/zip.png" alt="Alternate Text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IES-Data LDT-Data
+                        </a>
+        }
+                            </div>
+                            <div class="col-xs-12 col-sm-1 col-md-1 co-lg-1">
 
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                             </div>
                         </div>
-                    }
-                    else
-                    {
-                        // 图片靠右
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="padding-right: 50px">
-                            <div class="disInlineBlockWithoutSize" style="float: right">
-                                <div style="float: right">
-                                    <h5>Product Data</h5>
-
-                                    <ul class="nav nav-tabs">
-                                        <li role="presentation" class="active"><a href=@("#LINTRUDUCTION" + index.ToString())>INTRUDUCTION</a></li>
-                                        <li role="presentation"><a href=@("#LSPECTRUM" + index.ToString())>SPECTRUM</a></li>
-                                        <li role="presentation">
-                                            <a href=@("#LSPECIFICATION" + index.ToString())>SPECIFICATION</a>
-                                        </li>
-                                        <li role="presentation"><a href=@("#LDATA" + index.ToString())>DATA</a></li>
-                                    </ul>
-
-                                    <div class="tab-content" style="float: left">
-                                        <div role="tabpanel" class="tab-pane active" style="text-align:left;width:300px;padding-left:10px;padding-top:10px" id=@("LINTRUDUCTION" + index.ToString())>
-                                            @p.ProductDes
-                                        </div>
-                                        <div role="tabpanel" class="tab-pane" id=@("LSPECTRUM" + index.ToString())>
-                                            <br />
-                                            <img src=@p.Spectrum class="img-responsive" style="width:300px;height:200px" />
-                                        </div>
-                                        <div role="tabpanel" class="tab-pane" style="text-align:left;font-size: 15px" id=@("LSPECIFICATION" + index.ToString())>
-                                            <br />
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@p.ProductPower
-                                            <br />
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@p.ProductLength
-                                            <br />
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@p.Efficient
-                                            <br />
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@p.Ppf
-                                            <br />
-                                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@p.LightingAngle
-                                        </div>
-                                        <div role="tabpanel" class="tab-pane" id=@("LDATA" + index.ToString())>
-                                            <br />
-                                            <div class="" style="width:300px;height:200px">
-                                                <div class="col-xs-12 col-sm-1 col-md-1 co-lg-1">
-
-                                                </div>
-                                                <div class="col-xs-12 col-sm-10 col-md-10 co-lg-10 nonePaddingCol">
-
-                                                    @if (!string.IsNullOrEmpty(p.ProductGuide) && !string.IsNullOrWhiteSpace(p.ProductGuide))
-                {
-                                    <a class="aNoneDec" href=@(p.ProductGuide)>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="imgThirtySize" src="~/Images/pdf.png" alt="Alternate Text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Product Guide
-                                    </a>
-                                    <br />
-                                    <br />
-}
-                                                    @if (!string.IsNullOrEmpty(p.ProductInstallationGuide) && !string.IsNullOrWhiteSpace(p.ProductInstallationGuide))
-                {
-                                    <a class="aNoneDec" href=@(p.ProductInstallationGuide)>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="imgThirtySize" src="~/Images/pdf.png" alt="Alternate Text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Installation Guide
-                                    </a>
-                                    <br />
-                                    <br />
-}
-                                                    @if (!string.IsNullOrEmpty(p.ProductDatasheet) && !string.IsNullOrWhiteSpace(p.ProductDatasheet))
-                {
-                                    <a class="aNoneDec" href=@(p.ProductDatasheet)>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="imgThirtySize" src="~/Images/excel.png" alt="Alternate Text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Datasheet
-                                    </a>
-                                    <br />
-                                    <br />
-}
-                                                    @if (!string.IsNullOrEmpty(p.ProductIes) && !string.IsNullOrWhiteSpace(p.ProductIes))
-                {
-                                    <a class="aNoneDec" href=@(p.ProductIes)>
-                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="imgThirtySize" src="~/Images/zip.png" alt="Alternate Text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IES-Data LDT-Data
-                                    </a>
-}
-                                                </div>
-                                                <div class="col-xs-12 col-sm-1 col-md-1 co-lg-1">
-
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                <br />
-                                <br />
-                                <br />
-                                <img class="img-responsive disInlineBlockWithoutSize" style="max-width: 450px;float: left; margin-left: 50px" src=@p.ProductPicturePath />
-                        </div>
-                    }
+                    </div>
                 </div>
+            </div>
+        </div>
+}
+else
+{
+// 图片靠右
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="padding-right: 50px">
+            <div class="disInlineBlockWithoutSize" style="float: right">
+                @*<div style="float: right">*@
+                <br />
+                <br />
+                <br />
+                <h5>Product Data</h5>
+
+                <ul class="nav nav-tabs">
+                    <li role="presentation" class="active"><a href=@("#LINTRUDUCTION" + index.ToString())>INTRUDUCTION</a></li>
+                    <li role="presentation"><a href=@("#LSPECTRUM" + index.ToString())>SPECTRUM</a></li>
+                    <li role="presentation">
+                        <a href=@("#LSPECIFICATION" + index.ToString())>SPECIFICATION</a>
+                    </li>
+                    <li role="presentation"><a href=@("#LDATA" + index.ToString())>DATA</a></li>
+                </ul>
+
+                <div class="tab-content" style="float: left">
+                    <div role="tabpanel" class="tab-pane active" style="text-align:left;width:300px;padding-left:10px;padding-top:10px" id=@("LINTRUDUCTION" + index.ToString())>
+                        @p.ProductDes
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id=@("LSPECTRUM" + index.ToString())>
+                        <br />
+                        <img src=@p.Spectrum class="img-responsive" style="width:300px;height:200px" />
+                    </div>
+                    <div role="tabpanel" class="tab-pane" style="text-align:left;font-size: 15px" id=@("LSPECIFICATION" + index.ToString())>
+                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@p.ProductPower
+                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@p.ProductLength
+                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@p.Efficient
+                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@p.Ppf
+                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;@p.LightingAngle
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id=@("LDATA" + index.ToString())>
+                        <br />
+                        <div class="" style="width:300px;height:200px">
+                            <div class="col-xs-12 col-sm-1 col-md-1 co-lg-1">
+
+                            </div>
+                            <div class="col-xs-12 col-sm-10 col-md-10 co-lg-10 nonePaddingCol">
+
+                                @if (!string.IsNullOrEmpty(p.ProductGuide) && !string.IsNullOrWhiteSpace(p.ProductGuide))
+                    {
+                        <a class="aNoneDec" href=@(p.ProductGuide)>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="imgThirtySize" src="~/Images/pdf_icon.png" alt="Alternate Text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Product Guide
+                        </a>
+                        <br />
+                        <br />
+        }
+                                @if (!string.IsNullOrEmpty(p.ProductInstallationGuide) && !string.IsNullOrWhiteSpace(p.ProductInstallationGuide))
+                    {
+                        <a class="aNoneDec" href=@(p.ProductInstallationGuide)>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="imgThirtySize" src="~/Images/pdf_icon.png" alt="Alternate Text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Installation Guide
+                        </a>
+                        <br />
+                        <br />
+        }
+                                @if (!string.IsNullOrEmpty(p.ProductDatasheet) && !string.IsNullOrWhiteSpace(p.ProductDatasheet))
+                    {
+                        <a class="aNoneDec" href=@(p.ProductDatasheet)>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="imgThirtySize" src="~/Images/excel.png" alt="Alternate Text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Datasheet
+                        </a>
+                        <br />
+                        <br />
+        }
+                                @if (!string.IsNullOrEmpty(p.ProductIes) && !string.IsNullOrWhiteSpace(p.ProductIes))
+                    {
+                        <a class="aNoneDec" href=@(p.ProductIes)>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="imgThirtySize" src="~/Images/zip.png" alt="Alternate Text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IES-Data LDT-Data
+                        </a>
+        }
+                            </div>
+                            <div class="col-xs-12 col-sm-1 col-md-1 co-lg-1">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @*</div>*@
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <br />
+            <br />
+            <br />
+            <img class="img-responsive disInlineBlockWithoutSize" style="max-width: 450px;float: left" src=@p.ProductPicturePath />
+        </div>
+}
+        </div>
             }
         }
     </div>
@@ -227,7 +233,6 @@
             {
                 <div class="productScenePadding row text-center" style="background-image:url(@p.ProductBackgroundImage);background-size:cover">
                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                        <br />
                         <br />
                         <br />
                         <img class="img-responsive disInlineBlockWithoutSize" src=@p.ProductPicturePath />
@@ -289,7 +294,7 @@
                                             @if (!string.IsNullOrEmpty(p.ProductGuide) && !string.IsNullOrWhiteSpace(p.ProductGuide))
                                             {
                                                 <a class="aNoneDec" href=@(p.ProductGuide)>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="imgThirtySize" src="~/Images/pdf.png" alt="Alternate Text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Product Guide
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="imgThirtySize" src="~/Images/pdf_icon.png" alt="Alternate Text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Product Guide
                                                 </a>
                                                     <br />
                                                     <br />
@@ -297,7 +302,7 @@
                                             @if (!string.IsNullOrEmpty(p.ProductInstallationGuide) && !string.IsNullOrWhiteSpace(p.ProductInstallationGuide))
                                             {
                                                 <a class="aNoneDec" href=@(p.ProductInstallationGuide)>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="imgThirtySize" src="~/Images/pdf.png" alt="Alternate Text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Installation Guide
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="imgThirtySize" src="~/Images/pdf_icon.png" alt="Alternate Text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Installation Guide
                                                 </a>
                                                     <br />
                                                     <br />
@@ -305,7 +310,7 @@
                                             @if (!string.IsNullOrEmpty(p.ProductDatasheet) && !string.IsNullOrWhiteSpace(p.ProductDatasheet))
                                             {
                                                 <a class="aNoneDec" href=@(p.ProductDatasheet)>
-                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="imgThirtySize" src="~/Images/pdf.png" alt="Alternate Text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Datasheet
+                                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="imgThirtySize" src="~/Images/pdf_icon.png" alt="Alternate Text" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Datasheet
                                                 </a>
                                                     <br />
                                                     <br />
