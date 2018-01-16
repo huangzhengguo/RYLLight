@@ -702,27 +702,6 @@ a:hover{
     text-align: left;
 }
 
-/*
-.navbar-inverse .navbar-nav > li > a {
-    color: #000000;
-    font-size: 15px;
-}
-
-.navbar-inverse {
-    height: 75px;
-    background-color: #f6f6f6;
-    border-color: #ffffff;
-}
-
-.navbar .container {
-    background: #f6f6f6;
-}
-
-.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
-    color: #f37044;
-}
-*/
-
 .companyIntroducePadding{
     padding: 30px;
 }
@@ -786,4 +765,16 @@ a:hover{
 
 .plantFootUpBackgroundColor {
     background-color: #30ac66;
+}
+
+.login_2018 {
+    width: 280px;
+    height: 490px;
+    padding: 35px;
+    color: #000000;
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    margin-left: -175px;
+    background-color: #428bca;
 }

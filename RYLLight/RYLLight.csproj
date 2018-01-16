@@ -453,6 +453,7 @@
     <Content Include="Views\SaleContactInfoes\Index.cshtml" />
     <Content Include="Views\Shared\SalesContacts.cshtml" />
     <Content Include="Views\AdminManager\Index.cshtml" />
+    <Content Include="Views\Account\MyLogin.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace RYLLight.Controllers
 {
+    [Authorize]
     public class ProductManagerController : RyllightController
     {
         // GET: ProductManager
