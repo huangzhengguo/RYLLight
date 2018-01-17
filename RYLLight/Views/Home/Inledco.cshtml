@@ -76,8 +76,8 @@
     </div>
 </div>
 
-<!--轮播图部分-->
-<div class="blackBackground" style="margin-top: 20px;padding-bottom: 0px">
+<!--新闻轮播图部分-->
+<div id="companyNews" class="blackBackground" style="margin-top: 20px;padding-bottom: 0px">
     <div id="carousel-example-generic-news" class="container-fluid carseoulImg carousel slide" data-ride="carousel">
         <!--轮播图-->
         <div class="carousel-inner" role="listbox">
@@ -148,7 +148,7 @@
                                 foreach (var scene in productSceneList)
                                 {
                                     <div class="col-xs-4 col-sm-4">
-                                        <a id=@scene.Id class="sceneDisInlineBlock productSceneNavigation" href="#">
+                                        <a id=@scene.Id class="smallSceneDisInlineBlock productSceneNavigation" href="#">
                                             <img class="img-responsive" src=@scene.ScenePicturePath alt=@scene.SceneName />
                                         </a>
                                     </div>

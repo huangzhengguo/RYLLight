@@ -77,7 +77,7 @@ namespace RYLLight.Models
 
         [DataType(DataType.Password)]
         [Display(Name = "确认密码")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Compare("Password", ErrorMessage = "密码和确认密码不匹配.")]
         public string ConfirmPassword { get; set; }
     }
 
@@ -96,7 +96,7 @@ namespace RYLLight.Models
 
         [DataType(DataType.Password)]
         [Display(Name = "确认密码")]
-        [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
+        [Compare("Password", ErrorMessage = "密码和确认密码不匹配.")]
         public string ConfirmPassword { get; set; }
 
         public string Code { get; set; }
@@ -106,7 +106,7 @@ namespace RYLLight.Models
     {
         [Required]
         [EmailAddress]
-        [Display(Name = "Email")]
+        [Display(Name = "邮箱")]
         public string Email { get; set; }
     }
 }
