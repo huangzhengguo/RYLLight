@@ -184,9 +184,6 @@ namespace RYLLight.Controllers
         private bool EditProductWithFile(Product product, HttpPostedFileBase[] file)
         {
             int index = 0;
-            string filePrefixName = DateTime.Now.Year.ToString() + DateTime.Now.Month.ToString() +
-                                        DateTime.Now.Day.ToString() + DateTime.Now.Hour.ToString() +
-                                        DateTime.Now.Minute.ToString() + DateTime.Now.Second.ToString();
             foreach (var f in file)
             {
                 // 如果没有选择文件，继续执行循环
@@ -196,50 +193,46 @@ namespace RYLLight.Controllers
                     continue;
                 }
 
-                // 根据上传时间重新命名文件
-                filePrefixName = filePrefixName + index.ToString();
-
-                // 获取文件后缀名
-                string fileSuffixName = f.FileName.Substring(f.FileName.LastIndexOf("."));
-                var filePath = Path.Combine(Request.MapPath("~/Upload"), filePrefixName + fileSuffixName);
+                string fileName = f.FileName;
+                var filePath = Path.Combine(Request.MapPath("~/Upload"), fileName);
                 try
                 {
                     f.SaveAs(filePath);
                     if (index == 0)
                     {
-                        product.ProductPicturePath = "/Upload/" + filePrefixName + fileSuffixName;
+                        product.ProductPicturePath = "/Upload/" + fileName;
                     }
                     else if (index == 1)
                     {
-                        product.MobileProductPicturePath = "/Upload/" + filePrefixName + fileSuffixName;
+                        product.MobileProductPicturePath = "/Upload/" + fileName;
                     }
                     else if (index == 2)
                     {
-                        product.ProductBackgroundImage = "/Upload/" + filePrefixName + fileSuffixName;
+                        product.ProductBackgroundImage = "/Upload/" + fileName;
                     }
                     else if (index == 3)
                     {
-                        product.ApplicationScenePath = "/Upload/" + filePrefixName + fileSuffixName;
+                        product.ApplicationScenePath = "/Upload/" + fileName;
                     }
                     else if (index == 4)
                     {
-                        product.Spectrum = "/Upload/" + filePrefixName + fileSuffixName;
+                        product.Spectrum = "/Upload/" + fileName;
                     }
                     else if (index == 5)
                     {
-                        product.ProductGuide = "/Upload/" + filePrefixName + fileSuffixName;
+                        product.ProductGuide = "/Upload/" + fileName;
                     }
                     else if (index == 6)
                     {
-                        product.ProductInstallationGuide = "/Upload/" + filePrefixName + fileSuffixName;
+                        product.ProductInstallationGuide = "/Upload/" + fileName;
                     }
                     else if (index == 7)
                     {
-                        product.ProductDatasheet = "/Upload/" + filePrefixName + fileSuffixName;
+                        product.ProductDatasheet = "/Upload/" + fileName;
                     }
                     else if (index == 9)
                     {
-                        product.ProductIes = "/Upload/" + filePrefixName + fileSuffixName;
+                        product.ProductIes = "/Upload/" + fileName;
                     }
                 }
                 catch
