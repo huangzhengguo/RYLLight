@@ -49,9 +49,9 @@ namespace RYLLight.Models
         // 家里电脑数据库
         // private const string connectionString = @"server=DESKTOP-GRT5610\HUANGSQLEXPRESS;database=RYLLight.Models.RyllightEntities;Trusted_Connection=true";
         // 服务器数据库
-        // private const string connectionString = @"server=(local)\SQLEXPRESS;database=RYLLight.Models.RyllightEntities;Trusted_Connection=true";
+        private const string connectionString = @"server=(local)\SQLEXPRESS;database=RYLLight.Models.RyllightEntities;Trusted_Connection=true";
         // 公司电脑数据库
-        private const string connectionString = @"server=HUANGZHENGGUO\MYSQLSERVER2008;database=RYLLight.Models.RyllightEntities;Trusted_Connection=true";
+        // private const string connectionString = @"server=HUANGZHENGGUO\MYSQLSERVER2008;database=RYLLight.Models.RyllightEntities;Trusted_Connection=true";
         public RyllightEntities() : base(connectionString)
         {
 
