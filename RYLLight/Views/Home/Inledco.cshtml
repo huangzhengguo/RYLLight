@@ -90,7 +90,7 @@
                 {
                     <div class="item active">
                         <div class="visible-xs visible-sm hidden-md hidden-lg carseoulImg">
-                             <img src=@(item.NewsBackgroundImg) class="img-responsive" />
+                             <img src=@(item.Picture) class="img-responsive" />
                         </div>
                         <div class="hidden-xs hidden-sm visible-md visible-lg carseoulImg">
                             <img src=@(item.NewsBackgroundImg) class="img-responsive" />
@@ -101,7 +101,7 @@
                 {
                     <div class="item">
                         <div class="visible-xs visible-sm hidden-md hidden-lg carseoulImg">
-                            <img src=@(item.NewsBackgroundImg) class="img-responsive" />
+                            <img src=@(item.Picture) class="img-responsive" />
                         </div>
                         <div class="hidden-xs hidden-sm visible-md visible-lg carseoulImg">
                             <img src=@(item.NewsBackgroundImg) class="img-responsive" />
@@ -169,8 +169,9 @@
 @{
     if (companyInfo != null)
     {
-        <div id="companyIntroduce" class="container-fluid">
-            <img class="img-responsive" src=@(companyInfo.CompanyBackgroundImg) style="width:100%" />
-        </div>
+<div id="companyIntroduce" class="container-fluid">
+    <img class="img-responsive hidden-sm hidden-xs visible-md visible-lg" src=@(companyInfo.CompanyBackgroundImg) style="width:100%" />
+    <img class="img-responsive visible-sm visible-xs hidden-md hidden-lg" src=@(companyInfo.FreeThree) style="width:100%" />
+</div>
     }
 }

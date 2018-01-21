@@ -28,8 +28,8 @@ namespace RYLLight.Models
         public string Thumbnail { get; set; }
 
         // 大图
-        [Required(ErrorMessage = "请输入新闻大图!")]
-        [Display(Name = "新闻大图")]
+        [Required(ErrorMessage = "请输入手机版新闻!")]
+        [Display(Name = "手机版新闻")]
         public string Picture { get; set; }
 
         // 文章内容

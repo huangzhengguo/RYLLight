@@ -41,7 +41,7 @@ namespace RYLLight.Models
         public string FreeOne { get; set; }
         [Display(Name = "公司业务")]
         public string FreeTwo { get; set; }
-        [Display(Name = "公司简介")]
+        [Display(Name = "手机版背景图片")]
         public string FreeThree { get; set; }
 
         // 背景图片
