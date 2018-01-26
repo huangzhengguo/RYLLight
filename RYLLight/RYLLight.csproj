@@ -454,6 +454,7 @@
     <Content Include="Views\Shared\SalesContacts.cshtml" />
     <Content Include="Views\AdminManager\Index.cshtml" />
     <Content Include="Views\Account\MyLogin.cshtml" />
+    <Content Include="Views\Home\ProductFileDownload.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

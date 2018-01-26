@@ -1,0 +1,39 @@
+﻿@model IEnumerable<RYLLight.Models.Product>
+
+<table class="table table-bordered">
+    <tr>
+        <th>Product Name</th>
+        <th>Product Code</th>
+        <th>Product Guide</th>
+        <th>Installation Guide</th>
+        <th>Datasheet</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.ProductName</td>
+            <td>@item.ProductCode</td>
+            <td>
+                @if (!string.IsNullOrEmpty(item.ProductGuide) && !string.IsNullOrWhiteSpace(item.ProductGuide))
+                {
+                    <a href=@item.ProductGuide>Download</a>
+                }
+            </td>
+            <td>
+                @if (!string.IsNullOrEmpty(item.ProductInstallationGuide) && !string.IsNullOrWhiteSpace(item.ProductInstallationGuide))
+                {
+                    <a href=@item.ProductGuide>Download</a>
+                }
+            </td>
+            <td>
+                @if (!string.IsNullOrEmpty(item.ProductDatasheet) && !string.IsNullOrWhiteSpace(item.ProductDatasheet))
+                {
+                    <a href=@item.ProductGuide>Download</a>
+                }
+            </td>
+        </tr>
+    }
+</table>
+
+@Scripts.Render("~/bundles/jquery")

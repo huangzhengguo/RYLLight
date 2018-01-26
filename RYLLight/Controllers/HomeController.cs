@@ -153,8 +153,10 @@ namespace RYLLight.Controllers
             return View();
         }
 
-        /* 菜单点击方法 */
-        // 0.APPLICATION
+        /// <summary>
+        /// 应用场景
+        /// </summary>
+        /// <returns></returns>
         public ActionResult ApplicationScene()
         {
             // 返回View() 框架会自动查找对应的视图
@@ -166,7 +168,11 @@ namespace RYLLight.Controllers
             return View(productSceneList);
         }
 
-        // 点击场景图片，列出场景下面的所有商业照明的产品
+        /// <summary>
+        /// 场景产品
+        /// </summary>
+        /// <param name="sceneId"></param>
+        /// <returns></returns>
         public ActionResult ProductInApplicationScene(int sceneId)
         {
             // 只能显示对应的产品
@@ -190,7 +196,10 @@ namespace RYLLight.Controllers
             return View("Lighting", productList);
         }
 
-        // 1.LIGHTING
+        /// <summary>
+        /// 商业照明产品
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Lighting()
         {
             ViewBag.isShowButton = true;
@@ -208,7 +217,10 @@ namespace RYLLight.Controllers
             return View(productList);
         }
 
-        // 2.INTELLGENTCONTROL
+        /// <summary>
+        /// 智能控制
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Intellgentcontrol()
         {
             // 传递导航信息
@@ -224,7 +236,10 @@ namespace RYLLight.Controllers
             return View(productList);
         }
 
-        // 3.植物照明
+        /// <summary>
+        /// 植物照明
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Horticulture()
         {
             // 传递导航信息
@@ -240,7 +255,10 @@ namespace RYLLight.Controllers
             return View(productList);
         }
 
-        // 4.水族灯
+        /// <summary>
+        /// 水族灯
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Aquarium()
         {
             // 传递导航信息
@@ -255,7 +273,10 @@ namespace RYLLight.Controllers
             return View(productList);
         }
 
-        // 5.公司页面
+        /// <summary>
+        /// 公司页面
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Company()
         {
             List<CompanyInfo> companyList = (from p in db.CompanyInfos
@@ -269,6 +290,17 @@ namespace RYLLight.Controllers
             {
                 return null;
             }
+        }
+
+        /// <summary>
+        /// 产品文件下载
+        /// </summary>
+        public ActionResult ProductFileDownload()
+        {
+            var productList = (from p in db.Products
+                               select p).AsNoTracking()
+                                        .ToList();
+            return View(productList);
         }
 
         // 添加参数区分是点击的是product还是application
