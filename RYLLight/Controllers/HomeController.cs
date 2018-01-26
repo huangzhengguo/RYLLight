@@ -295,11 +295,21 @@ namespace RYLLight.Controllers
         /// <summary>
         /// 产品文件下载
         /// </summary>
-        public ActionResult ProductFileDownload()
+        public ActionResult ProductFileDownload(bool isPlant = false)
         {
+            MenuList = (from menu in Context.Menus
+                        where menu.FreeOne == "Plant" && menu.MenuTitle == "Download"
+                        orderby menu.Sortnumber ascending
+                        select menu).ToList<Menu>();
+
+            ViewBag.MenuList = MenuList;
+
             var productList = (from p in db.Products
+                               orderby p.ProductName
                                select p).AsNoTracking()
                                         .ToList();
+            ViewBag.isPlant = isPlant;
+
             return View(productList);
         }
 

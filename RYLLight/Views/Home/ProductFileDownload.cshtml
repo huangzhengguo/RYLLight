@@ -1,39 +1,54 @@
 ﻿@model IEnumerable<RYLLight.Models.Product>
 
-<table class="table table-bordered">
-    <tr>
-        <th>Product Name</th>
-        <th>Product Code</th>
-        <th>Product Guide</th>
-        <th>Installation Guide</th>
-        <th>Datasheet</th>
-    </tr>
-
-    @foreach (var item in Model)
+@{
+    var isPlant = (bool)ViewBag.isPlant;
+    if (isPlant)
     {
-        <tr>
-            <td>@item.ProductName</td>
-            <td>@item.ProductCode</td>
-            <td>
-                @if (!string.IsNullOrEmpty(item.ProductGuide) && !string.IsNullOrWhiteSpace(item.ProductGuide))
-                {
-                    <a href=@item.ProductGuide>Download</a>
-                }
-            </td>
-            <td>
-                @if (!string.IsNullOrEmpty(item.ProductInstallationGuide) && !string.IsNullOrWhiteSpace(item.ProductInstallationGuide))
-                {
-                    <a href=@item.ProductGuide>Download</a>
-                }
-            </td>
-            <td>
-                @if (!string.IsNullOrEmpty(item.ProductDatasheet) && !string.IsNullOrWhiteSpace(item.ProductDatasheet))
-                {
-                    <a href=@item.ProductGuide>Download</a>
-                }
-            </td>
-        </tr>
+        Layout = "~/Views/Shared/_Layout1.cshtml";
     }
-</table>
+    else
+    {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}
+
+<div class="container" style="margin-top: 50px">
+    <table class="table table-bordered">
+        <tr>
+            <th>Product Name</th>
+            <th>Product Code</th>
+            <th>Product Guide</th>
+            <th>Installation Guide</th>
+            <th>Datasheet</th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.ProductName</td>
+                <td>@item.ProductCode</td>
+                <td>
+                    @if (!string.IsNullOrEmpty(item.ProductGuide) && !string.IsNullOrWhiteSpace(item.ProductGuide))
+                    {
+                        <a style="text-decoration:underline;" href=@item.ProductGuide>Download</a>
+                    }
+                </td>
+                <td>
+                    @if (!string.IsNullOrEmpty(item.ProductInstallationGuide) && !string.IsNullOrWhiteSpace(item.ProductInstallationGuide))
+                    {
+                        <a style="text-decoration:underline;" href=@item.ProductGuide>Download</a>
+                    }
+                </td>
+                <td>
+                    @if (!string.IsNullOrEmpty(item.ProductDatasheet) && !string.IsNullOrWhiteSpace(item.ProductDatasheet))
+                    {
+                        <a style="text-decoration:underline;" href=@item.ProductGuide>Download</a>
+                    }
+                </td>
+            </tr>
+        }
+    </table>
+</div>
+
 
 @Scripts.Render("~/bundles/jquery")

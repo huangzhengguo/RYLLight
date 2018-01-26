@@ -90,8 +90,8 @@ namespace RYLLight.Controllers
                     new List<Menu>() {
                         new Menu {MenuTitle="News",Sortnumber=0,Link="#companyNews" },
                         new Menu {MenuTitle="Products",Sortnumber=1,Link="#productScenes"},
-                        new Menu {MenuTitle="Company",Sortnumber=2,Link="#companyIntroduce" },
-                        new Menu {MenuTitle="Contact_Us",Sortnumber=3,Link="#contact" },
+                        new Menu {MenuTitle="Company",Sortnumber=2,Link="#companyIntroduce"},
+                        new Menu {MenuTitle="Contact_Us",Sortnumber=3,Link="#contact"}
                     });
                 ViewBag.MenuList = MenuList;
             }

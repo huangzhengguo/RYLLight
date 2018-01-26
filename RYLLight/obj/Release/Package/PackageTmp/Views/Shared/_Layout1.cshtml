@@ -39,11 +39,15 @@
                         {
                             <li><a href="#" id="Contact_Us" style="color: #000000;font-size: 17px">Contact Us</a></li>
                         }
+                        else if (menuItem.MenuTitle.Equals("Download"))
+                        {
+                            <li style="color: #000000;font-size: 17px">@Html.ActionLink(menuItem.MenuTitle, menuItem.Link, "Home", new { isPlant = true },new { style = "color: #000000;font-size: 17px" })</li>
+                                                                  }
                         else
                         {
                             <li><a href="#" style="color: #000000;font-size: 17px" id=@menuItem.MenuTitle>@menuItem.MenuTitle</a></li>
                         }
-                    }
+                        }
                 </ul>
             </div>
         </div>
