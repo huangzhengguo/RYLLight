@@ -6,6 +6,9 @@ using System.Web;
 
 namespace RYLLight.Models
 {
+    /// <summary>
+    /// Logo实体类
+    /// </summary>
     public class Logo
     {
         public int Id { get; set; }

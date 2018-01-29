@@ -13,7 +13,9 @@ namespace RYLLight.Models
         // 子产品类型
         public TypeOfSubProduct ProductType { get; set; }
 
-        // 产品名称
+        /// <summary>
+        /// 产品名称
+        /// </summary>
         public string ProductName { get; set; }
 
         // 产品编码

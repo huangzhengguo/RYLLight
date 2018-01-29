@@ -6,6 +6,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace RYLLight.Models
 {
+    /// <summary>
+    /// 产品实体类
+    /// </summary>
     public class Product
     {
         public int Id { get; set; }

@@ -6,6 +6,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace RYLLight.Models
 {
+    /// <summary>
+    /// 轮播图实体类
+    /// </summary>
     public class Carousel
     {
         public int Id { get; set; }

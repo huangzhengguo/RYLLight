@@ -10,10 +10,8 @@ namespace RYLLight.Controllers
     {
         private RyllightEntities db = new RyllightEntities();
 
-        // 使用构造函数初始化信息
         public HomeController()
         {
-
         }
 
         /// <summary>
@@ -134,23 +132,9 @@ namespace RYLLight.Controllers
                                           where p.ProductSceneId == sceneId
                                           select p).ToList();
 
-
             ViewBag.sceneProducts = sceneProducts;
+
             return PartialView("ProductForSceneId");
-        }
-
-        public ActionResult About()
-        {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
-        }
-
-        public ActionResult Contact()
-        {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
         }
 
         /// <summary>

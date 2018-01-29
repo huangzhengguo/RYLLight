@@ -6,6 +6,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace RYLLight.Models
 {
+    /// <summary>
+    /// 业务员实体类
+    /// </summary>
     public class SaleContactInfo
     {
         public int Id { get; set; }
