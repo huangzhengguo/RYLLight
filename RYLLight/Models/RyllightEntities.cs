@@ -51,7 +51,7 @@ namespace RYLLight.Models
         // 服务器数据库
         // private const string connectionString = @"server=(local)\SQLEXPRESS;database=RYLLight.Models.RyllightEntities;Trusted_Connection=true";
         // 公司电脑数据库
-        private const string connectionString = @"server=HUANGZHENGGUO\SQLEXPRESS;database=RYLLight.Models.RyllightEntities;Trusted_Connection=true";
+        private const string connectionString = @"server=HUANGZHENGGUO;database=RYLLight.Models.RyllightEntities;Trusted_Connection=true";
         public RyllightEntities() : base(connectionString)
         {
 
