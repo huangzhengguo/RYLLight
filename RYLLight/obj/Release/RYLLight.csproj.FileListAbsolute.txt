@@ -448,7 +448,6 @@ D:\vsProject\CompanyProjects\RYLLight\RYLLight\obj\Release\RYLLight.csproj.Gener
 D:\vsProject\CompanyProjects\RYLLight\RYLLight\obj\Release\RYLLight.csproj.CoreCompileInputs.cache
 D:\vsProject\CompanyProjects\RYLLight\RYLLight\obj\Release\RYLLight.dll
 D:\vsProject\CompanyProjects\RYLLight\RYLLight\obj\Release\RYLLight.pdb
-D:\vsProject\CompanyProjects\RYLLight\RYLLight\obj\Release\RYLLight.csprojResolveAssemblyReference.cache
 D:\github\RYLLight\RYLLight\bin\ApplicationInsights.config
 D:\github\RYLLight\RYLLight\bin\roslyn\csc.exe
 D:\github\RYLLight\RYLLight\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
@@ -546,3 +545,4 @@ D:\github\RYLLight\RYLLight\obj\Release\RYLLight.csproj.GenerateResource.Cache
 D:\github\RYLLight\RYLLight\obj\Release\RYLLight.csproj.CoreCompileInputs.cache
 D:\github\RYLLight\RYLLight\obj\Release\RYLLight.dll
 D:\github\RYLLight\RYLLight\obj\Release\RYLLight.pdb
+D:\vsProject\CompanyProjects\RYLLight\RYLLight\obj\Release\RYLLight.csprojResolveAssemblyReference.cache

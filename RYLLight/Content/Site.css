@@ -783,3 +783,9 @@ a:hover{
     margin-left: -175px;
     background-color: #428bca;
 }
+
+.productParameterDiv {
+    margin-left: 20px;
+    width: 80px;
+    display: inline-block;
+}

@@ -10,33 +10,45 @@ namespace RYLLight.Models
     {
         public int Id { get; set; }
 
-        // 公司名称
+        /// <summary>
+        /// 公司名称
+        /// </summary>
         [Required]
         [MaxLength(200)]
         [Display(Name = "公司名称")]
         public string CompanyName { get; set; }
 
-        // 公司地址
+        /// <summary>
+        /// 公司地址
+        /// </summary>
         [Required]
         [Display(Name = "公司地址")]
         public string CompanyAddress { get; set; }
 
-        // 公司电话
+        /// <summary>
+        /// 公司电话
+        /// </summary>
         [Required]
         [Display(Name = "公司电话")]
         public string PhoneNumber { get; set; }
 
-        // 公司邮箱
+        /// <summary>
+        /// 公司邮箱
+        /// </summary>
         [Required]
         [Display(Name = "公司邮箱")]
         public string MailBox { get; set; }
 
-        // 公司简介
+        /// <summary>
+        /// 公司简介
+        /// </summary>
         [Required]
         [Display(Name = "公司简介")]
         public string CompanyDescription { get; set; }
 
-        // 备用字段
+        /// <summary>
+        /// 备用字段
+        /// </summary>
         [Display(Name = "公司历史")]
         public string FreeOne { get; set; }
         [Display(Name = "公司业务")]
@@ -44,11 +56,15 @@ namespace RYLLight.Models
         [Display(Name = "手机版背景图片")]
         public string FreeThree { get; set; }
 
-        // 背景图片
+        /// <summary>
+        /// 背景图片
+        /// </summary>
         [Display(Name = "背景图片")]
         public string CompanyBackgroundImg { get; set; }
 
-        // 分类
+        /// <summary>
+        /// 分类
+        /// </summary>
         [Display(Name = "分类")]
         public TypeOfProduct TypeProduct { get; set; }
     }
