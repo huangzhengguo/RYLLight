@@ -97,10 +97,14 @@
     </div>
 
     <!--底部区域-->
-    <footer id="contact" class="footUpBackgroundColor" style="background-color: #454240">
-        <br />
-        @Html.Partial("SalesContacts")
-        <div class="footDownBackgroundColor text-center" style="background-color: #454240">
+    <footer id="contact" class="footUpBackgroundColor" style="background: #454240;">
+        @*<br />*@
+        @*@Html.Partial("SalesContacts")*@
+        <div>
+            @Html.Partial("EmailView")
+        </div>
+        
+        <div class="footDownBackgroundColor text-center" style="background-color: #000000;padding-top: 20px">
             <img src="~/Images/logowhite.png" class="disInlineBlockWithSizeLog" />
             <p style="color:white;margin-bottom:0px">Zhengzhou Inledco Lighting Co.,LTD</p>
             <span id="cnzz_stat_icon_1259345350" style="float:left;display:none">

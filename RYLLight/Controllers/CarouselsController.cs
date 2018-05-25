@@ -174,8 +174,8 @@ namespace RYLLight.Controllers
 
             int index = 0;
             string filePrefixName = DateTime.Now.Year.ToString() + DateTime.Now.Month.ToString() +
-                                        DateTime.Now.Day.ToString() + DateTime.Now.Hour.ToString() +
-                                        DateTime.Now.Minute.ToString() + DateTime.Now.Second.ToString();
+                                    DateTime.Now.Day.ToString() + DateTime.Now.Hour.ToString() +
+                                    DateTime.Now.Minute.ToString() + DateTime.Now.Second.ToString();
             foreach (var f in file)
             {
                 if (f == null)
@@ -197,7 +197,8 @@ namespace RYLLight.Controllers
                     if (index == 0)
                     {
                         carousel.PicturePath = "/Upload/" + filePrefixName + fileSuffixName;
-                    }else if (index == 1)
+                    }
+                    else if (index == 1)
                     {
                         carousel.MobilePicturePath = "/Upload/" + filePrefixName + fileSuffixName;
                     }

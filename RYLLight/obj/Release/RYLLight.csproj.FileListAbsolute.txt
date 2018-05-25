@@ -545,4 +545,5 @@ D:\github\RYLLight\RYLLight\obj\Release\RYLLight.csproj.GenerateResource.Cache
 D:\github\RYLLight\RYLLight\obj\Release\RYLLight.csproj.CoreCompileInputs.cache
 D:\github\RYLLight\RYLLight\obj\Release\RYLLight.dll
 D:\github\RYLLight\RYLLight\obj\Release\RYLLight.pdb
+D:\vsProject\CompanyProjects\RYLLight\RYLLight\obj\Release\RYLLight.csproj.CopyComplete
 D:\vsProject\CompanyProjects\RYLLight\RYLLight\obj\Release\RYLLight.csprojResolveAssemblyReference.cache

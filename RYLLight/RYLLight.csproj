@@ -455,6 +455,7 @@
     <Content Include="Views\AdminManager\Index.cshtml" />
     <Content Include="Views\Account\MyLogin.cshtml" />
     <Content Include="Views\Home\ProductFileDownload.cshtml" />
+    <Content Include="Views\Shared\EmailView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

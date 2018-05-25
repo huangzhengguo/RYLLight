@@ -5,6 +5,9 @@ using System.Web;
 
 namespace RYLLight.Models
 {
+    /// <summary>
+    /// 产品详细信息
+    /// </summary>
     public class DetailProduct
     {
         // 产品子表
